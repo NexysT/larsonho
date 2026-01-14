@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Cookie Banner -->
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-text">
@@ -21,6 +22,7 @@
         </div>
     </div>
 
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -32,6 +34,7 @@
                     </div>
                 </div>
 
+                <!-- Desktop Navigation -->
                 <nav class="nav-desktop">
                     <button onclick="showPage('home')" class="nav-link active" data-page="home">🏠 Início</button>
                     <button onclick="showPage('services')" class="nav-link" data-page="services">❤️ Serviços</button>
@@ -39,9 +42,11 @@
                     <button onclick="showPage('contact')" class="nav-link" data-page="contact">📞 Contacto</button>
                 </nav>
 
+                <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
             </div>
 
+            <!-- Mobile Navigation -->
             <nav id="mobileNav" class="nav-mobile">
                 <button onclick="showPage('home'); toggleMobileMenu()" class="nav-link" data-page="home">🏠 Início</button>
                 <button onclick="showPage('services'); toggleMobileMenu()" class="nav-link" data-page="services">❤️ Serviços</button>
@@ -55,6 +60,7 @@
         </div>
     </header>
 
+    <!-- Hero Banner -->
     <section class="hero-banner">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -81,8 +87,10 @@
         </div>
     </section>
 
+    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
+            <!-- HOME PAGE -->
             <div id="homePage" class="page active">
                 <div class="section-intro">
                     <h2 class="section-title">Bem-vindo ao LAR DE SONHO</h2>
@@ -140,6 +148,7 @@
                 </div>
             </div>
 
+            <!-- SERVICES PAGE -->
             <div id="servicesPage" class="page">
                 <h2 class="page-title">Nossos Serviços</h2>
                 
@@ -186,6 +195,7 @@
                 </div>
             </div>
 
+            <!-- PRICING PAGE -->
             <div id="pricingPage" class="page">
                 <h2 class="page-title">Preçário</h2>
                 
@@ -277,6 +287,7 @@
                 </div>
             </div>
 
+            <!-- PRIVACY PAGE -->
             <div id="privacyPage" class="page">
                 <h2 class="page-title">Política de Privacidade</h2>
                 
@@ -368,96 +379,118 @@
                 </div>
             </div>
 
+            <!-- COOKIES PAGE -->
             <div id="cookiesPage" class="page">
                 <h2 class="page-title">Política de Cookies</h2>
                 
                 <div class="content-section">
-                    <h3>O que são Cookies?</h3>
-                    <p>Cookies são pequenos ficheiros de texto armazenados no seu dispositivo quando visita o nosso website. Ajudam a melhorar a sua experiência de navegação e permitem-nos analisar o tráfego do site.</p>
+            <h3>1. O que são cookies</h3>
+            <p>O presente website utiliza cookies e/ou tecnologias similares, próprias e de terceiros. Cookies são ficheiros que contêm pequenas quantidades de informação e que são descarregados para o dispositivo do utilizador quando este visita um website. O objetivo principal dos cookies é reconhecer o utilizador sempre que acede ao website, permitindo melhorar a qualidade, segurança e funcionalidade do site, bem como simplificar a navegação. Os cookies são essenciais para o funcionamento da Internet, não danificam o dispositivo do utilizador e ajudam a identificar e resolver possíveis erros na operação do website.</p>
+
+            <h3>2. Responsável pelo tratamento</h3>
+            <p>O responsável pelo tratamento dos dados recolhidos através de cookies é:</p>
+            <p>LAR DE SONHO, LDA<br>
+            Rua dos Barcelinhos, n.º 67 4720-121 Braga<br>
+            Email: <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></p>
+
+            <h3>3. Categorias de cookies utilizados</h3>
+            <div class="cookie-types">
+                <div class="cookie-type cookie-necessary">
+                    <h4>Cookies necessários</h4>
+                    <p>Essenciais para permitir a navegação no website e o acesso a funcionalidades básicas, como formulários e áreas seguras. Não recolhem informações para fins de marketing e não podem ser desativados.</p>
                 </div>
-
-                <div class="content-section">
-                    <h3>Tipos de Cookies Utilizados</h3>
-                    
-                    <div class="cookie-types">
-                        <div class="cookie-type cookie-necessary">
-                            <div class="cookie-header">
-                                <h4>🔒 Cookies Necessários</h4>
-                                <span class="badge badge-required">OBRIGATÓRIOS</span>
-                            </div>
-                            <p>Essenciais para o funcionamento do website. Não podem ser desativados.</p>
-                            <p class="cookie-detail"><strong>Exemplos:</strong> Sessão de utilizador, preferências de idioma</p>
-                            <p class="cookie-detail"><strong>Duração:</strong> Sessão ou até 1 ano</p>
-                        </div>
-
-                        <div class="cookie-type cookie-functional">
-                            <div class="cookie-header">
-                                <h4>⚙️ Cookies Funcionais</h4>
-                                <span class="badge badge-optional">OPCIONAL</span>
-                            </div>
-                            <p>Melhoram a funcionalidade e personalização do site.</p>
-                            <p class="cookie-detail"><strong>Exemplos:</strong> Preferências de visualização</p>
-                            <p class="cookie-detail"><strong>Duração:</strong> Até 2 anos</p>
-                        </div>
-
-                        <div class="cookie-type cookie-analytics">
-                            <div class="cookie-header">
-                                <h4>📊 Cookies Analíticos</h4>
-                                <span class="badge badge-optional">OPCIONAL</span>
-                            </div>
-                            <p>Permitem analisar o uso do website e melhorar o desempenho.</p>
-                            <p class="cookie-detail"><strong>Exemplos:</strong> Google Analytics</p>
-                            <p class="cookie-detail"><strong>Duração:</strong> Até 2 anos</p>
-                        </div>
-
-                        <div class="cookie-type cookie-marketing">
-                            <div class="cookie-header">
-                                <h4>🎯 Cookies de Marketing</h4>
-                                <span class="badge badge-optional">OPCIONAL</span>
-                            </div>
-                            <p>Utilizados para publicidade direcionada.</p>
-                            <p class="cookie-detail"><strong>Exemplos:</strong> Facebook Pixel, Google Ads</p>
-                            <p class="cookie-detail"><strong>Duração:</strong> Até 2 anos</p>
-                        </div>
-                    </div>
+                <div class="cookie-type cookie-analytics">
+                    <h4>Cookies analíticos</h4>
+                    <p>Permitem recolher informação estatística sobre a utilização do website, como páginas visitadas e tempo de navegação, com o objetivo de melhorar o desempenho e os conteúdos disponibilizados.</p>
                 </div>
+                <div class="cookie-type cookie-marketing">
+                    <h4>Cookies de marketing e publicidade</h4>
+                    <p>São utilizados para apresentar publicidade direcionada relacionada com terapias e serviços disponibilizados pelo LAR DE SONHO, com base nos interesses e comportamento de navegação do utilizador.</p>
+                </div>
+                <div class="cookie-type cookie-functional">
+                    <h4>Cookies de terceiros</h4>
+                    <p>Podem ser instalados por entidades externas, nomeadamente redes sociais como Facebook, Instagram ou Twitter, quando o utilizador se encontra autenticado nessas plataformas, ficando sujeito às respetivas políticas de privacidade.</p>
+                </div>
+            </div>
 
-                <div class="content-section">
-                    <h3>Gestão de Preferências</h3>
-                    <div class="cookie-preferences">
-                        <div class="preference-item">
-                            <span>Cookies Necessários</span>
-                            <label class="switch">
-                                <input type="checkbox" checked disabled>
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <div class="preference-item">
-                            <span>Cookies Funcionais</span>
-                            <label class="switch">
-                                <input type="checkbox" id="functional-cookies">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <div class="preference-item">
-                            <span>Cookies Analíticos</span>
-                            <label class="switch">
-                                <input type="checkbox" id="analytics-cookies">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <div class="preference-item">
-                            <span>Cookies de Marketing</span>
-                            <label class="switch">
-                                <input type="checkbox" id="marketing-cookies">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </div>
+            <div class="content-section">
+    <h3>4. Dados recolhidos através de cookies</h3>
+    <div class="data-categories">
+        <div class="data-category">Endereço IP</div>
+        <div class="data-category">Browser utilizado</div>
+        <div class="data-category">Sistema operativo</div>
+        <div class="data-category">Localização aproximada</div>
+        <div class="data-category">Data e hora de acesso</div>
+        <div class="data-category">Preferências do utilizador associadas a redes sociais</div>
+    </div>
+    <br>
+    <br>
+    <h3>5. Finalidades da utilização de cookies</h3>
+    <div class="data-categories">
+        <div class="data-category">Garantir o funcionamento técnico do website</div>
+        <div class="data-category">Melhorar a experiência de navegação</div>
+        <div class="data-category">Analisar padrões de utilização do website</div>
+        <div class="data-category">Apresentar conteúdos e publicidade relevantes</div>
+    </div>
+    <br>
+    <br>    
+    <h3>6. Base legal para o tratamento</h3>
+    <div class="legal-bases">
+        <div class="legal-item">
+            <strong>Cookies não estritamente necessários</strong>
+            <p>Baseiam-se no consentimento do utilizador, nos termos do artigo 6.º, n.º 1, alínea a) do RGPD.</p>
+        </div>
+        <div class="legal-item">
+            <strong>Cookies estritamente necessários</strong>
+            <p>Baseiam-se no interesse legítimo do responsável pelo tratamento, nos termos do artigo 6.º, n.º 1, alínea f) do RGPD.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>7. Consentimento do utilizador</h3>
+    <div class="content-section">
+        <p>Ao aceder ao website, o utilizador é informado de forma clara sobre a utilização de cookies e pode:</p>
+        <ul>
+            <li>Aceitar todos os cookies</li>
+            <li>Rejeitar cookies não essenciais</li>
+            <li>Gerir as suas preferências de cookies</li>
+        </ul>
+        <p>O consentimento pode ser retirado a qualquer momento através das definições do browser ou das opções disponibilizadas no website.</p>
+    </div>
+
+    <h3>8. Configuração do utilizador para evitar cookies</h3>
+    <div class="content-section">
+        <p>O utilizador pode configurar o seu navegador para gerir ou bloquear cookies:</p>
+        <ul>
+            <li>Google Chrome: <a href="https://support.google.com/accounts/answer/61416" target="_blank">link</a></li>
+            <li>Mozilla Firefox: <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">link</a></li>
+            <li>Internet Explorer: <a href="https://support.microsoft.com/pt-pt/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">link</a></li>
+            <li>Safari: <a href="https://www.apple.com/legal/privacy/pt/" target="_blank">link</a></li>
+        </ul>
+        <p>O utilizador pode ainda gerir preferências de publicidade comportamental através de: <a href="https://www.youronlinechoices.com/pt/your-ad-choices" target="_blank">link</a></p>
+    </div>
+
+    <h3>9. Prazo de conservação</h3>
+    <p>Os cookies são conservados apenas pelo período necessário para cumprir as finalidades para as quais foram recolhidos, sendo eliminados automaticamente ou quando removidos pelo utilizador.</p>
+    <br>
+    <h3>10. Direitos do utilizador</h3>
+    <div class="rights-grid">
+        <div class="right-card">Aceder aos seus dados pessoais</div>
+        <div class="right-card">Retificar dados inexatos</div>
+        <div class="right-card">Solicitar o apagamento dos dados</div>
+        <div class="right-card">Limitar ou opor-se ao tratamento</div>
+        <div class="right-card">Retirar o consentimento a qualquer momento – Email: <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></div>
+    </div>
+
+    <h3>11. Alterações à política de cookies</h3>
+    <p>O LAR DE SONHO reserva-se o direito de atualizar a presente Política de Cookies sempre que necessário, sendo as alterações devidamente publicadas no website.</p>
+    </div>
+
                     <button onclick="saveCookiePreferences()" class="btn-primary btn-full">Guardar Preferências</button>
                 </div>
             </div>
 
+            <!-- LEGAL PAGE -->
             <div id="legalPage" class="page">
                 <h2 class="page-title">Aviso Legal</h2>
                 
@@ -497,6 +530,7 @@
                 </div>
             </div>
 
+            <!-- RIGHTS PAGE -->
             <div id="rightsPage" class="page">
                 <h2 class="page-title">Os Seus Direitos (RGPD)</h2>
                 
@@ -599,6 +633,8 @@
                     </form>
                 </div>
             </div>
+
+            <!-- CONTACT PAGE -->
             <div id="contactPage" class="page">
                 <h2 class="page-title">Contactos</h2>
                 
@@ -743,6 +779,7 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -768,6 +805,7 @@
                         <li><button onclick="showPage('cookies')">Política de Cookies</button></li>
                         <li><button onclick="showPage('legal')">Aviso Legal</button></li>
                         <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
+                        <li><button onclick="window.location.href='visualizador.html'">Visualizador de Cookies</button></li>
                     </ul>
                 </div>
 
