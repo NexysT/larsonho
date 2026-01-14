@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAR DE SONHO - Cuidados de Excelência para a Terceira Idade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>🍪 Este site utiliza cookies</h3>
+                <p>Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e personalizar conteúdos. Ao clicar em "Aceitar Todos", consente a utilização de todos os cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button onclick="showCookieSettings()" class="btn-outline">Personalizar</button>
+                <button onclick="acceptCookies('necessary')" class="btn-outline">Apenas Necessários</button>
+                <button onclick="acceptCookies('all')" class="btn-primary">Aceitar Todos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">❤️</div>
+                    <div class="logo-text">
+                        <h1>LAR DE SONHO</h1>
+                        <p>Cuidar com Excelência</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <button onclick="showPage('home')" class="nav-link active" data-page="home">🏠 Início</button>
+                    <button onclick="showPage('services')" class="nav-link" data-page="services">❤️ Serviços</button>
+                    <button onclick="showPage('pricing')" class="nav-link" data-page="pricing">💰 Preçário</button>
+                    <button onclick="showPage('contact')" class="nav-link" data-page="contact">📞 Contacto</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileNav" class="nav-mobile">
+                <button onclick="showPage('home'); toggleMobileMenu()" class="nav-link" data-page="home">🏠 Início</button>
+                <button onclick="showPage('services'); toggleMobileMenu()" class="nav-link" data-page="services">❤️ Serviços</button>
+                <button onclick="showPage('pricing'); toggleMobileMenu()" class="nav-link" data-page="pricing">💰 Preçário</button>
+                <button onclick="showPage('privacy'); toggleMobileMenu()" class="nav-link" data-page="privacy">🔒 Privacidade</button>
+                <button onclick="showPage('cookies'); toggleMobileMenu()" class="nav-link" data-page="cookies">🍪 Cookies</button>
+                <button onclick="showPage('legal'); toggleMobileMenu()" class="nav-link" data-page="legal">📋 Aviso Legal</button>
+                <button onclick="showPage('rights'); toggleMobileMenu()" class="nav-link" data-page="rights">✅ Seus Direitos</button>
+                <button onclick="showPage('contact'); toggleMobileMenu()" class="nav-link" data-page="contact">📞 Contacto</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Cuidados que Transformam Vidas</h2>
+            <p class="hero-subtitle">Mais de 20.000 famílias confiam em nós há mais de 15 anos</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">20.000+</div>
+                    <div class="stat-label">Residentes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏡</div>
+                    <div class="stat-number">1.500+</div>
+                    <div class="stat-label">Apoio Domiciliário</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-number">15.000+</div>
+                    <div class="stat-label">Profissionais</div>
+                </div>
+            </div>
+            <button onclick="showPage('contact')" class="hero-btn">Fale Connosco</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- HOME PAGE -->
+            <div id="homePage" class="page active">
+                <div class="section-intro">
+                    <h2 class="section-title">Bem-vindo ao LAR DE SONHO</h2>
+                    <p class="section-description">Dedicados a proporcionar cuidados de excelência com dignidade, respeito e carinho</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card service-card-blue">
+                        <div class="service-icon">🏠</div>
+                        <h3>Serviço Residencial</h3>
+                        <p>Ambiente acolhedor e seguro, com acompanhamento 24h por profissionais qualificados.</p>
+                        <button onclick="showPage('services')" class="btn-link">Saber mais →</button>
+                    </div>
+
+                    <div class="service-card service-card-green">
+                        <div class="service-icon">🏡</div>
+                        <h3>Apoio Domiciliário</h3>
+                        <p>Cuidados personalizados no conforto do seu lar, com toda a dedicação que merece.</p>
+                        <button onclick="showPage('services')" class="btn-link">Saber mais →</button>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <div class="alert-icon">🔒</div>
+                    <div>
+                        <h4>Compromisso com a sua Privacidade</h4>
+                        <p>O LAR DE SONHO está 100% em conformidade com o RGPD. Os seus dados pessoais são tratados com a máxima segurança e transparência.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3>Porque nos escolher?</h3>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <div class="feature-icon">✅</div>
+                            <h4>Experiência Comprovada</h4>
+                            <p>Mais de 15 anos ao serviço da comunidade</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">👨‍⚕️</div>
+                            <h4>Equipa Especializada</h4>
+                            <p>Profissionais certificados e dedicados</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🌍</div>
+                            <h4>Presença Internacional</h4>
+                            <p>Portugal e Itália</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🔒</div>
+                            <h4>RGPD Compliant</h4>
+                            <p>Máxima segurança dos seus dados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERVICES PAGE -->
+            <div id="servicesPage" class="page">
+                <h2 class="page-title">Nossos Serviços</h2>
+                
+                <div class="service-section">
+                    <h3 class="service-title">🏠 Serviço de Residência</h3>
+                    <div class="service-features">
+                        <div class="feature-item">✅ Acompanhamento 24 horas por profissionais especializados</div>
+                        <div class="feature-item">✅ Quartos confortáveis e adaptados</div>
+                        <div class="feature-item">✅ Alimentação personalizada e balanceada</div>
+                        <div class="feature-item">✅ Atividades recreativas e terapêuticas</div>
+                        <div class="feature-item">✅ Acompanhamento médico e de enfermagem</div>
+                        <div class="feature-item">✅ Fisioterapia e terapias complementares</div>
+                    </div>
+                </div>
+
+                <div class="service-section service-section-green">
+                    <h3 class="service-title">🏡 Apoio ao Domicílio</h3>
+                    <div class="service-features">
+                        <div class="feature-item">✅ Cuidados de higiene pessoal</div>
+                        <div class="feature-item">✅ Preparação de refeições</div>
+                        <div class="feature-item">✅ Administração de medicação</div>
+                        <div class="feature-item">✅ Companhia e apoio emocional</div>
+                        <div class="feature-item">✅ Tarefas domésticas ligeiras</div>
+                        <div class="feature-item">✅ Acompanhamento a consultas médicas</div>
+                    </div>
+                </div>
+
+                <div class="service-section service-section-purple">
+                    <h3 class="service-title">💆 Serviços Terapêuticos</h3>
+                    <div class="therapy-grid">
+                        <div class="therapy-card">
+                            <h4>Fisioterapia</h4>
+                            <p>Recuperação e manutenção da mobilidade</p>
+                        </div>
+                        <div class="therapy-card">
+                            <h4>Terapia Oriental</h4>
+                            <p>Acupuntura e técnicas complementares</p>
+                        </div>
+                        <div class="therapy-card">
+                            <h4>Terapias Tradicionais</h4>
+                            <p>Massagens e tratamentos especializados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRICING PAGE -->
+            <div id="pricingPage" class="page">
+                <h2 class="page-title">Preçário</h2>
+                
+                <div class="alert alert-info">
+                    <strong>Nota:</strong> Os preços apresentados são indicativos. Para um orçamento personalizado, contacte-nos através dos nossos canais.
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card pricing-card-blue">
+                        <h3>Serviço Residencial</h3>
+                        <p class="pricing-subtitle">Cuidados completos 24h</p>
+                        
+                        <div class="pricing-items">
+                            <div class="pricing-item">
+                                <span>Quarto Individual</span>
+                                <strong>€1.200 - €1.800/mês</strong>
+                            </div>
+                            <div class="pricing-item">
+                                <span>Quarto Duplo</span>
+                                <strong>€900 - €1.200/mês</strong>
+                            </div>
+                            <div class="pricing-item">
+                                <span>Suite Premium</span>
+                                <strong>€2.000 - €2.500/mês</strong>
+                            </div>
+                        </div>
+
+                        <div class="pricing-includes">
+                            <strong>Incluído:</strong>
+                            <ul>
+                                <li>• Alimentação completa</li>
+                                <li>• Cuidados de enfermagem</li>
+                                <li>• Atividades recreativas</li>
+                                <li>• Lavandaria</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card pricing-card-green">
+                        <h3>Apoio Domiciliário</h3>
+                        <p class="pricing-subtitle">Flexível e personalizado</p>
+                        
+                        <div class="pricing-items">
+                            <div class="pricing-item">
+                                <span>2h/dia (5 dias/semana)</span>
+                                <strong>€400 - €600/mês</strong>
+                            </div>
+                            <div class="pricing-item">
+                                <span>4h/dia (5 dias/semana)</span>
+                                <strong>€700 - €1.000/mês</strong>
+                            </div>
+                            <div class="pricing-item">
+                                <span>Apoio 24h</span>
+                                <strong>€1.500 - €2.200/mês</strong>
+                            </div>
+                        </div>
+
+                        <div class="pricing-includes">
+                            <strong>Serviços disponíveis:</strong>
+                            <ul>
+                                <li>• Higiene pessoal</li>
+                                <li>• Preparação de refeições</li>
+                                <li>• Administração medicação</li>
+                                <li>• Companhia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="additional-services">
+                    <h3>Serviços Adicionais</h3>
+                    <div class="additional-grid">
+                        <div class="additional-card">
+                            <h4>Fisioterapia</h4>
+                            <div class="price">€30-€50</div>
+                            <p>por sessão</p>
+                        </div>
+                        <div class="additional-card">
+                            <h4>Terapia Oriental</h4>
+                            <div class="price">€35-€60</div>
+                            <p>por sessão</p>
+                        </div>
+                        <div class="additional-card">
+                            <h4>Consulta Médica</h4>
+                            <div class="price">€40-€70</div>
+                            <p>por consulta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRIVACY PAGE -->
+            <div id="privacyPage" class="page">
+                <h2 class="page-title">Política de Privacidade</h2>
+                
+                <div class="alert alert-info">
+                    <strong>Última atualização:</strong> Janeiro 2026
+                </div>
+
+                <div class="content-section">
+                    <h3>1. Responsável pelo Tratamento</h3>
+                    <p><strong>Entidade:</strong> LAR DE SONHO</p>
+                    <p><strong>Morada:</strong> Rua Verde, n.º 1, 4700-001 Braga, Portugal</p>
+                    <p><strong>NIPC:</strong> 501 000 000</p>
+                    <p><strong>Email:</strong> privacidade@lardesonho.pt</p>
+                    <p><strong>Encarregado de Proteção de Dados (DPO):</strong> dpo@lardesonho.pt</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>2. Dados Pessoais Recolhidos</h3>
+                    <p>No âmbito dos nossos serviços, podemos recolher as seguintes categorias de dados:</p>
+                    
+                    <div class="data-categories">
+                        <div class="data-category">
+                            <h4>📋 Dados de Identificação</h4>
+                            <p>Nome, data de nascimento, número de identificação civil, morada, contactos (telefone, email).</p>
+                        </div>
+                        <div class="data-category">
+                            <h4>🏥 Dados de Saúde</h4>
+                            <p>Informação médica necessária para prestação de cuidados (com consentimento explícito).</p>
+                        </div>
+                        <div class="data-category">
+                            <h4>💰 Dados Económicos</h4>
+                            <p>Rendimentos (apenas quando relevante para apoios sociais).</p>
+                        </div>
+                        <div class="data-category">
+                            <h4>👨‍👩‍👦 Dados de Familiares</h4>
+                            <p>Informação de contacto de responsáveis/cuidadores (com base em interesse legítimo).</p>
+                        </div>
+                        <div class="data-category">
+                            <h4>🔐 Dados Biométricos</h4>
+                            <p>Impressões digitais para controlo de acessos (apenas funcionários, com consentimento).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>3. Finalidades e Fundamentos Legais</h3>
+                    <div class="legal-bases">
+                        <div class="legal-item">
+                            <strong>✅ Prestação de Serviços</strong>
+                            <p>Fundamento: Execução de contrato (Art. 6.º, n.º 1, al. b) RGPD)</p>
+                        </div>
+                        <div class="legal-item">
+                            <strong>✅ Tratamento de Dados de Saúde</strong>
+                            <p>Fundamento: Consentimento explícito (Art. 9.º, n.º 2, al. a) RGPD)</p>
+                        </div>
+                        <div class="legal-item">
+                            <strong>✅ Obrigações Legais</strong>
+                            <p>Fundamento: Cumprimento de obrigação legal (Art. 6.º, n.º 1, al. c) RGPD)</p>
+                        </div>
+                        <div class="legal-item">
+                            <strong>✅ Marketing (opcional)</strong>
+                            <p>Fundamento: Consentimento (Art. 6.º, n.º 1, al. a) RGPD) - pode retirar a qualquer momento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>4. Medidas de Segurança</h3>
+                    <div class="security-grid">
+                        <div class="security-item">
+                            <h4>🔒 Técnicas</h4>
+                            <ul>
+                                <li>• Encriptação de dados</li>
+                                <li>• Controlo de acessos</li>
+                                <li>• Backups regulares</li>
+                                <li>• Firewalls e antivírus</li>
+                            </ul>
+                        </div>
+                        <div class="security-item">
+                            <h4>👥 Organizativas</h4>
+                            <ul>
+                                <li>• Formação de colaboradores</li>
+                                <li>• Políticas internas</li>
+                                <li>• Auditoria regular</li>
+                                <li>• Dever de confidencialidade</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COOKIES PAGE -->
+            <div id="cookiesPage" class="page">
+                <h2 class="page-title">Política de Cookies</h2>
+                
+                <div class="content-section">
+                    <h3>O que são Cookies?</h3>
+                    <p>Cookies são pequenos ficheiros de texto armazenados no seu dispositivo quando visita o nosso website. Ajudam a melhorar a sua experiência de navegação e permitem-nos analisar o tráfego do site.</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>Tipos de Cookies Utilizados</h3>
+                    
+                    <div class="cookie-types">
+                        <div class="cookie-type cookie-necessary">
+                            <div class="cookie-header">
+                                <h4>🔒 Cookies Necessários</h4>
+                                <span class="badge badge-required">OBRIGATÓRIOS</span>
+                            </div>
+                            <p>Essenciais para o funcionamento do website. Não podem ser desativados.</p>
+                            <p class="cookie-detail"><strong>Exemplos:</strong> Sessão de utilizador, preferências de idioma</p>
+                            <p class="cookie-detail"><strong>Duração:</strong> Sessão ou até 1 ano</p>
+                        </div>
+
+                        <div class="cookie-type cookie-functional">
+                            <div class="cookie-header">
+                                <h4>⚙️ Cookies Funcionais</h4>
+                                <span class="badge badge-optional">OPCIONAL</span>
+                            </div>
+                            <p>Melhoram a funcionalidade e personalização do site.</p>
+                            <p class="cookie-detail"><strong>Exemplos:</strong> Preferências de visualização</p>
+                            <p class="cookie-detail"><strong>Duração:</strong> Até 2 anos</p>
+                        </div>
+
+                        <div class="cookie-type cookie-analytics">
+                            <div class="cookie-header">
+                                <h4>📊 Cookies Analíticos</h4>
+                                <span class="badge badge-optional">OPCIONAL</span>
+                            </div>
+                            <p>Permitem analisar o uso do website e melhorar o desempenho.</p>
+                            <p class="cookie-detail"><strong>Exemplos:</strong> Google Analytics</p>
+                            <p class="cookie-detail"><strong>Duração:</strong> Até 2 anos</p>
+                        </div>
+
+                        <div class="cookie-type cookie-marketing">
+                            <div class="cookie-header">
+                                <h4>🎯 Cookies de Marketing</h4>
+                                <span class="badge badge-optional">OPCIONAL</span>
+                            </div>
+                            <p>Utilizados para publicidade direcionada.</p>
+                            <p class="cookie-detail"><strong>Exemplos:</strong> Facebook Pixel, Google Ads</p>
+                            <p class="cookie-detail"><strong>Duração:</strong> Até 2 anos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Gestão de Preferências</h3>
+                    <div class="cookie-preferences">
+                        <div class="preference-item">
+                            <span>Cookies Necessários</span>
+                            <label class="switch">
+                                <input type="checkbox" checked disabled>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="preference-item">
+                            <span>Cookies Funcionais</span>
+                            <label class="switch">
+                                <input type="checkbox" id="functional-cookies">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="preference-item">
+                            <span>Cookies Analíticos</span>
+                            <label class="switch">
+                                <input type="checkbox" id="analytics-cookies">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="preference-item">
+                            <span>Cookies de Marketing</span>
+                            <label class="switch">
+                                <input type="checkbox" id="marketing-cookies">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <button onclick="saveCookiePreferences()" class="btn-primary btn-full">Guardar Preferências</button>
+                </div>
+            </div>
+
+            <!-- LEGAL PAGE -->
+            <div id="legalPage" class="page">
+                <h2 class="page-title">Aviso Legal</h2>
+                
+                <div class="content-section">
+                    <h3>Identificação da Entidade</h3>
+                    <p><strong>Denominação Social:</strong> LAR DE SONHO - Residências e Apoio Domiciliário, Lda.</p>
+                    <p><strong>Sede:</strong> Rua Verde, n.º 1, 4700-001 Braga, Portugal</p>
+                    <p><strong>NIPC:</strong> 501 000 000</p>
+                    <p><strong>Capital Social:</strong> €50.000,00</p>
+                    <p><strong>Email:</strong> geral@lardesonho.pt</p>
+                    <p><strong>Telefone:</strong> +351 253 000 000</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>Videovigilância</h3>
+                    <div class="alert alert-warning">
+                        <strong>🎥 Áreas sob Videovigilância</strong>
+                        <p>As nossas instalações dispõem de sistema de videovigilância nas seguintes áreas:</p>
+                        <ul>
+                            <li>• Corredores (segurança de utentes e trabalhadores)</li>
+                            <li>• Entradas e saídas (controlo de acessos)</li>
+                            <li>• Cozinha (higiene e segurança alimentar)</li>
+                        </ul>
+                        <p><strong>Finalidade:</strong> Segurança de pessoas e bens, conforme Lei n.º 1/2005</p>
+                        <p><strong>Conservação:</strong> Máximo 30 dias</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Legislação Aplicável</h3>
+                    <ul>
+                        <li>• Regulamento (UE) 2016/679 (RGPD)</li>
+                        <li>• Lei n.º 58/2019 (Proteção de Dados)</li>
+                        <li>• Lei n.º 1/2005 (Videovigilância)</li>
+                        <li>• Código Civil e Código de Direito de Autor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHTS PAGE -->
+            <div id="rightsPage" class="page">
+                <h2 class="page-title">Os Seus Direitos (RGPD)</h2>
+                
+                <div class="alert alert-info">
+                    Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem os seguintes direitos relativamente aos seus dados pessoais:
+                </div>
+
+                <div class="rights-grid">
+                    <div class="right-card">
+                        <div class="right-icon">✅</div>
+                        <h3>Direito de Acesso</h3>
+                        <p class="right-article">Art. 15.º RGPD</p>
+                        <p>Pode solicitar informação sobre que dados pessoais tratamos sobre si e obter uma cópia dos mesmos.</p>
+                        <p class="right-deadline">Prazo: 1 mês</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">📝</div>
+                        <h3>Direito de Retificação</h3>
+                        <p class="right-article">Art. 16.º RGPD</p>
+                        <p>Pode solicitar a correção de dados incorretos ou incompletos.</p>
+                        <p class="right-deadline">Prazo: 1 mês</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">❌</div>
+                        <h3>Direito ao Apagamento</h3>
+                        <p class="right-article">Art. 17.º RGPD</p>
+                        <p>Pode solicitar o apagamento dos seus dados quando não sejam mais necessários.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">⚠️</div>
+                        <h3>Direito de Limitação</h3>
+                        <p class="right-article">Art. 18.º RGPD</p>
+                        <p>Pode solicitar a limitação do tratamento em determinadas circunstâncias.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">🛑</div>
+                        <h3>Direito de Oposição</h3>
+                        <p class="right-article">Art. 21.º RGPD</p>
+                        <p>Pode opor-se ao tratamento dos seus dados para fins de marketing direto.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">📦</div>
+                        <h3>Direito à Portabilidade</h3>
+                        <p class="right-article">Art. 20.º RGPD</p>
+                        <p>Pode receber os seus dados num formato estruturado.</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Como Exercer os Seus Direitos?</h3>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <strong>📧 Por Email:</strong> dpo@lardesonho.pt
