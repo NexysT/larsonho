@@ -569,3 +569,253 @@
                     <div class="contact-methods">
                         <div class="contact-method">
                             <strong>📧 Por Email:</strong> dpo@lardesonho.pt
+                        </div>
+                        <div class="contact-method">
+                            <strong>📞 Por Telefone:</strong> +351 253 000 000
+                        </div>
+                        <div class="contact-method">
+                            <strong>✉️ Por Correio:</strong> LAR DE SONHO - Encarregado de Proteção de Dados, Rua Verde, n.º 1, 4700-001 Braga
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>Direito de Reclamação</h3>
+                    <p>Se considerar que os seus direitos não estão a ser respeitados, pode apresentar reclamação:</p>
+                    <div class="alert alert-info">
+                        <div>
+                            <strong>🇵🇹 CNPD - Comissão Nacional de Proteção de Dados</strong>
+                            <p>Av. D. Carlos I, 134, 1.º, 1200-651 Lisboa</p>
+                            <p>Tel: +351 213 928 400 | Email: geral@cnpd.pt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>💡 Formulário Rápido</h3>
+                    <p>Preencha o formulário abaixo para exercer os seus direitos:</p>
+                    <form onsubmit="submitRightsRequest(event)">
+                        <div class="form-group">
+                            <select id="rightsSelect" required>
+                                <option>Selecione o direito que pretende exercer</option>
+                                <option>Acesso aos meus dados</option>
+                                <option>Retificação de dados</option>
+                                <option>Apagamento de dados</option>
+                                <option>Oposição ao tratamento</option>
+                                <option>Portabilidade de dados</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="rightsDescription" rows="4" placeholder="Descreva o seu pedido..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Enviar Pedido</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CONTACT PAGE -->
+            <div id="contactPage" class="page">
+                <h2 class="page-title">Contactos</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>📍 Sede - Portugal</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <strong>Morada</strong>
+                                    <p>Rua Verde, n.º 1<br>4700-001 Braga<br>Portugal</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <strong>Telefone</strong>
+                                    <p>+351 253 000 000</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <strong>Email Geral</strong>
+                                    <p>geral@lardesonho.pt</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">🕐</div>
+                                <div class="contact-details">
+                                    <strong>Horário</strong>
+                                    <p>Seg-Sex: 09:00 - 18:00<br>Sáb: 09:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card contact-card-green">
+                        <h3>🇮🇹 Itália</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <strong>Morada</strong>
+                                    <p>Via della Stella, 25<br>20121 Milano<br>Italia</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <strong>Telefone</strong>
+                                    <p>+39 02 1234 5678</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <strong>Email</strong>
+                                    <p>italia@lardesonho.pt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3>📬 Contactos Específicos</h3>
+                    <div class="contact-specific">
+                        <div class="specific-card">
+                            <h4>🔒 Proteção de Dados (DPO)</h4>
+                            <p>dpo@lardesonho.pt</p>
+                            <p class="cookie-detail">Para questões de privacidade e RGPD</p>
+                        </div>
+                        <div class="specific-card">
+                            <h4>📝 Inscrições</h4>
+                            <p>inscricoes@lardesonho.pt</p>
+                            <p class="cookie-detail">Para novos utentes</p>
+                        </div>
+                        <div class="specific-card">
+                            <h4>💼 Recursos Humanos</h4>
+                            <p>rh@lardesonho.pt</p>
+                            <p class="cookie-detail">Para candidaturas</p>
+                        </div>
+                        <div class="specific-card">
+                            <h4>💰 Financeiro</h4>
+                            <p>financeiro@lardesonho.pt</p>
+                            <p class="cookie-detail">Para questões de pagamentos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>💬 Envie-nos uma Mensagem</h3>
+                    <form onsubmit="submitContactForm(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" id="contactName" placeholder="Nome completo *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contactEmail" placeholder="Email *" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="contactPhone" placeholder="Telefone">
+                        </div>
+                        <div class="form-group">
+                            <select id="contactSubject" required>
+                                <option>Assunto *</option>
+                                <option>Informações sobre Serviços</option>
+                                <option>Inscrição como Utente</option>
+                                <option>Candidatura a Emprego</option>
+                                <option>Questões de Privacidade</option>
+                                <option>Reclamação</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contactMessage" rows="5" placeholder="Mensagem *" required></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <label>
+                                <input type="checkbox" id="contactConsent" required>
+                                <span>Li e aceito a <button type="button" onclick="showPage('privacy')" class="btn-link">Política de Privacidade</button> e autorizo o tratamento dos meus dados pessoais para efeitos de resposta ao meu contacto. *</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-full">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <div class="alert alert-warning">
+                    <div class="alert-icon">🚨</div>
+                    <div>
+                        <h4>Em caso de Emergência</h4>
+                        <p>Para situações urgentes fora do horário de atendimento:</p>
+                        <p style="font-size: 18px; font-weight: 700; margin-top: 8px;">📞 +351 912 345 678 (24h)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>❤️ LAR DE SONHO</h3>
+                    <p>Dedicados aos cuidados de excelência para a terceira idade desde 2010.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><button onclick="showPage('services')">Residência</button></li>
+                        <li><button onclick="showPage('services')">Apoio Domiciliário</button></li>
+                        <li><button onclick="showPage('services')">Fisioterapia</button></li>
+                        <li><button onclick="showPage('pricing')">Preçário</button></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal & Privacidade</h3>
+                    <ul>
+                        <li><button onclick="showPage('privacy')">Política de Privacidade</button></li>
+                        <li><button onclick="showPage('cookies')">Política de Cookies</button></li>
+                        <li><button onclick="showPage('legal')">Aviso Legal</button></li>
+                        <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contactos</h3>
+                    <ul>
+                        <li>📍 Rua Verde, nº 1, 4700-001 Braga</li>
+                        <li>📞 +351 253 000 000</li>
+                        <li>📧 geral@lardesonho.pt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 LAR DE SONHO. Todos os direitos reservados. | NIPC: 501 000 000</p>
+                <div class="footer-links">
+                    <button onclick="showPage('privacy')">Privacidade</button>
+                    <button onclick="showPage('cookies')">Cookies</button>
+                    <button onclick="showPage('contact')">Contacto</button>
+                </div>
+            </div>
+
+            <div class="footer-compliance">
+                <div class="compliance-badge">
+                    <span>🔒</span>
+                    <span>100% Conforme com RGPD</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
