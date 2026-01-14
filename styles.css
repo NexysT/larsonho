@@ -1,3 +1,4 @@
+/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -1013,6 +1014,56 @@ input:disabled + .slider {
     font-weight: 700;
     margin-bottom: 24px;
 }
+
+.cookie-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.cookie-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s;
+}
+
+.cookie-card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1);
+}
+
+.cookie-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.cookie-card p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 4px;
+}
+
+.cookie-category {
+    font-weight: 600;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.cookie-category.necessario { background: #10b981; }
+.cookie-category.analitico { background: #3b82f6; }
+.cookie-category.marketing { background: #a855f7; }
+.cookie-category.terceiros { background: #f97316; }
+
 
 .form-grid {
     display: grid;
