@@ -1,4 +1,4 @@
-// Banner
+// ===== COOKIE BANNER =====
 window.addEventListener('DOMContentLoaded', function() {
     const cookieBanner = document.getElementById('cookieBanner');
     const cookieConsent = localStorage.getItem('cookieConsent');
@@ -40,18 +40,19 @@ function saveCookiePreferences() {
     alert('✅ Preferências de cookies guardadas com sucesso!');
 }
 
-// nNAV
+// ===== NAVIGATION =====
 function showPage(pageId) {
+    // Hide all pages
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
     
-
+    // Show selected page
     const selectedPage = document.getElementById(pageId + 'Page');
     if (selectedPage) {
         selectedPage.classList.add('active');
     }
     
-
+    // Update nav links
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -60,7 +61,7 @@ function showPage(pageId) {
         }
     });
     
-
+    // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -69,7 +70,7 @@ function toggleMobileMenu() {
     mobileNav.classList.toggle('show');
 }
 
-// Contacto EHEH
+// ===== CONTACT FORM =====
 function submitContactForm(event) {
     event.preventDefault();
     
@@ -83,11 +84,15 @@ function submitContactForm(event) {
         alert('⚠️ Por favor, aceite a Política de Privacidade para continuar.');
         return;
     }
+    
+    // Simulate form submission
     alert(`✅ Mensagem enviada com sucesso!\n\nObrigado ${name}, entraremos em contacto brevemente através de ${email}.`);
+    
+    // Reset form
     event.target.reset();
 }
 
-
+// ===== RIGHTS REQUEST FORM =====
 function submitRightsRequest(event) {
     event.preventDefault();
     
@@ -104,11 +109,14 @@ function submitRightsRequest(event) {
         return;
     }
     
+    // Simulate form submission
     alert(`✅ Pedido enviado com sucesso!\n\nO seu pedido de "${right}" foi recebido. Responderemos no prazo de 1 mês conforme estabelecido no RGPD.`);
     
+    // Reset form
     event.target.reset();
 }
 
+// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -122,13 +130,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ===== CLOSE MOBILE MENU ON RESIZE =====
 window.addEventListener('resize', function() {
     if (window.innerWidth > 968) {
         document.getElementById('mobileNav').classList.remove('show');
     }
 });
 
-// ===== LOGS =====
+// ===== INITIALIZE =====
 console.log('🏥 LAR DE SONHO - Website carregado com sucesso!');
 console.log('🔒 100% Conforme com RGPD');
 console.log('📧 Contacto: geral@lardesonho.pt');
