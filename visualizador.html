@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Cookies</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustes específicos para a página de cookies */
+        .cookie-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-left: 6px solid;
+            margin-bottom: 16px;
+            transition: all 0.3s;
+        }
+        .cookie-card.necessario { border-color: #10b981; }
+        .cookie-card.analitico { border-color: #3b82f6; }
+        .cookie-card.marketing { border-color: #f97316; }
+        .cookie-card.terceiros { border-color: #a855f7; }
+
+        .cookie-card h4 { margin-bottom: 8px; color: #1f2937; }
+        .cookie-card p { font-size: 14px; color: #4b5563; margin-bottom: 4px; }
+
+        .cookie-preferences {
+            margin-bottom: 32px;
+        }
+
+        .cookie-preferences .preference-item span {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .cookie-preferences .preference-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background: #f9fafb;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        @media (max-width: 640px) {
+            .cookie-preferences .preference-item { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do site (reutilizado do index) -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">🟦</div>
+                <div class="logo-text">
+                    <h1>LAR DE SONHO</h1>
+                    <p>Visualizador de Cookies</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content page active">
+        <h1 class="page-title">Visualizador de Cookies</h1>
+        <p>Aqui podes ver os cookies ativos e os dados que recolhem.</p>
+
+        <!-- TOGGLE DE CATEGORIAS -->
+        <div class="cookie-preferences">
+            <div class="preference-item">
+                <span>Cookies Necessários</span>
+                <label class="switch">
+                    <input type="checkbox" checked disabled>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="preference-item">
+                <span>Cookies Analíticos</span>
+                <label class="switch">
+                    <input type="checkbox" id="analytics-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="preference-item">
+                <span>Cookies Marketing</span>
+                <label class="switch">
+                    <input type="checkbox" id="marketing-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="preference-item">
+                <span>Cookies de Terceiros</span>
+                <label class="switch">
+                    <input type="checkbox" id="thirdparty-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- DETALHES DOS COOKIES -->
+        <div class="cookie-details" id="cookie-details"></div>
+    </div>
+
+    <!-- Footer do site -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h3>Legal & Privacidade</h3>
+                <ul>
+                    <li><button onclick="showPage('privacy')">Política de Privacidade</button></li>
+                    <li><button onclick="showPage('cookies')">Política de Cookies</button></li>
+                    <li><button onclick="showPage('legal')">Aviso Legal</button></li>
+                    <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
+                    <li><a href="visualizador.html" class="nav-link">Visualizador de Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lista de cookies disponíveis
+        const cookies = [
+            { name: "session_id", category: "necessario", purpose: "Manter sessão ativa", data: ["Endereço IP", "Browser"], expiry: "Sessão" },
+            { name: "analytics_ua", category: "analitico", purpose: "Estatísticas de uso", data: ["Páginas visitadas", "Tempo de navegação"], expiry: "2 anos" },
+            { name: "ads_pixel", category: "marketing", purpose: "Publicidade direcionada", data: ["Interesses", "Páginas visitadas"], expiry: "6 meses" },
+            { name: "social_fb", category: "terceiros", purpose: "Integração Facebook", data: ["ID de utilizador", "Páginas visitadas"], expiry: "1 ano" },
+        ];
+
+        // Simular dados do utilizador
+        const userData = {
+            "Endereço IP": "192.168.0.1",
+            "Browser": navigator.userAgent,
+            "Páginas visitadas": "home, serviços, contacto",
+            "Tempo de navegação": "5 min",
+            "Interesses": "Terapias alternativas, Relaxamento",
+            "ID de utilizador": "12345"
+        };
+
+        function renderCookies() {
+            const container = document.getElementById("cookie-details");
+            container.innerHTML = "";
+
+            const analyticsActive = document.getElementById("analytics-toggle").checked;
+            const marketingActive = document.getElementById("marketing-toggle").checked;
+            const thirdpartyActive = document.getElementById("thirdparty-toggle").checked;
+
+            cookies.forEach(cookie => {
+                if (
+                    cookie.category === "necessario" ||
+                    (cookie.category === "analitico" && analyticsActive) ||
+                    (cookie.category === "marketing" && marketingActive) ||
+                    (cookie.category === "terceiros" && thirdpartyActive)
+                ) {
+                    const card = document.createElement("div");
+                    card.className = `cookie-card ${cookie.category}`;
+
+                    const dataList = cookie.data.map(d => `${d}: ${userData[d] || "N/A"}`).join("<br>");
+
+                    card.innerHTML = `
+                        <span class="badge badge-${cookie.category}">${cookie.category.charAt(0).toUpperCase() + cookie.category.slice(1)}</span>
+                        <h4>${cookie.name}</h4>
+                        <p><strong>Finalidade:</strong> ${cookie.purpose}</p>
+                        <p><strong>Dados recolhidos:</strong><br>${dataList}</p>
+                        <p><strong>Expiração:</strong> ${cookie.expiry}</p>
+                    `;
+                    container.appendChild(card);
+                }
+            });
+        }
+
+        document.getElementById("analytics-toggle").addEventListener("change", renderCookies);
+        document.getElementById("marketing-toggle").addEventListener("change", renderCookies);
+        document.getElementById("thirdparty-toggle").addEventListener("change", renderCookies);
+
+        renderCookies();
+    </script>
+</body>
+</html>
