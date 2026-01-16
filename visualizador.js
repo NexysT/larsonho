@@ -1,4 +1,4 @@
-// Lista de cookies disponíveis e dados simulados
+
 const cookies = [
     { name: "session_id", category: "necessario", purpose: "Manter sessão ativa", data: ["IP", "Browser"], expiry: "Sessão" },
     { name: "analytics_ua", category: "analitico", purpose: "Estatísticas de uso", data: ["Páginas visitadas", "Tempo no site"], expiry: "2 anos" },
@@ -6,20 +6,20 @@ const cookies = [
     { name: "social_fb", category: "terceiros", purpose: "Integração Facebook", data: ["ID de utilizador", "Páginas visitadas"], expiry: "1 ano" },
 ];
 
-// Função para simular os dados do utilizador
+
 function getUserData() {
-    // Aqui podes ligar a dados reais ou simular
+    
     return {
         "IP": "192.168.1.100",
         "Browser": navigator.userAgent || "Desconhecido",
         "Sistema operativo": navigator.platform || "Desconhecido",
-        "Localização aproximada": "Lisboa, Portugal", // Exemplo
+        "Localização aproximada": "Lisboa, Portugal", 
         "Data e hora de acesso": new Date().toLocaleString(),
         "Preferências do utilizador associadas a redes sociais": "Nenhuma"
     };
 }
 
-// Renderiza os cookies ativos
+
 function renderCookies() {
     const container = document.getElementById("cookie-details");
     if (!container) return;
@@ -42,7 +42,7 @@ function renderCookies() {
             const card = document.createElement("div");
             card.className = "cookie-card";
 
-            // Mostra os dados do utilizador, se existirem
+            
             const dataList = cookie.data.map(d => {
                 return `<li>${d}: ${userData[d] || "Nenhum"}</li>`;
             }).join("");
@@ -60,7 +60,7 @@ function renderCookies() {
     });
 }
 
-// Espera o DOM carregar antes de ligar os eventos
+
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("analytics-toggle").addEventListener("change", renderCookies);
     document.getElementById("marketing-toggle").addEventListener("change", renderCookies);
