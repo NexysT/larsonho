@@ -6,7 +6,7 @@
     <title>Visualizador de Cookies</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Ajustes específicos para a página de cookies */
+        
         .cookie-card {
             background: white;
             padding: 24px;
@@ -50,7 +50,7 @@
     </style>
 </head>
 <body>
-    <!-- Header do site (reutilizado do index) -->
+    
     <header class="header">
         <div class="container header-content">
             <div class="logo">
@@ -67,7 +67,7 @@
         <h1 class="page-title">Visualizador de Cookies</h1>
         <p>Aqui podes ver os cookies ativos e os dados que recolhem.</p>
 
-        <!-- TOGGLE DE CATEGORIAS -->
+        
         <div class="cookie-preferences">
             <div class="preference-item">
                 <span>Cookies Necessários</span>
@@ -99,11 +99,11 @@
             </div>
         </div>
 
-        <!-- DETALHES DOS COOKIES -->
+        
         <div class="cookie-details" id="cookie-details"></div>
     </div>
 
-    <!-- Footer do site -->
+    
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-section">
@@ -120,7 +120,7 @@
     </footer>
 
     <script>
-        // Lista de cookies disponíveis
+        
         const cookies = [
             { name: "session_id", category: "necessario", purpose: "Manter sessão ativa", data: ["Endereço IP", "Browser"], expiry: "Sessão" },
             { name: "analytics_ua", category: "analitico", purpose: "Estatísticas de uso", data: ["Páginas visitadas", "Tempo de navegação"], expiry: "2 anos" },
@@ -128,7 +128,7 @@
             { name: "social_fb", category: "terceiros", purpose: "Integração Facebook", data: ["ID de utilizador", "Páginas visitadas"], expiry: "1 ano" },
         ];
 
-        // Simular dados do utilizador
+        
         const userData = {
             "Endereço IP": "192.168.0.1",
             "Browser": navigator.userAgent,
