@@ -70,15 +70,6 @@ function toggleMobileMenu() {
     mobileNav.classList.toggle('show');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    const page = params.get("page");
-
-    if (page) {
-        showPage(page);
-    }
-});
-
 function submitContactForm(event) {
     event.preventDefault();
     
