@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAR DE SONHO - Cuidados de Excelência para a Terceira Idade</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    
 <body>
-    <!-- Cookie Banner -->
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-text">
                 <h3>🍪 Este site utiliza cookies</h3>
-                <p>Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e personalizar conteúdos. Ao clicar em "Aceitar Todos", consente a utilização de todos os cookies.</p>
+                <p>Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e personalizar conteúdos. Ao
+                    clicar em "Aceitar Todos", consente a utilização de todos os cookies.</p>
             </div>
             <div class="cookie-buttons">
                 <button onclick="showCookieSettings()" class="btn-outline">Personalizar</button>
@@ -21,8 +23,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Header -->
+    
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -33,8 +34,7 @@
                         <p>Cuidar com Excelência</p>
                     </div>
                 </div>
-
-                <!-- Desktop Navigation -->
+                
                 <nav class="nav-desktop">
                     <button onclick="showPage('home')" class="nav-link active" data-page="home">🏠 Início</button>
                     <button onclick="showPage('services')" class="nav-link" data-page="services">❤️ Serviços</button>
@@ -42,25 +42,31 @@
                     <button onclick="showPage('contact')" class="nav-link" data-page="contact">📞 Contacto</button>
                 </nav>
 
-                <!-- Mobile Menu Button -->
+                
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
             </div>
-
-            <!-- Mobile Navigation -->
+            
             <nav id="mobileNav" class="nav-mobile">
-                <button onclick="showPage('home'); toggleMobileMenu()" class="nav-link" data-page="home">🏠 Início</button>
-                <button onclick="showPage('services'); toggleMobileMenu()" class="nav-link" data-page="services">❤️ Serviços</button>
-                <button onclick="showPage('pricing'); toggleMobileMenu()" class="nav-link" data-page="pricing">💰 Preçário</button>
-                <button onclick="showPage('privacy'); toggleMobileMenu()" class="nav-link" data-page="privacy">🔒 Privacidade</button>
-                <button onclick="showPage('cookies'); toggleMobileMenu()" class="nav-link" data-page="cookies">🍪 Cookies</button>
-                <button onclick="showPage('legal'); toggleMobileMenu()" class="nav-link" data-page="legal">📋 Aviso Legal</button>
-                <button onclick="showPage('rights'); toggleMobileMenu()" class="nav-link" data-page="rights">✅ Seus Direitos</button>
-                <button onclick="showPage('contact'); toggleMobileMenu()" class="nav-link" data-page="contact">📞 Contacto</button>
+                <button onclick="showPage('home'); toggleMobileMenu()" class="nav-link" data-page="home">🏠
+                    Início</button>
+                <button onclick="showPage('services'); toggleMobileMenu()" class="nav-link" data-page="services">❤️
+                    Serviços</button>
+                <button onclick="showPage('pricing'); toggleMobileMenu()" class="nav-link" data-page="pricing">💰
+                    Preçário</button>
+                <button onclick="showPage('privacy'); toggleMobileMenu()" class="nav-link" data-page="privacy">🔒
+                    Privacidade</button>
+                <button onclick="showPage('cookies'); toggleMobileMenu()" class="nav-link" data-page="cookies">🍪
+                    Cookies</button>
+                <button onclick="showPage('legal'); toggleMobileMenu()" class="nav-link" data-page="legal">📋 Aviso
+                    Legal</button>
+                <button onclick="showPage('rights'); toggleMobileMenu()" class="nav-link" data-page="rights">✅ Seus
+                    Direitos</button>
+                <button onclick="showPage('contact'); toggleMobileMenu()" class="nav-link" data-page="contact">📞
+                    Contacto</button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Banner -->
     <section class="hero-banner">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -87,14 +93,15 @@
         </div>
     </section>
 
-    <!-- Main Content -->
+    
     <main class="main-content">
         <div class="container">
-            <!-- HOME PAGE -->
+            
             <div id="homePage" class="page active">
                 <div class="section-intro">
                     <h2 class="section-title">Bem-vindo ao LAR DE SONHO</h2>
-                    <p class="section-description">Dedicados a proporcionar cuidados de excelência com dignidade, respeito e carinho</p>
+                    <p class="section-description">Dedicados a proporcionar cuidados de excelência com dignidade,
+                        respeito e carinho</p>
                 </div>
 
                 <div class="services-grid">
@@ -117,7 +124,8 @@
                     <div class="alert-icon">🔒</div>
                     <div>
                         <h4>Compromisso com a sua Privacidade</h4>
-                        <p>O LAR DE SONHO está 100% em conformidade com o RGPD. Os seus dados pessoais são tratados com a máxima segurança e transparência.</p>
+                        <p>O LAR DE SONHO está 100% em conformidade com o RGPD. Os seus dados pessoais são tratados com
+                            a máxima segurança e transparência.</p>
                     </div>
                 </div>
 
@@ -148,10 +156,10 @@
                 </div>
             </div>
 
-            <!-- SERVICES PAGE -->
+            
             <div id="servicesPage" class="page">
                 <h2 class="page-title">Nossos Serviços</h2>
-                
+
                 <div class="service-section">
                     <h3 class="service-title">🏠 Serviço de Residência</h3>
                     <div class="service-features">
@@ -195,19 +203,20 @@
                 </div>
             </div>
 
-            <!-- PRICING PAGE -->
+            
             <div id="pricingPage" class="page">
                 <h2 class="page-title">Preçário</h2>
-                
+
                 <div class="alert alert-info">
-                    <strong>Nota:</strong> Os preços apresentados são indicativos. Para um orçamento personalizado, contacte-nos através dos nossos canais.
+                    <strong>Nota:</strong> Os preços apresentados são indicativos. Para um orçamento personalizado,
+                    contacte-nos através dos nossos canais.
                 </div>
 
                 <div class="pricing-grid">
                     <div class="pricing-card pricing-card-blue">
                         <h3>Serviço Residencial</h3>
                         <p class="pricing-subtitle">Cuidados completos 24h</p>
-                        
+
                         <div class="pricing-items">
                             <div class="pricing-item">
                                 <span>Quarto Individual</span>
@@ -237,7 +246,7 @@
                     <div class="pricing-card pricing-card-green">
                         <h3>Apoio Domiciliário</h3>
                         <p class="pricing-subtitle">Flexível e personalizado</p>
-                        
+
                         <div class="pricing-items">
                             <div class="pricing-item">
                                 <span>2h/dia (5 dias/semana)</span>
@@ -287,14 +296,15 @@
                 </div>
             </div>
 
-            <!-- PRIVACY PAGE -->
+            
             <div id="privacyPage" class="page">
-                <h2 class="page-title">Política de Privacidade</h2>
-                
+                <h2 class="page-title">A tua privacidade é um compromisso, não um detalhe</h2>
+
                 <div class="alert alert-info">
                     <strong>Última atualização:</strong> Janeiro 2026
                 </div>
 
+                
                 <div class="content-section">
                     <h3>1. Responsável pelo Tratamento</h3>
                     <p><strong>Entidade:</strong> LAR DE SONHO</p>
@@ -304,196 +314,278 @@
                     <p><strong>Encarregado de Proteção de Dados (DPO):</strong> dpo@lardesonho.pt</p>
                 </div>
 
+                
                 <div class="content-section">
                     <h3>2. Dados Pessoais Recolhidos</h3>
                     <p>No âmbito dos nossos serviços, podemos recolher as seguintes categorias de dados:</p>
-                    
-                    <div class="data-categories">
-                        <div class="data-category">
+                    <div class="content-section">
+                        <div class="contact-method--">
                             <h4>📋 Dados de Identificação</h4>
-                            <p>Nome, data de nascimento, número de identificação civil, morada, contactos (telefone, email).</p>
+                            <p>Nome, data de nascimento, número de identificação civil, morada, contactos.</p>
                         </div>
-                        <div class="data-category">
+                        <br>
+                        <div class="contact-method">
                             <h4>🏥 Dados de Saúde</h4>
-                            <p>Informação médica necessária para prestação de cuidados (com consentimento explícito).</p>
+                            <p>Informação médica necessária para prestação de cuidados, mediante consentimento
+                                explícito.</p>
                         </div>
-                        <div class="data-category">
+                        <br>
+                        <div class="contact-method--">
                             <h4>💰 Dados Económicos</h4>
-                            <p>Rendimentos (apenas quando relevante para apoios sociais).</p>
+                            <p>Rendimentos, apenas quando relevantes para efeitos de apoios sociais.</p>
                         </div>
-                        <div class="data-category">
+                        <br>
+                        <div class="contact-method">
                             <h4>👨‍👩‍👦 Dados de Familiares</h4>
-                            <p>Informação de contacto de responsáveis/cuidadores (com base em interesse legítimo).</p>
+                            <p>Contactos de responsáveis legais ou cuidadores.</p>
                         </div>
-                        <div class="data-category">
+                        <br>
+                        <div class="contact-method--">
                             <h4>🔐 Dados Biométricos</h4>
-                            <p>Impressões digitais para controlo de acessos (apenas funcionários, com consentimento).</p>
+                            <p>Impressões digitais para controlo de acessos de funcionários.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="content-section">
-                    <h3>3. Finalidades e Fundamentos Legais</h3>
-                    <div class="legal-bases">
-                        <div class="legal-item">
-                            <strong>✅ Prestação de Serviços</strong>
-                            <p>Fundamento: Execução de contrato (Art. 6.º, n.º 1, al. b) RGPD)</p>
-                        </div>
-                        <div class="legal-item">
-                            <strong>✅ Tratamento de Dados de Saúde</strong>
-                            <p>Fundamento: Consentimento explícito (Art. 9.º, n.º 2, al. a) RGPD)</p>
-                        </div>
-                        <div class="legal-item">
-                            <strong>✅ Obrigações Legais</strong>
-                            <p>Fundamento: Cumprimento de obrigação legal (Art. 6.º, n.º 1, al. c) RGPD)</p>
-                        </div>
-                        <div class="legal-item">
-                            <strong>✅ Marketing (opcional)</strong>
-                            <p>Fundamento: Consentimento (Art. 6.º, n.º 1, al. a) RGPD) - pode retirar a qualquer momento</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3>4. Medidas de Segurança</h3>
-                    <div class="security-grid">
-                        <div class="security-item">
-                            <h4>🔒 Técnicas</h4>
-                            <ul>
-                                <li>• Encriptação de dados</li>
-                                <li>• Controlo de acessos</li>
-                                <li>• Backups regulares</li>
-                                <li>• Firewalls e antivírus</li>
-                            </ul>
-                        </div>
-                        <div class="security-item">
-                            <h4>👥 Organizativas</h4>
-                            <ul>
-                                <li>• Formação de colaboradores</li>
-                                <li>• Políticas internas</li>
-                                <li>• Auditoria regular</li>
-                                <li>• Dever de confidencialidade</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- COOKIES PAGE -->
-            <div id="cookiesPage" class="page">
-                <h2 class="page-title">Política de Cookies</h2>
                 
                 <div class="content-section">
-            <h3>1. O que são cookies</h3>
-            <p>O presente website utiliza cookies e/ou tecnologias similares, próprias e de terceiros. Cookies são ficheiros que contêm pequenas quantidades de informação e que são descarregados para o dispositivo do utilizador quando este visita um website. O objetivo principal dos cookies é reconhecer o utilizador sempre que acede ao website, permitindo melhorar a qualidade, segurança e funcionalidade do site, bem como simplificar a navegação. Os cookies são essenciais para o funcionamento da Internet, não danificam o dispositivo do utilizador e ajudam a identificar e resolver possíveis erros na operação do website.</p>
+                    <h3>3. Finalidades e Fundamentos Legais</h3>
 
-            <h3>2. Responsável pelo tratamento</h3>
-            <p>O responsável pelo tratamento dos dados recolhidos através de cookies é:</p>
-            <p>LAR DE SONHO, LDA<br>
-            Rua dos Barcelinhos, n.º 67 4720-121 Braga<br>
-            Email: <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></p>
+                    <div class="legal-bases">
+                        <div class="legal-item">
+                            <strong>Prestação de Serviços</strong>
+                            <p>Execução de contrato Art. 6.º, n.º 1, al. b) RGPD</p>
+                        </div>
+                        <div class="legal-item">
+                            <strong>Dados de Saúde</strong>
+                            <p>Consentimento explícito Art. 9.º, n.º 2, al. a) RGPD</p>
+                        </div>
+                        <div class="legal-item">
+                            <strong>Obrigações Legais</strong>
+                            <p>Cumprimento de obrigação legal Art. 6.º, n.º 1, al. c) RGPD</p>
+                        </div>
+                        <div class="legal-item">
+                            <strong>Marketing (opcional)</strong>
+                            <p>Consentimento Art. 6.º, n.º 1, al. a) RGPD</p>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>3. Categorias de cookies utilizados</h3>
-            <div class="cookie-types">
-                <div class="cookie-type cookie-necessary">
-                    <h4>Cookies necessários</h4>
-                    <p>Essenciais para permitir a navegação no website e o acesso a funcionalidades básicas, como formulários e áreas seguras. Não recolhem informações para fins de marketing e não podem ser desativados.</p>
+                
+                <div class="content-section">
+                    <h3>4. Informação obtida automaticamente</h3>
+                    <p>
+                        O website utiliza cookies estritamente necessários ao seu funcionamento.
+                        Cookies adicionais só são utilizados mediante consentimento do utilizador.
+                    </p>
+                    <p>
+                        Para mais informação, consulta a nossa Política de Cookies.
+                    </p>
                 </div>
-                <div class="cookie-type cookie-analytics">
-                    <h4>Cookies analíticos</h4>
-                    <p>Permitem recolher informação estatística sobre a utilização do website, como páginas visitadas e tempo de navegação, com o objetivo de melhorar o desempenho e os conteúdos disponibilizados.</p>
+
+                
+                <div class="content-section">
+                    <h3>5. Destinatários dos Dados</h3>
+                    <ul class="clean-list">
+                        <li>Prestadores de serviços tecnológicos</li>
+                        <li>Entidades públicas com legitimidade legal</li>
+                        <li>Auditores internos e externos</li>
+                    </ul>
                 </div>
-                <div class="cookie-type cookie-marketing">
-                    <h4>Cookies de marketing e publicidade</h4>
-                    <p>São utilizados para apresentar publicidade direcionada relacionada com terapias e serviços disponibilizados pelo LAR DE SONHO, com base nos interesses e comportamento de navegação do utilizador.</p>
+
+                
+                <div class="content-section">
+                    <h3>6. Prazos de Conservação</h3>
+                    <p>
+                        Os dados são conservados apenas pelo período necessário às finalidades
+                        para as quais foram recolhidos, ou pelo prazo legalmente exigido.
+                    </p>
                 </div>
-                <div class="cookie-type cookie-functional">
-                    <h4>Cookies de terceiros</h4>
-                    <p>Podem ser instalados por entidades externas, nomeadamente redes sociais como Facebook, Instagram ou Twitter, quando o utilizador se encontra autenticado nessas plataformas, ficando sujeito às respetivas políticas de privacidade.</p>
+
+                
+                <div class="content-section">
+                    <h3>7. Transferências Internacionais</h3>
+                    <p>
+                        Os dados pessoais não são transferidos para fora do Espaço Económico Europeu,
+                        salvo quando garantido um nível de proteção adequado nos termos do RGPD.
+                    </p>
+                </div>
+
+                
+                <div class="content-section highlight">
+                    <h3>8. Direitos do Titular dos Dados</h3>
+                    <ul class="clean-list">
+                        <li>Direito de acesso</li>
+                        <li>Direito de retificação</li>
+                        <li>Direito ao apagamento</li>
+                        <li>Direito à limitação</li>
+                        <li>Direito de oposição</li>
+                        <li>Direito à portabilidade</li>
+                        <li>Direito de retirar o consentimento</li>
+                    </ul>
+
+                    <p>
+                        Para exercer os seus direitos, envia um email para
+                        <strong>privacidade@lardesonho.pt</strong>
+                    </p>
+                </div>
+
+                
+                <div class="content-section">
+                    <h3>9. Autoridade de Controlo</h3>
+                    <p>
+                        O titular dos dados pode apresentar reclamação à Comissão Nacional de Proteção
+                        de Dados CNPD.
+                    </p>
+                    <p><strong>www.cnpd.pt</strong></p>
                 </div>
             </div>
 
-            <div class="content-section">
-    <h3>4. Dados recolhidos através de cookies</h3>
-    <div class="data-categories">
-        <div class="data-category">Endereço IP</div>
-        <div class="data-category">Browser utilizado</div>
-        <div class="data-category">Sistema operativo</div>
-        <div class="data-category">Localização aproximada</div>
-        <div class="data-category">Data e hora de acesso</div>
-        <div class="data-category">Preferências do utilizador associadas a redes sociais</div>
-    </div>
-    <br>
-    <br>
-    <h3>5. Finalidades da utilização de cookies</h3>
-    <div class="data-categories">
-        <div class="data-category">Garantir o funcionamento técnico do website</div>
-        <div class="data-category">Melhorar a experiência de navegação</div>
-        <div class="data-category">Analisar padrões de utilização do website</div>
-        <div class="data-category">Apresentar conteúdos e publicidade relevantes</div>
-    </div>
-    <br>
-    <br>    
-    <h3>6. Base legal para o tratamento</h3>
-    <div class="legal-bases">
-        <div class="legal-item">
-            <strong>Cookies não estritamente necessários</strong>
-            <p>Baseiam-se no consentimento do utilizador, nos termos do artigo 6.º, n.º 1, alínea a) do RGPD.</p>
-        </div>
-        <div class="legal-item">
-            <strong>Cookies estritamente necessários</strong>
-            <p>Baseiam-se no interesse legítimo do responsável pelo tratamento, nos termos do artigo 6.º, n.º 1, alínea f) do RGPD.</p>
-        </div>
-    </div>
-    <br>
-    <br>
-    <h3>7. Consentimento do utilizador</h3>
-    <div class="content-section">
-        <p>Ao aceder ao website, o utilizador é informado de forma clara sobre a utilização de cookies e pode:</p>
-        <ul>
-            <li>Aceitar todos os cookies</li>
-            <li>Rejeitar cookies não essenciais</li>
-            <li>Gerir as suas preferências de cookies</li>
-        </ul>
-        <p>O consentimento pode ser retirado a qualquer momento através das definições do browser ou das opções disponibilizadas no website.</p>
-    </div>
+            
+            <div id="cookiesPage" class="page">
+                <h2 class="page-title">Política de Cookies</h2>
 
-    <h3>8. Configuração do utilizador para evitar cookies</h3>
-    <div class="content-section">
-        <p>O utilizador pode configurar o seu navegador para gerir ou bloquear cookies:</p>
-        <ul>
-            <li>Google Chrome: <a href="https://support.google.com/accounts/answer/61416" target="_blank">link</a></li>
-            <li>Mozilla Firefox: <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">link</a></li>
-            <li>Internet Explorer: <a href="https://support.microsoft.com/pt-pt/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">link</a></li>
-            <li>Safari: <a href="https://www.apple.com/legal/privacy/pt/" target="_blank">link</a></li>
-        </ul>
-        <p>O utilizador pode ainda gerir preferências de publicidade comportamental através de: <a href="https://www.youronlinechoices.com/pt/your-ad-choices" target="_blank">link</a></p>
-    </div>
+                <div class="content-section">
+                    <h3>1. O que são cookies</h3>
+                    <p>O presente website utiliza cookies e/ou tecnologias similares, próprias e de terceiros. Cookies
+                        são ficheiros que contêm pequenas quantidades de informação e que são descarregados para o
+                        dispositivo do utilizador quando este visita um website. O objetivo principal dos cookies é
+                        reconhecer o utilizador sempre que acede ao website, permitindo melhorar a qualidade, segurança
+                        e funcionalidade do site, bem como simplificar a navegação. Os cookies são essenciais para o
+                        funcionamento da Internet, não danificam o dispositivo do utilizador e ajudam a identificar e
+                        resolver possíveis erros na operação do website.</p>
 
-    <h3>9. Prazo de conservação</h3>
-    <p>Os cookies são conservados apenas pelo período necessário para cumprir as finalidades para as quais foram recolhidos, sendo eliminados automaticamente ou quando removidos pelo utilizador.</p>
-    <br>
-    <h3>10. Direitos do utilizador</h3>
-    <div class="rights-grid">
-        <div class="right-card">Aceder aos seus dados pessoais</div>
-        <div class="right-card">Retificar dados inexatos</div>
-        <div class="right-card">Solicitar o apagamento dos dados</div>
-        <div class="right-card">Limitar ou opor-se ao tratamento</div>
-        <div class="right-card">Retirar o consentimento a qualquer momento – Email: <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></div>
-    </div>
+                    <h3>2. Responsável pelo tratamento</h3>
+                    <p>O responsável pelo tratamento dos dados recolhidos através de cookies é:</p>
+                    <p>LAR DE SONHO, LDA<br>
+                        Rua dos Barcelinhos, n.º 67 4720-121 Braga<br>
+                        Email: <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></p>
 
-    <h3>11. Alterações à política de cookies</h3>
-    <p>O LAR DE SONHO reserva-se o direito de atualizar a presente Política de Cookies sempre que necessário, sendo as alterações devidamente publicadas no website.</p>
-    </div>
+                    <h3>3. Categorias de cookies utilizados</h3>
+                    <div class="cookie-types">
+                        <div class="cookie-type cookie-necessary">
+                            <h4>Cookies necessários</h4>
+                            <p>Essenciais para permitir a navegação no website e o acesso a funcionalidades básicas,
+                                como formulários e áreas seguras. Não recolhem informações para fins de marketing e não
+                                podem ser desativados.</p>
+                        </div>
+                        <div class="cookie-type cookie-analytics">
+                            <h4>Cookies analíticos</h4>
+                            <p>Permitem recolher informação estatística sobre a utilização do website, como páginas
+                                visitadas e tempo de navegação, com o objetivo de melhorar o desempenho e os conteúdos
+                                disponibilizados.</p>
+                        </div>
+                        <div class="cookie-type cookie-marketing">
+                            <h4>Cookies de marketing e publicidade</h4>
+                            <p>São utilizados para apresentar publicidade direcionada relacionada com terapias e
+                                serviços disponibilizados pelo LAR DE SONHO, com base nos interesses e comportamento de
+                                navegação do utilizador.</p>
+                        </div>
+                        <div class="cookie-type cookie-functional">
+                            <h4>Cookies de terceiros</h4>
+                            <p>Podem ser instalados por entidades externas, nomeadamente redes sociais como Facebook,
+                                Instagram ou Twitter, quando o utilizador se encontra autenticado nessas plataformas,
+                                ficando sujeito às respetivas políticas de privacidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>4. Dados recolhidos através de cookies</h3>
+                        <div class="data-categories">
+                            <div class="data-category">Endereço IP</div>
+                            <div class="data-category">Browser utilizado</div>
+                            <div class="data-category">Sistema operativo</div>
+                            <div class="data-category">Localização aproximada</div>
+                            <div class="data-category">Data e hora de acesso</div>
+                            <div class="data-category">Preferências do utilizador associadas a redes sociais</div>
+                        </div>
+                        <br>
+                        <br>
+                        <h3>5. Finalidades da utilização de cookies</h3>
+                        <div class="data-categories">
+                            <div class="data-category">Garantir o funcionamento técnico do website</div>
+                            <div class="data-category">Melhorar a experiência de navegação</div>
+                            <div class="data-category">Analisar padrões de utilização do website</div>
+                            <div class="data-category">Apresentar conteúdos e publicidade relevantes</div>
+                        </div>
+                        <br>
+                        <br>
+                        <h3>6. Base legal para o tratamento</h3>
+                        <div class="legal-bases">
+                            <div class="legal-item">
+                                <strong>Cookies não estritamente necessários</strong>
+                                <p>Baseiam-se no consentimento do utilizador, nos termos do artigo 6.º, n.º 1, alínea a)
+                                    do RGPD.</p>
+                            </div>
+                            <div class="legal-item">
+                                <strong>Cookies estritamente necessários</strong>
+                                <p>Baseiam-se no interesse legítimo do responsável pelo tratamento, nos termos do artigo
+                                    6.º, n.º 1, alínea f) do RGPD.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <h3>7. Consentimento do utilizador</h3>
+                        <div class="content-section">
+                            <p>Ao aceder ao website, o utilizador é informado de forma clara sobre a utilização de
+                                cookies e pode:</p>
+                            <ul>
+                                <li>Aceitar todos os cookies</li>
+                                <li>Rejeitar cookies não essenciais</li>
+                                <li>Gerir as suas preferências de cookies</li>
+                            </ul>
+                            <p>O consentimento pode ser retirado a qualquer momento através das definições do browser ou
+                                das opções disponibilizadas no website.</p>
+                        </div>
+
+                        <h3>8. Configuração do utilizador para evitar cookies</h3>
+                        <div class="content-section">
+                            <p>O utilizador pode configurar o seu navegador para gerir ou bloquear cookies:</p>
+                            <ul>
+                                <li>Google Chrome: <a href="https://support.google.com/accounts/answer/61416"
+                                        target="_blank">link</a></li>
+                                <li>Mozilla Firefox: <a
+                                        href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences"
+                                        target="_blank">link</a></li>
+                                <li>Internet Explorer: <a
+                                        href="https://support.microsoft.com/pt-pt/help/17442/windows-internet-explorer-delete-manage-cookies"
+                                        target="_blank">link</a></li>
+                                <li>Safari: <a href="https://www.apple.com/legal/privacy/pt/" target="_blank">link</a>
+                                </li>
+                            </ul>
+                            <p>O utilizador pode ainda gerir preferências de publicidade comportamental através de: <a
+                                    href="https://www.youronlinechoices.com/pt/your-ad-choices" target="_blank">link</a>
+                            </p>
+                        </div>
+
+                        <h3>9. Prazo de conservação</h3>
+                        <p>Os cookies são conservados apenas pelo período necessário para cumprir as finalidades para as
+                            quais foram recolhidos, sendo eliminados automaticamente ou quando removidos pelo
+                            utilizador.</p>
+                        <br>
+                        <h3>10. Direitos do utilizador</h3>
+                        <div class="rights-grid">
+                            <div class="right-card">Aceder aos seus dados pessoais</div>
+                            <div class="right-card">Retificar dados inexatos</div>
+                            <div class="right-card">Solicitar o apagamento dos dados</div>
+                            <div class="right-card">Limitar ou opor-se ao tratamento</div>
+                            <div class="right-card">Retirar o consentimento a qualquer momento – Email: <a
+                                    href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></div>
+                        </div>
+
+                        <h3>11. Alterações à política de cookies</h3>
+                        <p>O LAR DE SONHO reserva-se o direito de atualizar a presente Política de Cookies sempre que
+                            necessário, sendo as alterações devidamente publicadas no website.</p>
+                    </div>
 
                     <button onclick="saveCookiePreferences()" class="btn-primary btn-full">Guardar Preferências</button>
                 </div>
             </div>
 
-            <!-- LEGAL PAGE -->
+            
             <div id="legalPage" class="page">
                 <h2 class="page-title">Aviso Legal</h2>
-                
+
                 <div class="content-section">
                     <h3>Identificação da Entidade</h3>
                     <p><strong>Denominação Social:</strong> LAR DE SONHO - Residências e Apoio Domiciliário, Lda.</p>
@@ -530,12 +622,13 @@
                 </div>
             </div>
 
-            <!-- RIGHTS PAGE -->
+            
             <div id="rightsPage" class="page">
                 <h2 class="page-title">Os Seus Direitos (RGPD)</h2>
-                
+
                 <div class="alert alert-info">
-                    Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem os seguintes direitos relativamente aos seus dados pessoais:
+                    Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem os seguintes direitos
+                    relativamente aos seus dados pessoais:
                 </div>
 
                 <div class="rights-grid">
@@ -543,7 +636,8 @@
                         <div class="right-icon">✅</div>
                         <h3>Direito de Acesso</h3>
                         <p class="right-article">Art. 15.º RGPD</p>
-                        <p>Pode solicitar informação sobre que dados pessoais tratamos sobre si e obter uma cópia dos mesmos.</p>
+                        <p>Pode solicitar informação sobre que dados pessoais tratamos sobre si e obter uma cópia dos
+                            mesmos.</p>
                         <p class="right-deadline">Prazo: 1 mês</p>
                     </div>
 
@@ -594,7 +688,8 @@
                             <strong>📞 Por Telefone:</strong> +351 253 000 000
                         </div>
                         <div class="contact-method">
-                            <strong>✉️ Por Correio:</strong> LAR DE SONHO - Encarregado de Proteção de Dados, Rua Verde, n.º 1, 4700-001 Braga
+                            <strong>✉️ Por Correio:</strong> LAR DE SONHO - Encarregado de Proteção de Dados, Rua Verde,
+                            n.º 1, 4700-001 Braga
                         </div>
                     </div>
                 </div>
@@ -627,17 +722,18 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="rightsDescription" rows="4" placeholder="Descreva o seu pedido..." required></textarea>
+                            <textarea id="rightsDescription" rows="4" placeholder="Descreva o seu pedido..."
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn-primary btn-full">Enviar Pedido</button>
                     </form>
                 </div>
             </div>
 
-            <!-- CONTACT PAGE -->
+            
             <div id="contactPage" class="page">
                 <h2 class="page-title">Contactos</h2>
-                
+
                 <div class="contact-grid">
                     <div class="contact-card">
                         <h3>📍 Sede - Portugal</h3>
@@ -755,11 +851,13 @@
                         <div class="form-group">
                             <textarea id="contactMessage" rows="5" placeholder="Mensagem *" required></textarea>
                         </div>
-                        
+
                         <div class="form-checkbox">
                             <label>
                                 <input type="checkbox" id="contactConsent" required>
-                                <span>Li e aceito a <button type="button" onclick="showPage('privacy')" class="btn-link">Política de Privacidade</button> e autorizo o tratamento dos meus dados pessoais para efeitos de resposta ao meu contacto. *</span>
+                                <span>Li e aceito a <button type="button" onclick="showPage('privacy')"
+                                        class="btn-link">Política de Privacidade</button> e autorizo o tratamento dos
+                                    meus dados pessoais para efeitos de resposta ao meu contacto. *</span>
                             </label>
                         </div>
 
@@ -772,14 +870,14 @@
                     <div>
                         <h4>Em caso de Emergência</h4>
                         <p>Para situações urgentes fora do horário de atendimento:</p>
-                        <p style="font-size: 18px; font-weight: 700; margin-top: 8px;">📞 +351 253 000 000 (24h)</p>
+                        <p style="font-size: 18px; font-weight: 700; margin-top: 8px;">📞 +351 912 345 678 (24h)</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -805,7 +903,8 @@
                         <li><button onclick="showPage('cookies')">Política de Cookies</button></li>
                         <li><button onclick="showPage('legal')">Aviso Legal</button></li>
                         <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
-                        <li><button onclick="window.location.href='visualizador.html'">Visualizador de Cookies</button></li>
+                        <li><button onclick="window.location.href='visualizador.html'">Visualizador de Cookies</button>
+                        </li>
                     </ul>
                 </div>
 
@@ -821,12 +920,17 @@
 
             <div class="footer-bottom">
                 <p>© 2026 LAR DE SONHO. Todos os direitos reservados. | NIPC: 501 000 000</p>
+                <div class="footer-links">
+                    <button onclick="showPage('privacy')">Privacidade</button>
+                    <button onclick="showPage('cookies')">Cookies</button>
+                    <button onclick="showPage('contact')">Contacto</button>
+                </div>
             </div>
 
             <div class="footer-compliance">
                 <div class="compliance-badge">
                     <span>🔒</span>
-                    <span>101% Conforme com RGPD</span>
+                    <span>100% Conforme com RGPD</span>
                 </div>
             </div>
         </div>
@@ -834,4 +938,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
