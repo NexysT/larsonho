@@ -61,6 +61,9 @@
                     Legal</button>
                 <button onclick="showPage('rights'); toggleMobileMenu()" class="nav-link" data-page="rights">✅ Seus
                     Direitos</button>
+                <button onclick="showPage('recrutamento'); toggleMobileMenu()" class="nav-link" data-page="recrutamento">
+                    🧑‍💼 Recrutamento</button>
+                <button onclick="showPage('cctv'); toggleMobileMenu()" class="nav-link" data-page="cctv">Videovigilancia</button>
                 <button onclick="showPage('contact'); toggleMobileMenu()" class="nav-link" data-page="contact">📞
                     Contacto</button>
             </nav>
@@ -730,6 +733,66 @@
                 </div>
             </div>
 
+
+
+            <div id="videovigilanciaPage" class="page">
+                <h2 class="page-title">Política de Videovigilância</h2>
+            
+                <div class="alert alert-info">
+                    Última atualização: Janeiro 2026
+                </div>
+            
+                <div class="content-section">
+                    <h3>1. Responsável pelo Tratamento</h3>
+                    <p><strong>Entidade:</strong> LAR DE SONHO</p>
+                    <p><strong>Email:</strong> privacidade@lardesonho.pt</p>
+                </div>
+            
+                <div class="content-section">
+                    <h3>2. Finalidade da Videovigilância</h3>
+                    <ul class="clean-list">
+                        <li>Proteção de pessoas (utentes, colaboradores e visitantes)</li>
+                        <li>Segurança de bens e instalações</li>
+                        <li>Prevenção de incidentes e comportamentos ilícitos</li>
+                    </ul>
+                </div>
+            
+                <div class="content-section">
+                    <h3>3. Base Legal</h3>
+                    <p>
+                        O tratamento baseia-se no interesse legítimo do responsável
+                        (Art. 6.º, n.º 1, al. f) RGPD) e na Lei n.º 1/2005.
+                    </p>
+                </div>
+            
+                <div class="content-section">
+                    <h3>4. Áreas Abrangidas</h3>
+                    <ul class="clean-list">
+                        <li>Entradas e saídas</li>
+                        <li>Corredores comuns</li>
+                        <li>Zonas técnicas e logísticas</li>
+                    </ul>
+                    <p><strong>Não são captadas imagens</strong> em quartos, casas de banho ou áreas privadas.</p>
+                </div>
+            
+                <div class="content-section">
+                    <h3>5. Conservação das Imagens</h3>
+                    <p>
+                        As imagens são conservadas por um período máximo de
+                        <strong>30 dias</strong>, salvo obrigação legal.
+                    </p>
+                </div>
+            
+                <div class="content-section">
+                    <h3>6. Direitos dos Titulares</h3>
+                    <p>
+                        O titular pode exercer os seus direitos RGPD através do email
+                        <strong>privacidade@lardesonho.pt</strong>.
+                    </p>
+                </div>
+            </div>
+
+
             
             <div id="contactPage" class="page">
                 <h2 class="page-title">Contactos</h2>
@@ -901,9 +964,11 @@
                     <ul>
                         <li><button onclick="showPage('privacy')">Política de Privacidade</button></li>
                         <li><button onclick="showPage('cookies')">Política de Cookies</button></li>
-                        <li><button onclick="showPage('legal')">Aviso Legal</button></li>
-                        <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
+                        <li><button onclick="showPage('recrutamento')">Politica de Recrutamento</button></li>
+                        <li><button onclick="showPage('cctv')">Politica de Videovigilância</button></li>
                         <li><button onclick="window.location.href='visualizador.html'">Visualizador de Cookies</button>
+                        <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
+                        <li><button onclick="showPage('legal')">Aviso Legal</button></li>
                         </li>
                     </ul>
                 </div>
