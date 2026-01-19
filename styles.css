@@ -1024,7 +1024,7 @@ input:disabled + .slider {
 }
 
 
-/* === POLÍTICAS – VISUAL CLEAN PREMIUM === */
+/* === POLÍTICAS – VISUAL CLEAN PREMIUM 
 
 .policy-wrapper {
     max-width: 900px;
@@ -1078,7 +1078,7 @@ input:disabled + .slider {
     font-weight: 600;
     color: #1e293b;
 }
-
+=== */
 
 .contact-grid {
     display: grid;
