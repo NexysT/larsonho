@@ -63,6 +63,195 @@ body {
     flex-wrap: wrap;
 }
 
+/* === MODAL DE COOKIES (visual branco, limpo) === */
+.cookie-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 2000;
+}
+
+.cookie-modal-overlay.is-open {
+  display: flex;
+}
+
+.cookie-modal {
+  width: min(720px, 100%);
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.cookie-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 18px 12px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.cookie-modal__titlewrap {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.cookie-modal__brand {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #f1f5f9;
+  border: 1px solid #e5e7eb;
+  font-size: 18px;
+}
+
+.cookie-modal__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.cookie-modal__subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.cookie-modal__close {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.cookie-modal__close:hover {
+  background: #f8fafc;
+}
+
+.cookie-modal__body {
+  padding: 14px 18px 18px;
+}
+
+.cookie-modal__note {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px 12px;
+  font-size: 13px;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+.cookie-accordion {
+  display: grid;
+  gap: 10px;
+}
+
+.cookie-acc-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cookie-acc-head {
+  width: 100%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 14px;
+}
+
+.cookie-acc-title {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cookie-acc-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.cookie-acc-arrow {
+  color: #64748b;
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+  font-size: 14px;
+}
+
+.cookie-acc-body {
+  display: none;
+  padding: 0 14px 14px;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.cookie-acc-item.is-open .cookie-acc-body {
+  display: block;
+}
+
+.cookie-acc-item.is-open .cookie-acc-arrow {
+  transform: rotate(180deg);
+}
+
+.cookie-modal__footer {
+  display: flex;
+  gap: 10px;
+  padding: 14px 18px 18px;
+  border-top: 1px solid #eef2f7;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Botões escuros só para o modal (não mexe nos teus btn-outline brancos do banner) */
+.btn-outline-dark {
+  background: #fff;
+  color: #0f172a;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-outline-dark:hover {
+  background: #f8fafc;
+}
+
+/* Ajuste subtil do switch dentro do modal (mantém o teu switch global) */
+.cookie-modal .slider {
+  background-color: #cbd5e1;
+}
+
+.cookie-modal input:checked + .slider {
+  background-color: #3b82f6;
+}
+
 
 .header {
     background: white;
