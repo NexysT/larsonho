@@ -8,117 +8,115 @@
     <link rel="stylesheet" href="styles.css">
 </head>
     
-<body>
-    <div id="cookieBanner" class="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <h3>🍪 Este site utiliza cookies</h3>
-                <p>Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e personalizar conteúdos. Ao
-                    clicar em "Aceitar Todos", consente a utilização de todos os cookies.</p>
-            </div>
-            <div class="cookie-buttons">
-                <button onclick="showCookieSettings()" class="btn-outline">Personalizar</button>
-                <button onclick="acceptCookies('necessary')" class="btn-outline">Apenas Necessários</button>
-                <button onclick="acceptCookies('all')" class="btn-primary">Aceitar Todos</button>
-            </div>
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <h3>🍪 Este site utiliza cookies</h3>
+      <p>Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e personalizar conteúdos. Ao
+        clicar em "Aceitar Todos", consente a utilização de todos os cookies.</p>
+    </div>
+    <div class="cookie-buttons">
+      <button onclick="showCookieSettings()" class="btn-outline">Personalizar</button>
+      <button onclick="acceptCookies('necessary')" class="btn-outline">Apenas Necessários</button>
+      <button onclick="acceptCookies('all')" class="btn-primary">Aceitar Todos</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Preferências de Cookies -->
+<div id="cookieModalOverlay" class="cookie-modal-overlay" aria-hidden="true">
+  <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle">
+
+    <div class="cookie-modal__header">
+      <div class="cookie-modal__titlewrap">
+        <div class="cookie-modal__brand">🍪</div>
+        <div>
+          <h3 id="cookieModalTitle" class="cookie-modal__title">Gestão de Cookies</h3>
+          <p class="cookie-modal__subtitle">Podes escolher que categorias queres permitir. Podes alterar isto a qualquer momento.</p>
+        </div>
+      </div>
+
+      <button type="button" class="cookie-modal__close" onclick="closeCookieSettings()" aria-label="Fechar">✕</button>
+    </div>
+
+    <div class="cookie-modal__body">
+      <div class="cookie-modal__note">
+        Os cookies necessários estão sempre ativos para garantir o funcionamento do site.
+        Para mais detalhes consulta a <button type="button" class="btn-link" onclick="showPage('cookies'); closeCookieSettings()">Política de Cookies</button>.
+      </div>
+
+      <div class="cookie-accordion">
+
+        <div class="cookie-acc-item is-open">
+          <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
+            <span class="cookie-acc-title">Necessários</span>
+            <span class="cookie-acc-meta">Sempre ativo</span>
+            <span class="cookie-acc-arrow">⌄</span>
+          </button>
+          <div class="cookie-acc-body">
+            <p>Essenciais para navegação, segurança e funcionamento das funcionalidades base do site.</p>
+          </div>
         </div>
 
-        <!-- Modal de Preferências de Cookies -->
-    <div id="cookieModalOverlay" class="cookie-modal-overlay" aria-hidden="true">
-      <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle">
-    
-        <div class="cookie-modal__header">
-          <div class="cookie-modal__titlewrap">
-            <div class="cookie-modal__brand">🍪</div>
-            <div>
-              <h3 id="cookieModalTitle" class="cookie-modal__title">Gestão de Cookies</h3>
-              <p class="cookie-modal__subtitle">Podes escolher que categorias queres permitir. Podes alterar isto a qualquer momento.</p>
-            </div>
-          </div>
-    
-          <button type="button" class="cookie-modal__close" onclick="closeCookieSettings()" aria-label="Fechar">✕</button>
-        </div>
-    
-        <div class="cookie-modal__body">
-          <div class="cookie-modal__note">
-            Os cookies necessários estão sempre ativos para garantir o funcionamento do site.
-            Para mais detalhes consulta a <button type="button" class="btn-link" onclick="showPage('cookies'); closeCookieSettings()">Política de Cookies</button>.
-          </div>
-    
-          <div class="cookie-accordion">
-    
-            <div class="cookie-acc-item is-open">
-              <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
-                <span class="cookie-acc-title">Necessários</span>
-                <span class="cookie-acc-meta">Sempre ativo</span>
-                <span class="cookie-acc-arrow">⌄</span>
-              </button>
-              <div class="cookie-acc-body">
-                <p>Essenciais para navegação, segurança e funcionamento das funcionalidades base do site.</p>
-              </div>
-            </div>
-    
-            <div class="cookie-acc-item">
-              <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
-                <span class="cookie-acc-title">Funcionais</span>
-                <span class="cookie-acc-meta">
-                  <label class="switch" onclick="event.stopPropagation()">
-                    <input id="functional-cookies" type="checkbox">
-                    <span class="slider"></span>
-                  </label>
-                </span>
-                <span class="cookie-acc-arrow">⌄</span>
-              </button>
-              <div class="cookie-acc-body">
-                <p>Permitem guardar preferências (ex.: idioma) e melhorar a experiência no site.</p>
-              </div>
-            </div>
-    
-            <div class="cookie-acc-item">
-              <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
-                <span class="cookie-acc-title">Estatísticas</span>
-                <span class="cookie-acc-meta">
-                  <label class="switch" onclick="event.stopPropagation()">
-                    <input id="analytics-cookies" type="checkbox">
-                    <span class="slider"></span>
-                  </label>
-                </span>
-                <span class="cookie-acc-arrow">⌄</span>
-              </button>
-              <div class="cookie-acc-body">
-                <p>Ajudam-nos a perceber como o site é usado, para melhorar conteúdos e desempenho.</p>
-              </div>
-            </div>
-    
-            <div class="cookie-acc-item">
-              <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
-                <span class="cookie-acc-title">Marketing</span>
-                <span class="cookie-acc-meta">
-                  <label class="switch" onclick="event.stopPropagation()">
-                    <input id="marketing-cookies" type="checkbox">
-                    <span class="slider"></span>
-                  </label>
-                </span>
-                <span class="cookie-acc-arrow">⌄</span>
-              </button>
-              <div class="cookie-acc-body">
-                <p>Permitem personalizar conteúdos e medir eficácia de campanhas e anúncios.</p>
-              </div>
-            </div>
-    
+        <div class="cookie-acc-item">
+          <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
+            <span class="cookie-acc-title">Funcionais</span>
+            <span class="cookie-acc-meta">
+              <label class="switch" onclick="event.stopPropagation()">
+                <input id="functional-cookies" type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </span>
+            <span class="cookie-acc-arrow">⌄</span>
+          </button>
+          <div class="cookie-acc-body">
+            <p>Permitem guardar preferências (ex.: idioma) e melhorar a experiência no site.</p>
           </div>
         </div>
-    
-        <div class="cookie-modal__footer">
-          <button type="button" class="btn-outline-dark" onclick="rejectAllCookies()">Rejeitar</button>
-          <button type="button" class="btn-outline-dark" onclick="acceptAllCookies()">Aceitar</button>
-          <button type="button" class="btn-primary" onclick="saveCookiePreferences()">Guardar preferências</button>
+
+        <div class="cookie-acc-item">
+          <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
+            <span class="cookie-acc-title">Estatísticas</span>
+            <span class="cookie-acc-meta">
+              <label class="switch" onclick="event.stopPropagation()">
+                <input id="analytics-cookies" type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </span>
+            <span class="cookie-acc-arrow">⌄</span>
+          </button>
+          <div class="cookie-acc-body">
+            <p>Ajudam-nos a perceber como o site é usado, para melhorar conteúdos e desempenho.</p>
+          </div>
         </div>
-    
+
+        <div class="cookie-acc-item">
+          <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
+            <span class="cookie-acc-title">Marketing</span>
+            <span class="cookie-acc-meta">
+              <label class="switch" onclick="event.stopPropagation()">
+                <input id="marketing-cookies" type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </span>
+            <span class="cookie-acc-arrow">⌄</span>
+          </button>
+          <div class="cookie-acc-body">
+            <p>Permitem personalizar conteúdos e medir eficácia de campanhas e anúncios.</p>
+          </div>
+        </div>
+
       </div>
     </div>
 
+    <div class="cookie-modal__footer">
+      <button type="button" class="btn-outline-dark" onclick="rejectAllCookies()">Rejeitar</button>
+      <button type="button" class="btn-outline-dark" onclick="acceptAllCookies()">Aceitar</button>
+      <button type="button" class="btn-primary" onclick="saveCookiePreferences()">Guardar preferências</button>
     </div>
+
+  </div>
+</div>
     
     <header class="header">
         <div class="container">
