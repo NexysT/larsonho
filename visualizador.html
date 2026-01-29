@@ -52,14 +52,48 @@
 <body>
     
     <header class="header">
-        <div class="container header-content">
-            <div class="logo">
-                <div class="logo-icon">🟦</div>
-                <div class="logo-text">
-                    <h1>LAR DE SONHO</h1>
-                    <p>Visualizador de Cookies</p>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">❤️</div>
+                    <div class="logo-text">
+                        <h1>LAR DE SONHO</h1>
+                        <p>Visualizador de Cookies</p>
+                    </div>
                 </div>
+                
+                <nav class="nav-desktop">
+                    <button onclick="showPage('home')" class="nav-link active" data-page="home">🏠 Início</button>
+                    <button onclick="showPage('services')" class="nav-link" data-page="services">❤️ Serviços</button>
+                    <button onclick="showPage('pricing')" class="nav-link" data-page="pricing">💰 Preçário</button>
+                    <button onclick="showPage('contact')" class="nav-link" data-page="contact">📞 Contacto</button>
+                </nav>
+
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
             </div>
+            
+            <nav id="mobileNav" class="nav-mobile">
+                <button onclick="showPage('home'); toggleMobileMenu()" class="nav-link" data-page="home">🏠
+                    Início</button>
+                <button onclick="showPage('services'); toggleMobileMenu()" class="nav-link" data-page="services">❤️
+                    Serviços</button>
+                <button onclick="showPage('pricing'); toggleMobileMenu()" class="nav-link" data-page="pricing">💰
+                    Preçário</button>
+                <button onclick="showPage('privacy'); toggleMobileMenu()" class="nav-link" data-page="privacy">🔒
+                    Privacidade</button>
+                <button onclick="showPage('cookies'); toggleMobileMenu()" class="nav-link" data-page="cookies">🍪
+                    Cookies</button>
+                <button onclick="showPage('legal'); toggleMobileMenu()" class="nav-link" data-page="legal">📋 Aviso
+                    Legal</button>
+                <button onclick="showPage('rights'); toggleMobileMenu()" class="nav-link" data-page="rights">✅ Seus
+                    Direitos</button>
+                <button onclick="showPage('recrutamento'); toggleMobileMenu()" class="nav-link" data-page="recrutamento">
+                    🧑‍💼 Recrutamento</button>
+                <button onclick="showPage('cctv'); toggleMobileMenu()" class="nav-link" data-page="cctv">Videovigilancia</button>
+                <button onclick="showPage('contact'); toggleMobileMenu()" class="nav-link" data-page="contact">📞
+                    Contacto</button>
+            </nav>
         </div>
     </header>
 
