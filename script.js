@@ -8,6 +8,43 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+/* === ADICIONADO: Toast + mensagens inteligentes (sem mexer no resto) === */
+function showCookieToast(message) {
+  let toast = document.getElementById('cookieToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'cookieToast';
+    toast.className = 'cookie-toast';
+    document.body.appendChild(toast);
+  }
+
+  toast.textContent = message;
+  toast.classList.add('show');
+
+  clearTimeout(window.__cookieToastTimer);
+  window.__cookieToastTimer = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 4500);
+}
+
+function listFromPreferences(prefs) {
+  const aceites = ['Necessários'];
+  const rejeitados = [];
+
+  if (prefs.functional) aceites.push('Funcionais'); else rejeitados.push('Funcionais');
+  if (prefs.analytics) aceites.push('Estatísticas'); else rejeitados.push('Estatísticas');
+  if (prefs.marketing) aceites.push('Marketing'); else rejeitados.push('Marketing');
+
+  return { aceites, rejeitados };
+}
+
+function joinPT(items) {
+  if (!items || items.length === 0) return '';
+  if (items.length === 1) return items[0];
+  if (items.length === 2) return items[0] + ' e ' + items[1];
+  return items.slice(0, -1).join(', ') + ' e ' + items[items.length - 1];
+}
+
 /* Abrir modal */
 function showCookieSettings() {
   document.getElementById('cookieBanner').classList.remove('show');
@@ -61,6 +98,9 @@ function acceptAllCookies() {
   localStorage.setItem('cookieConsent', 'all');
   localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
 
+  const { aceites } = listFromPreferences(preferences);
+  showCookieToast(`Aceitaste cookies de ${joinPT(aceites)}.`);
+
   document.getElementById('cookieBanner').classList.remove('show');
   closeCookieSettings();
 }
@@ -76,6 +116,8 @@ function rejectAllCookies() {
 
   localStorage.setItem('cookieConsent', 'necessary');
   localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+
+  showCookieToast('Rejeitaste todos os cookies, exceto os obrigatórios para o funcionamento do site.');
 
   document.getElementById('cookieBanner').classList.remove('show');
   closeCookieSettings();
@@ -105,6 +147,9 @@ function saveCookiePreferences() {
 
   localStorage.setItem('cookieConsent', 'custom');
   localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+
+  const { aceites, rejeitados } = listFromPreferences(preferences);
+  showCookieToast(`Preferências guardadas: aceitaste ${joinPT(aceites)} e rejeitaste ${joinPT(rejeitados)}.`);
 
   document.getElementById('cookieBanner').classList.remove('show');
   closeCookieSettings();
@@ -139,102 +184,97 @@ function loadCookiePreferencesIntoUI() {
   if (marketingEl) marketingEl.checked = !!prefs.marketing;
 }
 
-
 function showPage(pageId) {
-    
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.remove('active'));
-    
-    
-    const selectedPage = document.getElementById(pageId + 'Page');
-    if (selectedPage) {
-        selectedPage.classList.add('active');
+
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => page.classList.remove('active'));
+
+
+  const selectedPage = document.getElementById(pageId + 'Page');
+  if (selectedPage) {
+    selectedPage.classList.add('active');
+  }
+
+
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('data-page') === pageId) {
+      link.classList.add('active');
     }
-    
-    
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('data-page') === pageId) {
-            link.classList.add('active');
-        }
-    });
-    
-    
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function toggleMobileMenu() {
-    const mobileNav = document.getElementById('mobileNav');
-    mobileNav.classList.toggle('show');
+  const mobileNav = document.getElementById('mobileNav');
+  mobileNav.classList.toggle('show');
 }
 
 function submitContactForm(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('contactName').value;
-    const email = document.getElementById('contactEmail').value;
-    const subject = document.getElementById('contactSubject').value;
-    const message = document.getElementById('contactMessage').value;
-    const consent = document.getElementById('contactConsent').checked;
-    
-    if (!consent) {
-        alert('⚠️ Por favor, aceite a Política de Privacidade para continuar.');
-        return;
-    }
-    
-    
-    alert(`✅ Mensagem enviada com sucesso!\n\nObrigado ${name}, entraremos em contacto brevemente através de ${email}.`);
-    
-    
-    event.target.reset();
-}
+  event.preventDefault();
 
+  const name = document.getElementById('contactName').value;
+  const email = document.getElementById('contactEmail').value;
+  const subject = document.getElementById('contactSubject').value;
+  const message = document.getElementById('contactMessage').value;
+  const consent = document.getElementById('contactConsent').checked;
+
+  if (!consent) {
+    alert('⚠️ Por favor, aceite a Política de Privacidade para continuar.');
+    return;
+  }
+
+
+  alert(`✅ Mensagem enviada com sucesso!\n\nObrigado ${name}, entraremos em contacto brevemente através de ${email}.`);
+
+
+  event.target.reset();
+}
 
 function submitRightsRequest(event) {
-    event.preventDefault();
-    
-    const right = document.getElementById('rightsSelect').value;
-    const description = document.getElementById('rightsDescription').value;
-    
-    if (!right || right === 'Selecione o direito que pretende exercer') {
-        alert('⚠️ Por favor, selecione um direito.');
-        return;
-    }
-    
-    if (!description.trim()) {
-        alert('⚠️ Por favor, descreva o seu pedido.');
-        return;
-    }
-    
-    
-    alert(`✅ Pedido enviado com sucesso!\n\nO seu pedido de "${right}" foi recebido. Responderemos no prazo de 1 mês conforme estabelecido no RGPD.`);
-    
-    
-    event.target.reset();
+  event.preventDefault();
+
+  const right = document.getElementById('rightsSelect').value;
+  const description = document.getElementById('rightsDescription').value;
+
+  if (!right || right === 'Selecione o direito que pretende exercer') {
+    alert('⚠️ Por favor, selecione um direito.');
+    return;
+  }
+
+  if (!description.trim()) {
+    alert('⚠️ Por favor, descreva o seu pedido.');
+    return;
+  }
+
+
+  alert(`✅ Pedido enviado com sucesso!\n\nO seu pedido de "${right}" foi recebido. Responderemos no prazo de 1 mês conforme estabelecido no RGPD.`);
+
+
+  event.target.reset();
 }
 
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 968) {
-        document.getElementById('mobileNav').classList.remove('show');
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
+  });
 });
 
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 968) {
+    document.getElementById('mobileNav').classList.remove('show');
+  }
+});
 
 console.log('🏥 LAR DE SONHO - Website carregado com sucesso!');
 console.log('🔒 100% Conforme com RGPD');
