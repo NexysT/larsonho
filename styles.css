@@ -1377,6 +1377,41 @@ input:disabled + .slider {
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1);
 }
 
+.legal-bases {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.legal-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+}
+
+.legal-item h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.legal-item p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.legal-item ul {
+    margin: 10px 0 15px 20px;
+    padding: 0;
+}
+
+.legal-item li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
 .cookie-card h4 {
     font-size: 18px;
     font-weight: 700;
