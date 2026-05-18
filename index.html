@@ -7,7 +7,9 @@
     <title>LAR DE SONHO - Cuidados de Excelência para a Terceira Idade</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-    
+
+<body>
+
 <div id="cookieBanner" class="cookie-banner">
   <div class="cookie-content">
     <div class="cookie-text">
@@ -26,7 +28,6 @@
 <!-- Modal de Preferências de Cookies -->
 <div id="cookieModalOverlay" class="cookie-modal-overlay" aria-hidden="true">
   <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle">
-
     <div class="cookie-modal__header">
       <div class="cookie-modal__titlewrap">
         <div class="cookie-modal__brand">🍪</div>
@@ -35,18 +36,14 @@
           <p class="cookie-modal__subtitle">Podes escolher que categorias queres permitir. Podes alterar isto a qualquer momento.</p>
         </div>
       </div>
-
       <button type="button" class="cookie-modal__close" onclick="closeCookieSettings()" aria-label="Fechar">✕</button>
     </div>
-
     <div class="cookie-modal__body">
       <div class="cookie-modal__note">
         Os cookies necessários estão sempre ativos para garantir o funcionamento do site.
         Para mais detalhes consulta a <button type="button" class="btn-link" onclick="showPage('cookies'); closeCookieSettings()">Política de Cookies</button>.
       </div>
-
       <div class="cookie-accordion">
-
         <div class="cookie-acc-item is-open">
           <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
             <span class="cookie-acc-title">Necessários</span>
@@ -57,7 +54,6 @@
             <p>Essenciais para navegação, segurança e funcionamento das funcionalidades base do site.</p>
           </div>
         </div>
-
         <div class="cookie-acc-item">
           <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
             <span class="cookie-acc-title">Funcionais</span>
@@ -73,7 +69,6 @@
             <p>Permitem guardar preferências (ex.: idioma) e melhorar a experiência no site.</p>
           </div>
         </div>
-
         <div class="cookie-acc-item">
           <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
             <span class="cookie-acc-title">Estatísticas</span>
@@ -89,7 +84,6 @@
             <p>Ajudam-nos a perceber como o site é usado, para melhorar conteúdos e desempenho.</p>
           </div>
         </div>
-
         <div class="cookie-acc-item">
           <button type="button" class="cookie-acc-head" onclick="toggleCookieAccordion(this)">
             <span class="cookie-acc-title">Marketing</span>
@@ -105,1179 +99,979 @@
             <p>Permitem personalizar conteúdos e medir eficácia de campanhas e anúncios.</p>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="cookie-modal__footer">
       <button type="button" class="btn-outline-dark" onclick="rejectAllCookies()">Rejeitar</button>
       <button type="button" class="btn-outline-dark" onclick="acceptAllCookies()">Aceitar</button>
       <button type="button" class="btn-primary" onclick="saveCookiePreferences()">Guardar preferências</button>
     </div>
-
   </div>
 </div>
-    
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">❤️</div>
-                    <div class="logo-text">
-                        <h1>LAR DE SONHO</h1>
-                        <p>Cuidar com Excelência</p>
-                    </div>
-                </div>
-                
-                <nav class="nav-desktop">
-                    <button onclick="showPage('home')" class="nav-link active" data-page="home">🏠 Início</button>
-                    <button onclick="showPage('services')" class="nav-link" data-page="services">❤️ Serviços</button>
-                    <button onclick="showPage('pricing')" class="nav-link" data-page="pricing">💰 Preçário</button>
-                    <button onclick="showPage('contact')" class="nav-link" data-page="contact">📞 Contacto</button>
-                </nav>
 
-                
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">❤️</div>
+                <div class="logo-text">
+                    <h1>LAR DE SONHO</h1>
+                    <p>Cuidar com Excelência</p>
+                </div>
             </div>
-            
-            <nav id="mobileNav" class="nav-mobile">
-                <button onclick="showPage('home'); toggleMobileMenu()" class="nav-link" data-page="home">🏠
-                    Início</button>
-                <button onclick="showPage('services'); toggleMobileMenu()" class="nav-link" data-page="services">❤️
-                    Serviços</button>
-                <button onclick="showPage('pricing'); toggleMobileMenu()" class="nav-link" data-page="pricing">💰
-                    Preçário</button>
-                <button onclick="showPage('privacy'); toggleMobileMenu()" class="nav-link" data-page="privacy">🔒
-                    Privacidade</button>
-                <button onclick="showPage('cookies'); toggleMobileMenu()" class="nav-link" data-page="cookies">🍪
-                    Cookies</button>
-                <button onclick="showPage('legal'); toggleMobileMenu()" class="nav-link" data-page="legal">📋 Aviso
-                    Legal</button>
-                <button onclick="showPage('rights'); toggleMobileMenu()" class="nav-link" data-page="rights">✅ Seus
-                    Direitos</button>
-                <button onclick="showPage('recrutamento'); toggleMobileMenu()" class="nav-link" data-page="recrutamento">
-                    🧑‍💼 Recrutamento</button>
-                <button onclick="showPage('cctv'); toggleMobileMenu()" class="nav-link" data-page="cctv">Videovigilancia</button>
-                <button onclick="showPage('contact'); toggleMobileMenu()" class="nav-link" data-page="contact">📞
-                    Contacto</button>
+            <nav class="nav-desktop">
+                <button onclick="showPage('home')" class="nav-link active" data-page="home">🏠 Início</button>
+                <button onclick="showPage('services')" class="nav-link" data-page="services">❤️ Serviços</button>
+                <button onclick="showPage('pricing')" class="nav-link" data-page="pricing">💰 Preçário</button>
+                <button onclick="showPage('contact')" class="nav-link" data-page="contact">📞 Contacto</button>
             </nav>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         </div>
-    </header>
+        <nav id="mobileNav" class="nav-mobile">
+            <button onclick="showPage('home'); toggleMobileMenu()" class="nav-link" data-page="home">🏠 Início</button>
+            <button onclick="showPage('services'); toggleMobileMenu()" class="nav-link" data-page="services">❤️ Serviços</button>
+            <button onclick="showPage('pricing'); toggleMobileMenu()" class="nav-link" data-page="pricing">💰 Preçário</button>
+            <button onclick="showPage('privacy'); toggleMobileMenu()" class="nav-link" data-page="privacy">🔒 Privacidade</button>
+            <button onclick="showPage('cookies'); toggleMobileMenu()" class="nav-link" data-page="cookies">🍪 Cookies</button>
+            <button onclick="showPage('terms'); toggleMobileMenu()" class="nav-link" data-page="terms">📄 Termos</button>
+            <button onclick="showPage('legal'); toggleMobileMenu()" class="nav-link" data-page="legal">📋 Aviso Legal</button>
+            <button onclick="showPage('rights'); toggleMobileMenu()" class="nav-link" data-page="rights">✅ Seus Direitos</button>
+            <button onclick="showPage('recrutamento'); toggleMobileMenu()" class="nav-link" data-page="recrutamento">🧑‍💼 Recrutamento</button>
+            <button onclick="showPage('cctv'); toggleMobileMenu()" class="nav-link" data-page="cctv">📹 Videovigilância</button>
+            <button onclick="showPage('contact'); toggleMobileMenu()" class="nav-link" data-page="contact">📞 Contacto</button>
+        </nav>
+    </div>
+</header>
 
-    <section class="hero-banner">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2 class="hero-title">Cuidados que Transformam Vidas</h2>
-            <p class="hero-subtitle">Mais de 20.000 famílias confiam em nós há mais de 15 anos</p>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-number">20.000+</div>
-                    <div class="stat-label">Residentes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🏡</div>
-                    <div class="stat-number">1.500+</div>
-                    <div class="stat-label">Apoio Domiciliário</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">💼</div>
-                    <div class="stat-number">15.000+</div>
-                    <div class="stat-label">Profissionais</div>
-                </div>
+<section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h2 class="hero-title">Cuidados que Transformam Vidas</h2>
+        <p class="hero-subtitle">Mais de 20.000 famílias confiam em nós há mais de 15 anos</p>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-number">20.000+</div>
+                <div class="stat-label">Residentes</div>
             </div>
-            <button onclick="showPage('contact')" class="hero-btn">Fale Connosco</button>
+            <div class="stat-card">
+                <div class="stat-icon">🏡</div>
+                <div class="stat-number">1.500+</div>
+                <div class="stat-label">Apoio Domiciliário</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💼</div>
+                <div class="stat-number">15.000+</div>
+                <div class="stat-label">Profissionais</div>
+            </div>
         </div>
-    </section>
+        <button onclick="showPage('contact')" class="hero-btn">Fale Connosco</button>
+    </div>
+</section>
 
-    
-    <main class="main-content">
-        <div class="container">
-            
-            <div id="homePage" class="page active">
-                <div class="section-intro">
-                    <h2 class="section-title">Bem-vindo ao LAR DE SONHO</h2>
-                    <p class="section-description">Dedicados a proporcionar cuidados de excelência com dignidade,
-                        respeito e carinho</p>
+<main class="main-content">
+    <div class="container">
+
+        <!-- HOME PAGE -->
+        <div id="homePage" class="page active">
+            <div class="section-intro">
+                <h2 class="section-title">Bem-vindo ao LAR DE SONHO</h2>
+                <p class="section-description">Dedicados a proporcionar cuidados de excelência com dignidade, respeito e carinho</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card service-card-blue">
+                    <div class="service-icon">🏠</div>
+                    <h3>Serviço Residencial</h3>
+                    <p>Ambiente acolhedor e seguro, com acompanhamento 24h por profissionais qualificados.</p>
+                    <button onclick="showPage('services')" class="btn-link">Saber mais →</button>
                 </div>
-
-                <div class="services-grid">
-                    <div class="service-card service-card-blue">
-                        <div class="service-icon">🏠</div>
-                        <h3>Serviço Residencial</h3>
-                        <p>Ambiente acolhedor e seguro, com acompanhamento 24h por profissionais qualificados.</p>
-                        <button onclick="showPage('services')" class="btn-link">Saber mais →</button>
-                    </div>
-
-                    <div class="service-card service-card-green">
-                        <div class="service-icon">🏡</div>
-                        <h3>Apoio Domiciliário</h3>
-                        <p>Cuidados personalizados no conforto do seu lar, com toda a dedicação que merece.</p>
-                        <button onclick="showPage('services')" class="btn-link">Saber mais →</button>
-                    </div>
+                <div class="service-card service-card-green">
+                    <div class="service-icon">🏡</div>
+                    <h3>Apoio Domiciliário</h3>
+                    <p>Cuidados personalizados no conforto do seu lar, com toda a dedicação que merece.</p>
+                    <button onclick="showPage('services')" class="btn-link">Saber mais →</button>
                 </div>
-
-                <div class="alert alert-info">
-                    <div class="alert-icon">🔒</div>
-                    <div>
-                        <h4>Compromisso com a sua Privacidade</h4>
-                        <p>O LAR DE SONHO está 100% em conformidade com o RGPD. Os seus dados pessoais são tratados com
-                            a máxima segurança e transparência.</p>
-                    </div>
+            </div>
+            <div class="alert alert-info">
+                <div class="alert-icon">🔒</div>
+                <div>
+                    <h4>Compromisso com a sua Privacidade</h4>
+                    <p>O LAR DE SONHO está 100% em conformidade com o RGPD. Os seus dados pessoais são tratados com a máxima segurança e transparência.</p>
                 </div>
-
-                <div class="features-section">
-                    <h3>Porque nos escolher?</h3>
-                    <div class="features-grid">
-                        <div class="feature">
-                            <div class="feature-icon">✅</div>
-                            <h4>Experiência Comprovada</h4>
-                            <p>Mais de 15 anos ao serviço da comunidade</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">👨‍⚕️</div>
-                            <h4>Equipa Especializada</h4>
-                            <p>Profissionais certificados e dedicados</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🌍</div>
-                            <h4>Presença Internacional</h4>
-                            <p>Portugal e Itália</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🔒</div>
-                            <h4>RGPD Compliant</h4>
-                            <p>Máxima segurança dos seus dados</p>
-                        </div>
+            </div>
+            <div class="features-section">
+                <h3>Porque nos escolher?</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">✅</div>
+                        <h4>Experiência Comprovada</h4>
+                        <p>Mais de 15 anos ao serviço da comunidade</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">👨‍⚕️</div>
+                        <h4>Equipa Especializada</h4>
+                        <p>Profissionais certificados e dedicados</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🌍</div>
+                        <h4>Presença Internacional</h4>
+                        <p>Portugal e Itália</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🔒</div>
+                        <h4>RGPD Compliant</h4>
+                        <p>Máxima segurança dos seus dados</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            
-            <div id="servicesPage" class="page">
-                <h2 class="page-title">Nossos Serviços</h2>
-
-                <div class="service-section">
-                    <h3 class="service-title">🏠 Serviço de Residência</h3>
-                    <div class="service-features">
-                        <div class="feature-item">✅ Acompanhamento 24 horas por profissionais especializados</div>
-                        <div class="feature-item">✅ Quartos confortáveis e adaptados</div>
-                        <div class="feature-item">✅ Alimentação personalizada e balanceada</div>
-                        <div class="feature-item">✅ Atividades recreativas e terapêuticas</div>
-                        <div class="feature-item">✅ Acompanhamento médico e de enfermagem</div>
-                        <div class="feature-item">✅ Fisioterapia e terapias complementares</div>
-                    </div>
+        <!-- SERVICES PAGE -->
+        <div id="servicesPage" class="page">
+            <h2 class="page-title">Nossos Serviços</h2>
+            <div class="service-section">
+                <h3 class="service-title">🏠 Serviço de Residência</h3>
+                <div class="service-features">
+                    <div class="feature-item">✅ Acompanhamento 24 horas por profissionais especializados</div>
+                    <div class="feature-item">✅ Quartos confortáveis e adaptados</div>
+                    <div class="feature-item">✅ Alimentação personalizada e balanceada</div>
+                    <div class="feature-item">✅ Atividades recreativas e terapêuticas</div>
+                    <div class="feature-item">✅ Acompanhamento médico e de enfermagem</div>
+                    <div class="feature-item">✅ Fisioterapia e terapias complementares</div>
                 </div>
-
-                <div class="service-section service-section-green">
-                    <h3 class="service-title">🏡 Apoio ao Domicílio</h3>
-                    <div class="service-features">
-                        <div class="feature-item">✅ Cuidados de higiene pessoal</div>
-                        <div class="feature-item">✅ Preparação de refeições</div>
-                        <div class="feature-item">✅ Administração de medicação</div>
-                        <div class="feature-item">✅ Companhia e apoio emocional</div>
-                        <div class="feature-item">✅ Tarefas domésticas ligeiras</div>
-                        <div class="feature-item">✅ Acompanhamento a consultas médicas</div>
-                    </div>
+            </div>
+            <div class="service-section service-section-green">
+                <h3 class="service-title">🏡 Apoio ao Domicílio</h3>
+                <div class="service-features">
+                    <div class="feature-item">✅ Cuidados de higiene pessoal</div>
+                    <div class="feature-item">✅ Preparação de refeições</div>
+                    <div class="feature-item">✅ Administração de medicação</div>
+                    <div class="feature-item">✅ Companhia e apoio emocional</div>
+                    <div class="feature-item">✅ Tarefas domésticas ligeiras</div>
+                    <div class="feature-item">✅ Acompanhamento a consultas médicas</div>
                 </div>
-
-                <div class="service-section service-section-purple">
-                    <h3 class="service-title">💆 Serviços Terapêuticos</h3>
-                    <div class="therapy-grid">
-                        <div class="therapy-card">
-                            <h4>Fisioterapia</h4>
-                            <p>Recuperação e manutenção da mobilidade</p>
-                        </div>
-                        <div class="therapy-card">
-                            <h4>Terapia Oriental</h4>
-                            <p>Acupuntura e técnicas complementares</p>
-                        </div>
-                        <div class="therapy-card">
-                            <h4>Terapias Tradicionais</h4>
-                            <p>Massagens e tratamentos especializados</p>
-                        </div>
+            </div>
+            <div class="service-section service-section-purple">
+                <h3 class="service-title">💆 Serviços Terapêuticos</h3>
+                <div class="therapy-grid">
+                    <div class="therapy-card">
+                        <h4>Fisioterapia</h4>
+                        <p>Recuperação e manutenção da mobilidade</p>
+                    </div>
+                    <div class="therapy-card">
+                        <h4>Terapia Oriental</h4>
+                        <p>Acupuntura e técnicas complementares</p>
+                    </div>
+                    <div class="therapy-card">
+                        <h4>Terapias Tradicionais</h4>
+                        <p>Massagens e tratamentos especializados</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            
-            <div id="pricingPage" class="page">
-                <h2 class="page-title">Preçário</h2>
-
-                <div class="alert alert-info">
-                    <strong>Nota:</strong> Os preços apresentados são indicativos. Para um orçamento personalizado,
-                    contacte-nos através dos nossos canais.
-                </div>
-
-                <div class="pricing-grid">
-                    <div class="pricing-card pricing-card-blue">
-                        <h3>Serviço Residencial</h3>
-                        <p class="pricing-subtitle">Cuidados completos 24h</p>
-
-                        <div class="pricing-items">
-                            <div class="pricing-item">
-                                <span>Quarto Individual</span>
-                                <strong>€1.200 - €1.800/mês</strong>
-                            </div>
-                            <div class="pricing-item">
-                                <span>Quarto Duplo</span>
-                                <strong>€900 - €1.200/mês</strong>
-                            </div>
-                            <div class="pricing-item">
-                                <span>Suite Premium</span>
-                                <strong>€2.000 - €2.500/mês</strong>
-                            </div>
-                        </div>
-
-                        <div class="pricing-includes">
-                            <strong>Incluído:</strong>
-                            <ul>
-                                <li>• Alimentação completa</li>
-                                <li>• Cuidados de enfermagem</li>
-                                <li>• Atividades recreativas</li>
-                                <li>• Lavandaria</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pricing-card pricing-card-green">
-                        <h3>Apoio Domiciliário</h3>
-                        <p class="pricing-subtitle">Flexível e personalizado</p>
-
-                        <div class="pricing-items">
-                            <div class="pricing-item">
-                                <span>2h/dia (5 dias/semana)</span>
-                                <strong>€400 - €600/mês</strong>
-                            </div>
-                            <div class="pricing-item">
-                                <span>4h/dia (5 dias/semana)</span>
-                                <strong>€700 - €1.000/mês</strong>
-                            </div>
-                            <div class="pricing-item">
-                                <span>Apoio 24h</span>
-                                <strong>€1.500 - €2.200/mês</strong>
-                            </div>
-                        </div>
-
-                        <div class="pricing-includes">
-                            <strong>Serviços disponíveis:</strong>
-                            <ul>
-                                <li>• Higiene pessoal</li>
-                                <li>• Preparação de refeições</li>
-                                <li>• Administração medicação</li>
-                                <li>• Companhia</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="additional-services">
-                    <h3>Serviços Adicionais</h3>
-                    <div class="additional-grid">
-                        <div class="additional-card">
-                            <h4>Fisioterapia</h4>
-                            <div class="price">€30-€50</div>
-                            <p>por sessão</p>
-                        </div>
-                        <div class="additional-card">
-                            <h4>Terapia Oriental</h4>
-                            <div class="price">€35-€60</div>
-                            <p>por sessão</p>
-                        </div>
-                        <div class="additional-card">
-                            <h4>Consulta Médica</h4>
-                            <div class="price">€40-€70</div>
-                            <p>por consulta</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- PRICING PAGE -->
+        <div id="pricingPage" class="page">
+            <h2 class="page-title">Preçário</h2>
+            <div class="alert alert-info">
+                <strong>Nota:</strong> Os preços apresentados são indicativos. Para um orçamento personalizado, contacte-nos através dos nossos canais.
             </div>
-
-            
-            <div id="privacyPage" class="page">
-                <h2 class="page-title">A tua privacidade é um compromisso, não um detalhe</h2>
-
-                <div class="alert alert-info">
-                    <strong>Última atualização:</strong> Janeiro 2026
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>1. Responsável pelo Tratamento</h3>
-                    <p><strong>Entidade:</strong> LAR DE SONHO</p>
-                    <p><strong>Morada:</strong> Rua Verde, n.º 1, 4700-001 Braga, Portugal</p>
-                    <p><strong>NIPC:</strong> 501 000 000</p>
-                    <p><strong>Email:</strong> privacidade@lardesonho.pt</p>
-                    <p><strong>Encarregado de Proteção de Dados (DPO):</strong> dpo@lardesonho.pt</p>
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>2. Dados Pessoais Recolhidos</h3>
-                    <p>No âmbito dos nossos serviços, podemos recolher as seguintes categorias de dados:</p>
-                    <div class="content-section">
-                        <div class="contact-method--">
-                            <h4>📋 Dados de Identificação</h4>
-                            <p>Nome, data de nascimento, número de identificação civil, morada, contactos.</p>
-                        </div>
-                        <br>
-                        <div class="contact-method">
-                            <h4>🏥 Dados de Saúde</h4>
-                            <p>Informação médica necessária para prestação de cuidados, mediante consentimento
-                                explícito.</p>
-                        </div>
-                        <br>
-                        <div class="contact-method--">
-                            <h4>💰 Dados Económicos</h4>
-                            <p>Rendimentos, apenas quando relevantes para efeitos de apoios sociais.</p>
-                        </div>
-                        <br>
-                        <div class="contact-method">
-                            <h4>👨‍👩‍👦 Dados de Familiares</h4>
-                            <p>Contactos de responsáveis legais ou cuidadores.</p>
-                        </div>
-                        <br>
-                        <div class="contact-method--">
-                            <h4>🔐 Dados Biométricos</h4>
-                            <p>Impressões digitais para controlo de acessos de funcionários.</p>
-                        </div>
+            <div class="pricing-grid">
+                <div class="pricing-card pricing-card-blue">
+                    <h3>Serviço Residencial</h3>
+                    <p class="pricing-subtitle">Cuidados completos 24h</p>
+                    <div class="pricing-items">
+                        <div class="pricing-item"><span>Quarto Individual</span><strong>€1.200 - €1.800/mês</strong></div>
+                        <div class="pricing-item"><span>Quarto Duplo</span><strong>€900 - €1.200/mês</strong></div>
+                        <div class="pricing-item"><span>Suite Premium</span><strong>€2.000 - €2.500/mês</strong></div>
                     </div>
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>3. Finalidades e Fundamentos Legais</h3>
-
-                    <div class="legal-bases">
-                        <div class="legal-item">
-                            <strong>Prestação de Serviços</strong>
-                            <p>Execução de contrato Art. 6.º, n.º 1, al. b) RGPD</p>
-                        </div>
-                        <div class="legal-item">
-                            <strong>Dados de Saúde</strong>
-                            <p>Consentimento explícito Art. 9.º, n.º 2, al. a) RGPD</p>
-                        </div>
-                        <div class="legal-item">
-                            <strong>Obrigações Legais</strong>
-                            <p>Cumprimento de obrigação legal Art. 6.º, n.º 1, al. c) RGPD</p>
-                        </div>
-                        <div class="legal-item">
-                            <strong>Marketing (opcional)</strong>
-                            <p>Consentimento Art. 6.º, n.º 1, al. a) RGPD</p>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>4. Informação obtida automaticamente</h3>
-                    <p>
-                        O website utiliza cookies estritamente necessários ao seu funcionamento.
-                        Cookies adicionais só são utilizados mediante consentimento do utilizador.
-                    </p>
-                    <p>
-                        Para mais informação, consulta a nossa Política de Cookies.
-                    </p>
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>5. Destinatários dos Dados</h3>
-                    <ul class="clean-list">
-                        <li>Prestadores de serviços tecnológicos</li>
-                        <li>Entidades públicas com legitimidade legal</li>
-                        <li>Auditores internos e externos</li>
-                    </ul>
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>6. Prazos de Conservação</h3>
-                    <p>
-                        Os dados são conservados apenas pelo período necessário às finalidades
-                        para as quais foram recolhidos, ou pelo prazo legalmente exigido.
-                    </p>
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>7. Transferências Internacionais</h3>
-                    <p>
-                        Os dados pessoais não são transferidos para fora do Espaço Económico Europeu,
-                        salvo quando garantido um nível de proteção adequado nos termos do RGPD.
-                    </p>
-                </div>
-
-                
-                <div class="content-section highlight">
-                    <h3>8. Direitos do Titular dos Dados</h3>
-                    <ul class="clean-list">
-                        <li>Direito de acesso</li>
-                        <li>Direito de retificação</li>
-                        <li>Direito ao apagamento</li>
-                        <li>Direito à limitação</li>
-                        <li>Direito de oposição</li>
-                        <li>Direito à portabilidade</li>
-                        <li>Direito de retirar o consentimento</li>
-                    </ul>
-
-                    <p>
-                        Para exercer os seus direitos, envia um email para
-                        <strong>privacidade@lardesonho.pt</strong>
-                    </p>
-                </div>
-
-                
-                <div class="content-section">
-                    <h3>9. Autoridade de Controlo</h3>
-                    <p>
-                        O titular dos dados pode apresentar reclamação à Comissão Nacional de Proteção
-                        de Dados CNPD.
-                    </p>
-                    <p><strong>www.cnpd.pt</strong></p>
-                </div>
-            </div>
-
-            
-            <div id="cookiesPage" class="page">
-                <h2 class="page-title">Política de Cookies</h2>
-
-                <div class="content-section">
-                    <h3>1. O que são cookies</h3>
-                    <p>O presente website utiliza cookies e/ou tecnologias similares, próprias e de terceiros. Cookies
-                        são ficheiros que contêm pequenas quantidades de informação e que são descarregados para o
-                        dispositivo do utilizador quando este visita um website. O objetivo principal dos cookies é
-                        reconhecer o utilizador sempre que acede ao website, permitindo melhorar a qualidade, segurança
-                        e funcionalidade do site, bem como simplificar a navegação. Os cookies são essenciais para o
-                        funcionamento da Internet, não danificam o dispositivo do utilizador e ajudam a identificar e
-                        resolver possíveis erros na operação do website.</p>
-
-                    <h3>2. Responsável pelo tratamento</h3>
-                    <p>O responsável pelo tratamento dos dados recolhidos através de cookies é:</p>
-                    <p>LAR DE SONHO, LDA<br>
-                        Rua dos Barcelinhos, n.º 67 4720-121 Braga<br>
-                        Email: <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></p>
-
-                    <h3>3. Categorias de cookies utilizados</h3>
-                    <div class="cookie-types">
-                        <div class="cookie-type cookie-necessary">
-                            <h4>Cookies necessários</h4>
-                            <p>Essenciais para permitir a navegação no website e o acesso a funcionalidades básicas,
-                                como formulários e áreas seguras. Não recolhem informações para fins de marketing e não
-                                podem ser desativados.</p>
-                        </div>
-                        <div class="cookie-type cookie-analytics">
-                            <h4>Cookies analíticos</h4>
-                            <p>Permitem recolher informação estatística sobre a utilização do website, como páginas
-                                visitadas e tempo de navegação, com o objetivo de melhorar o desempenho e os conteúdos
-                                disponibilizados.</p>
-                        </div>
-                        <div class="cookie-type cookie-marketing">
-                            <h4>Cookies de marketing e publicidade</h4>
-                            <p>São utilizados para apresentar publicidade direcionada relacionada com terapias e
-                                serviços disponibilizados pelo LAR DE SONHO, com base nos interesses e comportamento de
-                                navegação do utilizador.</p>
-                        </div>
-                        <div class="cookie-type cookie-functional">
-                            <h4>Cookies de terceiros</h4>
-                            <p>Podem ser instalados por entidades externas, nomeadamente redes sociais como Facebook,
-                                Instagram ou Twitter, quando o utilizador se encontra autenticado nessas plataformas,
-                                ficando sujeito às respetivas políticas de privacidade.</p>
-                        </div>
-                    </div>
-
-                    <div class="content-section">
-                        <h3>4. Dados recolhidos através de cookies</h3>
-                        <div class="data-categories">
-                            <div class="data-category">Endereço IP</div>
-                            <div class="data-category">Browser utilizado</div>
-                            <div class="data-category">Sistema operativo</div>
-                            <div class="data-category">Localização aproximada</div>
-                            <div class="data-category">Data e hora de acesso</div>
-                            <div class="data-category">Preferências do utilizador associadas a redes sociais</div>
-                        </div>
-                        <br>
-                        <br>
-                        <h3>5. Finalidades da utilização de cookies</h3>
-                        <div class="data-categories">
-                            <div class="data-category">Garantir o funcionamento técnico do website</div>
-                            <div class="data-category">Melhorar a experiência de navegação</div>
-                            <div class="data-category">Analisar padrões de utilização do website</div>
-                            <div class="data-category">Apresentar conteúdos e publicidade relevantes</div>
-                        </div>
-                        <br>
-                        <br>
-                        <h3>6. Base legal para o tratamento</h3>
-                        <div class="legal-bases">
-                            <div class="legal-item">
-                                <strong>Cookies não estritamente necessários</strong>
-                                <p>Baseiam-se no consentimento do utilizador, nos termos do artigo 6.º, n.º 1, alínea a)
-                                    do RGPD.</p>
-                            </div>
-                            <div class="legal-item">
-                                <strong>Cookies estritamente necessários</strong>
-                                <p>Baseiam-se no interesse legítimo do responsável pelo tratamento, nos termos do artigo
-                                    6.º, n.º 1, alínea f) do RGPD.</p>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <h3>7. Consentimento do utilizador</h3>
-                        <div class="content-section">
-                            <p>Ao aceder ao website, o utilizador é informado de forma clara sobre a utilização de
-                                cookies e pode:</p>
-                            <ul>
-                                <li>Aceitar todos os cookies</li>
-                                <li>Rejeitar cookies não essenciais</li>
-                                <li>Gerir as suas preferências de cookies</li>
-                            </ul>
-                            <p>O consentimento pode ser retirado a qualquer momento através das definições do browser ou
-                                das opções disponibilizadas no website.</p>
-                        </div>
-
-                        <h3>8. Configuração do utilizador para evitar cookies</h3>
-                        <div class="content-section">
-                            <p>O utilizador pode configurar o seu navegador para gerir ou bloquear cookies:</p>
-                            <ul>
-                                <li>Google Chrome: <a href="https://support.google.com/accounts/answer/61416"
-                                        target="_blank">link</a></li>
-                                <li>Mozilla Firefox: <a
-                                        href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences"
-                                        target="_blank">link</a></li>
-                                <li>Internet Explorer: <a
-                                        href="https://support.microsoft.com/pt-pt/help/17442/windows-internet-explorer-delete-manage-cookies"
-                                        target="_blank">link</a></li>
-                                <li>Safari: <a href="https://www.apple.com/legal/privacy/pt/" target="_blank">link</a>
-                                </li>
-                            </ul>
-                            <p>O utilizador pode ainda gerir preferências de publicidade comportamental através de: <a
-                                    href="https://www.youronlinechoices.com/pt/your-ad-choices" target="_blank">link</a>
-                            </p>
-                        </div>
-
-                        <h3>9. Prazo de conservação</h3>
-                        <p>Os cookies são conservados apenas pelo período necessário para cumprir as finalidades para as
-                            quais foram recolhidos, sendo eliminados automaticamente ou quando removidos pelo
-                            utilizador.</p>
-                        <br>
-                        <h3>10. Direitos do utilizador</h3>
-                        <div class="rights-grid">
-                            <div class="right-card">Aceder aos seus dados pessoais</div>
-                            <div class="right-card">Retificar dados inexatos</div>
-                            <div class="right-card">Solicitar o apagamento dos dados</div>
-                            <div class="right-card">Limitar ou opor-se ao tratamento</div>
-                            <div class="right-card">Retirar o consentimento a qualquer momento – Email: <a
-                                    href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></div>
-                        </div>
-
-                        <h3>11. Alterações à política de cookies</h3>
-                        <p>O LAR DE SONHO reserva-se o direito de atualizar a presente Política de Cookies sempre que
-                            necessário, sendo as alterações devidamente publicadas no website.</p>
-                    </div>
-
-                    <button onclick="saveCookiePreferences()" class="btn-primary btn-full">Guardar Preferências</button>
-                </div>
-            </div>
-
-            
-            <div id="legalPage" class="page">
-                <h2 class="page-title">Aviso Legal</h2>
-
-                <div class="content-section">
-                    <h3>Identificação da Entidade</h3>
-                    <p><strong>Denominação Social:</strong> LAR DE SONHO - Residências e Apoio Domiciliário, Lda.</p>
-                    <p><strong>Sede:</strong> Rua Verde, n.º 1, 4700-001 Braga, Portugal</p>
-                    <p><strong>NIPC:</strong> 501 000 000</p>
-                    <p><strong>Capital Social:</strong> €50.000,00</p>
-                    <p><strong>Email:</strong> geral@lardesonho.pt</p>
-                    <p><strong>Telefone:</strong> +351 253 000 000</p>
-                </div>
-
-                <div class="content-section">
-                    <h3>Videovigilância</h3>
-                    <div class="alert alert-warning">
-                        <strong>🎥 Áreas sob Videovigilância</strong>
-                        <p>As nossas instalações dispõem de sistema de videovigilância nas seguintes áreas:</p>
+                    <div class="pricing-includes">
+                        <strong>Incluído:</strong>
                         <ul>
-                            <li>• Corredores (segurança de utentes e trabalhadores)</li>
-                            <li>• Entradas e saídas (controlo de acessos)</li>
+                            <li>• Alimentação completa</li>
+                            <li>• Cuidados de enfermagem</li>
+                            <li>• Atividades recreativas</li>
+                            <li>• Lavandaria</li>
                         </ul>
-                        <p><strong>Finalidade:</strong> Segurança de pessoas e bens, conforme Lei n.º 1/2005</p>
-                        <p><strong>Conservação:</strong> Máximo 30 dias</p>
                     </div>
                 </div>
+                <div class="pricing-card pricing-card-green">
+                    <h3>Apoio Domiciliário</h3>
+                    <p class="pricing-subtitle">Flexível e personalizado</p>
+                    <div class="pricing-items">
+                        <div class="pricing-item"><span>2h/dia (5 dias/semana)</span><strong>€400 - €600/mês</strong></div>
+                        <div class="pricing-item"><span>4h/dia (5 dias/semana)</span><strong>€700 - €1.000/mês</strong></div>
+                        <div class="pricing-item"><span>Apoio 24h</span><strong>€1.500 - €2.200/mês</strong></div>
+                    </div>
+                    <div class="pricing-includes">
+                        <strong>Serviços disponíveis:</strong>
+                        <ul>
+                            <li>• Higiene pessoal</li>
+                            <li>• Preparação de refeições</li>
+                            <li>• Administração medicação</li>
+                            <li>• Companhia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-services">
+                <h3>Serviços Adicionais</h3>
+                <div class="additional-grid">
+                    <div class="additional-card"><h4>Fisioterapia</h4><div class="price">€30-€50</div><p>por sessão</p></div>
+                    <div class="additional-card"><h4>Terapia Oriental</h4><div class="price">€35-€60</div><p>por sessão</p></div>
+                    <div class="additional-card"><h4>Consulta Médica</h4><div class="price">€40-€70</div><p>por consulta</p></div>
+                </div>
+            </div>
+        </div>
 
-                <div class="content-section">
-                    <h3>Legislação Aplicável</h3>
-                    <ul>
-                        <li>• Regulamento (UE) 2016/679 (RGPD)</li>
-                        <li>• Lei n.º 58/2019 (Proteção de Dados)</li>
-                        <li>• Lei n.º 1/2005 (Videovigilância)</li>
-                        <li>• Código Civil e Código de Direito de Autor</li>
-                    </ul>
+        <!-- PRIVACY PAGE -->
+        <div id="privacyPage" class="page">
+            <h2 class="page-title">A tua privacidade é um compromisso, não um detalhe</h2>
+            <div class="alert alert-info"><strong>Última atualização:</strong> Janeiro 2026</div>
+            <div class="content-section">
+                <h3>1. Responsável pelo Tratamento</h3>
+                <p><strong>Entidade:</strong> LAR DE SONHO</p>
+                <p><strong>Morada:</strong> Rua Verde, n.º 1, 4700-001 Braga, Portugal</p>
+                <p><strong>NIPC:</strong> 501 000 000</p>
+                <p><strong>Email:</strong> privacidade@lardesonho.pt</p>
+                <p><strong>Encarregado de Proteção de Dados (DPO):</strong> dpo@lardesonho.pt</p>
+            </div>
+            <div class="content-section">
+                <h3>2. Dados Pessoais Recolhidos</h3>
+                <p>No âmbito dos nossos serviços, podemos recolher as seguintes categorias de dados:</p>
+                <div class="legal-bases">
+                    <div class="legal-item"><strong>📋 Dados de Identificação</strong><p>Nome, data de nascimento, número de identificação civil, morada, contactos.</p></div>
+                    <div class="legal-item"><strong>🏥 Dados de Saúde</strong><p>Informação médica necessária para prestação de cuidados, mediante consentimento explícito.</p></div>
+                    <div class="legal-item"><strong>💰 Dados Económicos</strong><p>Rendimentos, apenas quando relevantes para efeitos de apoios sociais.</p></div>
+                    <div class="legal-item"><strong>👨‍👩‍👦 Dados de Familiares</strong><p>Contactos de responsáveis legais ou cuidadores.</p></div>
+                    <div class="legal-item"><strong>🔐 Dados Biométricos</strong><p>Impressões digitais para controlo de acessos de funcionários.</p></div>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>3. Finalidades e Fundamentos Legais</h3>
+                <div class="legal-bases">
+                    <div class="legal-item"><strong>Prestação de Serviços</strong><p>Execução de contrato — Art. 6.º, n.º 1, al. b) RGPD</p></div>
+                    <div class="legal-item"><strong>Dados de Saúde</strong><p>Consentimento explícito — Art. 9.º, n.º 2, al. a) RGPD</p></div>
+                    <div class="legal-item"><strong>Obrigações Legais</strong><p>Cumprimento de obrigação legal — Art. 6.º, n.º 1, al. c) RGPD</p></div>
+                    <div class="legal-item"><strong>Marketing (opcional)</strong><p>Consentimento — Art. 6.º, n.º 1, al. a) RGPD</p></div>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>4. Informação obtida automaticamente</h3>
+                <p>O website utiliza cookies estritamente necessários ao seu funcionamento. Cookies adicionais só são utilizados mediante consentimento do utilizador.</p>
+                <p>Para mais informação, consulta a nossa <button type="button" class="btn-link" onclick="showPage('cookies')">Política de Cookies</button>.</p>
+            </div>
+            <div class="content-section">
+                <h3>5. Destinatários dos Dados</h3>
+                <ul class="clean-list">
+                    <li>Prestadores de serviços tecnológicos</li>
+                    <li>Entidades públicas com legitimidade legal</li>
+                    <li>Auditores internos e externos</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>6. Prazos de Conservação</h3>
+                <p>Os dados são conservados apenas pelo período necessário às finalidades para as quais foram recolhidos, ou pelo prazo legalmente exigido.</p>
+            </div>
+            <div class="content-section">
+                <h3>7. Transferências Internacionais</h3>
+                <p>Os dados pessoais não são transferidos para fora do Espaço Económico Europeu, salvo quando garantido um nível de proteção adequado nos termos do RGPD.</p>
+            </div>
+            <div class="content-section highlight">
+                <h3>8. Direitos do Titular dos Dados</h3>
+                <ul class="clean-list">
+                    <li>Direito de acesso</li>
+                    <li>Direito de retificação</li>
+                    <li>Direito ao apagamento</li>
+                    <li>Direito à limitação</li>
+                    <li>Direito de oposição</li>
+                    <li>Direito à portabilidade</li>
+                    <li>Direito de retirar o consentimento</li>
+                </ul>
+                <p>Para exercer os seus direitos, envia um email para <strong>privacidade@lardesonho.pt</strong></p>
+            </div>
+            <div class="content-section">
+                <h3>9. Autoridade de Controlo</h3>
+                <p>O titular dos dados pode apresentar reclamação à Comissão Nacional de Proteção de Dados — CNPD.</p>
+                <p><strong>www.cnpd.pt</strong></p>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- COOKIES PAGE — FIXED STRUCTURE (cada secção = content-section) -->
+        <!-- ============================================================ -->
+        <div id="cookiesPage" class="page">
+            <h2 class="page-title">Política de Cookies</h2>
+
+            <div class="alert alert-info">
+                <strong>Última atualização:</strong> Janeiro 2026
+            </div>
+
+            <div class="content-section">
+                <h3>1. O que são cookies</h3>
+                <p>O presente website utiliza cookies e/ou tecnologias similares, próprias e de terceiros. Cookies são ficheiros que contêm pequenas quantidades de informação e que são descarregados para o dispositivo do utilizador quando este visita um website.</p>
+                <p>O objetivo principal dos cookies é reconhecer o utilizador sempre que acede ao website, permitindo melhorar a qualidade, segurança e funcionalidade do site, bem como simplificar a navegação. Os cookies são essenciais para o funcionamento da Internet, não danificam o dispositivo do utilizador e ajudam a identificar e resolver possíveis erros na operação do website.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>2. Responsável pelo tratamento</h3>
+                <p>O responsável pelo tratamento dos dados recolhidos através de cookies é:</p>
+                <p><strong>LAR DE SONHO, LDA</strong><br>
+                Rua dos Barcelinhos, n.º 67 — 4720-121 Braga<br>
+                Email: <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></p>
+            </div>
+
+            <div class="content-section">
+                <h3>3. Categorias de cookies utilizados</h3>
+                <div class="cookie-types">
+                    <div class="cookie-type cookie-necessary">
+                        <h4>Cookies necessários</h4>
+                        <p>Essenciais para permitir a navegação no website e o acesso a funcionalidades básicas, como formulários e áreas seguras. Não recolhem informações para fins de marketing e não podem ser desativados.</p>
+                    </div>
+                    <div class="cookie-type cookie-analytics">
+                        <h4>Cookies analíticos / estatísticas</h4>
+                        <p>Permitem recolher informação estatística sobre a utilização do website, como páginas visitadas e tempo de navegação, com o objetivo de melhorar o desempenho e os conteúdos disponibilizados.</p>
+                    </div>
+                    <div class="cookie-type cookie-marketing">
+                        <h4>Cookies de marketing e publicidade</h4>
+                        <p>São utilizados para apresentar publicidade direcionada relacionada com terapias e serviços disponibilizados pelo LAR DE SONHO, com base nos interesses e comportamento de navegação do utilizador.</p>
+                    </div>
+                    <div class="cookie-type cookie-functional">
+                        <h4>Cookies funcionais e de terceiros</h4>
+                        <p>Permitem guardar preferências do utilizador (ex.: idioma) e podem ser instalados por entidades externas, nomeadamente redes sociais, ficando sujeitos às respetivas políticas de privacidade.</p>
+                    </div>
                 </div>
             </div>
 
-            <div id="recrutamentoPage" class="page">
-
-                <h2 class="page-title">Política de Recrutamento</h2>
-            
-                <div class="alert alert-info">
-                    Última atualização: Janeiro 2026
+            <div class="content-section">
+                <h3>4. Dados recolhidos através de cookies</h3>
+                <div class="data-categories">
+                    <div class="data-category">Endereço IP</div>
+                    <div class="data-category">Browser utilizado</div>
+                    <div class="data-category">Sistema operativo</div>
+                    <div class="data-category">Localização aproximada</div>
+                    <div class="data-category">Data e hora de acesso</div>
+                    <div class="data-category">Preferências do utilizador associadas a redes sociais</div>
                 </div>
-            
-                <div class="content-section">
-                    <h3>1. Enquadramento e Objeto</h3>
-                    <p>
-                        A presente Política de Recrutamento define os termos em que o
-                        <strong>LAR DE SONHO</strong> procede à recolha, utilização e conservação
-                        de dados pessoais de candidatos a processos de recrutamento e seleção,
-                        em conformidade com o Regulamento (UE) 2016/679 (Regulamento Geral sobre a
-                        Proteção de Dados – RGPD), a Lei n.º 58/2019 e o Código do Trabalho.
-                    </p>
-                    <p>
-                        Esta política aplica-se a todas as candidaturas submetidas, quer em resposta
-                        a ofertas de emprego, quer através de candidaturas espontâneas.
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>2. Responsável pelo Tratamento</h3>
-                    <p><strong>Entidade:</strong> LAR DE SONHO</p>
-                    <p><strong>Contacto para proteção de dados:</strong> privacidade@lardesonho.pt</p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>3. Categorias de Dados Pessoais Tratados</h3>
-                    <p>
-                        No âmbito dos processos de recrutamento e seleção, poderão ser tratados,
-                        entre outros, os seguintes dados pessoais:
-                    </p>
-                    <ul class="clean-list">
-                        <li>Dados de identificação (nome, idade, nacionalidade)</li>
-                        <li>Dados de contacto (endereço de email, número de telefone, morada)</li>
-                        <li>Dados académicos e profissionais (formação, experiência, qualificações)</li>
-                        <li>Curriculum vitae e carta de motivação</li>
-                        <li>Outras informações fornecidas voluntariamente pelo candidato</li>
-                    </ul>
-                    <p>
-                        Não são solicitados nem tratados dados pessoais sensíveis, salvo quando
-                        tal seja estritamente necessário para o cumprimento de obrigações legais.
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>4. Finalidades do Tratamento</h3>
-                    <p>
-                        Os dados pessoais dos candidatos são tratados exclusivamente para as
-                        seguintes finalidades:
-                    </p>
-                    <ul class="clean-list">
-                        <li>Avaliação da candidatura e adequação ao perfil pretendido</li>
-                        <li>Gestão do processo de recrutamento e seleção</li>
-                        <li>Contacto com o candidato para entrevistas ou esclarecimentos</li>
-                        <li>Constituição de base de dados de candidatos para futuras oportunidades</li>
-                    </ul>
-                </div>
-            
-                <div class="content-section">
-                    <h3>5. Fundamento Jurídico do Tratamento</h3>
-                    <p>
-                        O tratamento de dados pessoais no âmbito do recrutamento tem como
-                        fundamento jurídico:
-                    </p>
-                    <ul class="clean-list">
-                        <li>
-                            A realização de diligências pré-contratuais a pedido do titular dos dados,
-                            nos termos do artigo 6.º, n.º 1, alínea b) do RGPD
-                        </li>
-                        <li>
-                            O consentimento do candidato, quando aplicável, nos termos do artigo 6.º,
-                            n.º 1, alínea a) do RGPD
-                        </li>
-                        <li>
-                            O interesse legítimo do responsável pelo tratamento na gestão de processos
-                            de recrutamento, nos termos do artigo 6.º, n.º 1, alínea f) do RGPD
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="content-section">
-                    <h3>6. Princípio da Igualdade e Não Discriminação</h3>
-                    <p>
-                        O LAR DE SONHO assegura que os processos de recrutamento e seleção respeitam
-                        o princípio da igualdade de oportunidades e da não discriminação, em
-                        conformidade com o disposto no Código do Trabalho, não sendo efetuada qualquer
-                        distinção com base em sexo, idade, origem étnica, religião, convicções políticas,
-                        deficiência, orientação sexual ou qualquer outro fator legalmente protegido.
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>7. Conservação dos Dados</h3>
-                    <p>
-                        Os dados pessoais dos candidatos serão conservados por um período máximo de
-                        <strong>12 meses</strong> após o termo do processo de recrutamento, sendo
-                        posteriormente eliminados, salvo se:
-                    </p>
-                    <ul class="clean-list">
-                        <li>O candidato prestar consentimento para a conservação por período superior</li>
-                        <li>Existir obrigação legal que imponha um prazo de conservação diferente</li>
-                    </ul>
-                </div>
-            
-                <div class="content-section">
-                    <h3>8. Destinatários e Acesso aos Dados</h3>
-                    <p>
-                        Os dados pessoais são acedidos exclusivamente por colaboradores devidamente
-                        autorizados, envolvidos no processo de recrutamento, estando sujeitos a
-                        dever de confidencialidade. Os dados não são comunicados a terceiros,
-                        salvo quando tal seja exigido por lei.
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>9. Direitos dos Titulares dos Dados</h3>
-                    <p>
-                        Nos termos do RGPD e da legislação nacional aplicável, o candidato pode
-                        exercer os seus direitos de acesso, retificação, apagamento, limitação
-                        do tratamento, oposição e retirada do consentimento, dentro dos limites
-                        legalmente previstos.
-                    </p>
-                    <p>
-                        O exercício destes direitos pode ser efetuado através do contacto:
-                        <strong>privacidade@lardesonho.pt</strong>
-                    </p>
-                    <p>
-                        O candidato tem ainda o direito de apresentar reclamação junto da
-                        Comissão Nacional de Proteção de Dados (CNPD).
-                    </p>
-                </div>
-            
             </div>
 
-
-            
-            <div id="rightsPage" class="page">
-                <h2 class="page-title">Os Seus Direitos (RGPD)</h2>
-
-                <div class="alert alert-info">
-                    Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem os seguintes direitos
-                    relativamente aos seus dados pessoais:
+            <div class="content-section">
+                <h3>5. Finalidades da utilização de cookies</h3>
+                <div class="data-categories">
+                    <div class="data-category">Garantir o funcionamento técnico do website</div>
+                    <div class="data-category">Melhorar a experiência de navegação</div>
+                    <div class="data-category">Analisar padrões de utilização do website</div>
+                    <div class="data-category">Apresentar conteúdos e publicidade relevantes</div>
                 </div>
+            </div>
 
+            <div class="content-section">
+                <h3>6. Base legal para o tratamento</h3>
+                <div class="legal-bases">
+                    <div class="legal-item">
+                        <strong>Cookies não estritamente necessários</strong>
+                        <p>Baseiam-se no consentimento do utilizador, nos termos do artigo 6.º, n.º 1, alínea a) do RGPD.</p>
+                    </div>
+                    <div class="legal-item">
+                        <strong>Cookies estritamente necessários</strong>
+                        <p>Baseiam-se no interesse legítimo do responsável pelo tratamento, nos termos do artigo 6.º, n.º 1, alínea f) do RGPD.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3>7. Consentimento do utilizador</h3>
+                <p>Ao aceder ao website, o utilizador é informado de forma clara sobre a utilização de cookies e pode:</p>
+                <ul class="clean-list">
+                    <li>Aceitar todos os cookies</li>
+                    <li>Rejeitar cookies não essenciais</li>
+                    <li>Gerir as suas preferências de forma granular</li>
+                </ul>
+                <p>O consentimento pode ser retirado a qualquer momento através das definições do browser ou das opções disponibilizadas neste website. A retirada do consentimento não prejudica a licitude do tratamento efetuado com base no consentimento previamente prestado.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>8. Configuração do browser para gerir cookies</h3>
+                <p>O utilizador pode configurar o seu navegador para gerir ou bloquear cookies:</p>
+                <ul class="clean-list">
+                    <li>Google Chrome: <a href="https://support.google.com/accounts/answer/61416" target="_blank">Gerir cookies no Chrome</a></li>
+                    <li>Mozilla Firefox: <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">Gerir cookies no Firefox</a></li>
+                    <li>Microsoft Edge / Internet Explorer: <a href="https://support.microsoft.com/pt-pt/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">Gerir cookies no Edge</a></li>
+                    <li>Safari: <a href="https://www.apple.com/legal/privacy/pt/" target="_blank">Gerir cookies no Safari</a></li>
+                </ul>
+                <p>O utilizador pode ainda gerir preferências de publicidade comportamental através de: <a href="https://www.youronlinechoices.com/pt/your-ad-choices" target="_blank">Your Online Choices</a></p>
+            </div>
+
+            <div class="content-section">
+                <h3>9. Prazo de conservação</h3>
+                <p>Os cookies são conservados apenas pelo período necessário para cumprir as finalidades para as quais foram recolhidos, sendo eliminados automaticamente após expiração ou quando removidos pelo utilizador através das definições do browser ou das ferramentas disponíveis neste website.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>10. Direitos do utilizador</h3>
                 <div class="rights-grid">
-                    <div class="right-card">
-                        <div class="right-icon">✅</div>
-                        <h3>Direito de Acesso</h3>
-                        <p class="right-article">Art. 15.º RGPD</p>
-                        <p>Pode solicitar informação sobre que dados pessoais tratamos sobre si e obter uma cópia dos
-                            mesmos.</p>
-                        <p class="right-deadline">Prazo: 1 mês</p>
-                    </div>
-
-                    <div class="right-card">
-                        <div class="right-icon">📝</div>
-                        <h3>Direito de Retificação</h3>
-                        <p class="right-article">Art. 16.º RGPD</p>
-                        <p>Pode solicitar a correção de dados incorretos ou incompletos.</p>
-                        <p class="right-deadline">Prazo: 1 mês</p>
-                    </div>
-
-                    <div class="right-card">
-                        <div class="right-icon">❌</div>
-                        <h3>Direito ao Apagamento</h3>
-                        <p class="right-article">Art. 17.º RGPD</p>
-                        <p>Pode solicitar o apagamento dos seus dados quando não sejam mais necessários.</p>
-                    </div>
-
-                    <div class="right-card">
-                        <div class="right-icon">⚠️</div>
-                        <h3>Direito de Limitação</h3>
-                        <p class="right-article">Art. 18.º RGPD</p>
-                        <p>Pode solicitar a limitação do tratamento em determinadas circunstâncias.</p>
-                    </div>
-
-                    <div class="right-card">
-                        <div class="right-icon">🛑</div>
-                        <h3>Direito de Oposição</h3>
-                        <p class="right-article">Art. 21.º RGPD</p>
-                        <p>Pode opor-se ao tratamento dos seus dados para fins de marketing direto.</p>
-                    </div>
-
-                    <div class="right-card">
-                        <div class="right-icon">📦</div>
-                        <h3>Direito à Portabilidade</h3>
-                        <p class="right-article">Art. 20.º RGPD</p>
-                        <p>Pode receber os seus dados num formato estruturado.</p>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3>Como Exercer os Seus Direitos?</h3>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <strong>📧 Por Email:</strong> dpo@lardesonho.pt
-                        </div>
-                        <div class="contact-method">
-                            <strong>📞 Por Telefone:</strong> +351 253 000 000
-                        </div>
-                        <div class="contact-method">
-                            <strong>✉️ Por Correio:</strong> LAR DE SONHO - Encarregado de Proteção de Dados, Rua Verde,
-                            n.º 1, 4700-001 Braga
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3>Direito de Reclamação</h3>
-                    <p>Se considerar que os seus direitos não estão a ser respeitados, pode apresentar reclamação:</p>
-                    <div class="alert alert-info">
-                        <div>
-                            <strong>🇵🇹 CNPD - Comissão Nacional de Proteção de Dados</strong>
-                            <p>Av. D. Carlos I, 134, 1.º, 1200-651 Lisboa</p>
-                            <p>Tel: +351 213 928 400 | Email: geral@cnpd.pt</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3>💡 Formulário Rápido</h3>
-                    <p>Preencha o formulário abaixo para exercer os seus direitos:</p>
-                    <form onsubmit="submitRightsRequest(event)">
-                        <div class="form-group">
-                            <select id="rightsSelect" required>
-                                <option>Selecione o direito que pretende exercer</option>
-                                <option>Acesso aos meus dados</option>
-                                <option>Retificação de dados</option>
-                                <option>Apagamento de dados</option>
-                                <option>Oposição ao tratamento</option>
-                                <option>Portabilidade de dados</option>
-                                <option>Outro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="rightsDescription" rows="4" placeholder="Descreva o seu pedido..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-full">Enviar Pedido</button>
-                    </form>
+                    <div class="right-card">Aceder aos seus dados pessoais</div>
+                    <div class="right-card">Retificar dados inexatos</div>
+                    <div class="right-card">Solicitar o apagamento dos dados</div>
+                    <div class="right-card">Limitar ou opor-se ao tratamento</div>
+                    <div class="right-card">Retirar o consentimento a qualquer momento — <a href="mailto:lardesonho@lardesonho.pt">lardesonho@lardesonho.pt</a></div>
+                    <div class="right-card">Apresentar reclamação junto da CNPD</div>
                 </div>
             </div>
 
-
-            <div id="cctvPage" class="page">
-                <h2 class="page-title">Política de Videovigilância</h2>
-            
-                <div class="alert alert-info">
-                    Última atualização: Janeiro 2026
-                </div>
-            
-                <div class="content-section">
-                    <h3>1. Enquadramento e Objeto</h3>
-                    <p>
-                        A presente Política de Videovigilância estabelece os princípios aplicáveis
-                        ao tratamento de dados pessoais através de sistemas de captação de imagem
-                        utilizados pelo <strong>LAR DE SONHO</strong>, nos termos do Regulamento (UE)
-                        2016/679 (Regulamento Geral sobre a Proteção de Dados – RGPD), da Lei n.º 58/2019
-                        e da legislação nacional aplicável à videovigilância.
-                    </p>
-                    <p>
-                        O sistema de videovigilância destina-se exclusivamente à proteção de pessoas
-                        e bens, não sendo utilizado para controlo de desempenho profissional,
-                        vigilância permanente de trabalhadores ou quaisquer finalidades incompatíveis.
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>2. Responsável pelo Tratamento</h3>
-                    <p><strong>Entidade:</strong> LAR DE SONHO</p>
-                    <p><strong>Contacto para proteção de dados:</strong> privacidade@lardesonho.pt</p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>3. Fundamento Jurídico do Tratamento</h3>
-                    <p>
-                        O tratamento de dados pessoais através de sistemas de videovigilância
-                        baseia-se no interesse legítimo do responsável pelo tratamento,
-                        nos termos do artigo 6.º, n.º 1, alínea f) do RGPD, concretamente na
-                        necessidade de garantir a segurança de pessoas, utentes, colaboradores,
-                        visitantes e património.
-                    </p>
-                    <p>
-                        O tratamento observa ainda as disposições da Lei n.º 1/2005, bem como
-                        as orientações e deliberações emitidas pela Comissão Nacional de Proteção
-                        de Dados (CNPD).
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>4. Âmbito da Captação de Imagens</h3>
-                    <p>
-                        As câmaras de videovigilância encontram-se instaladas exclusivamente
-                        em locais onde exista uma expectativa reduzida de privacidade,
-                        nomeadamente:
-                    </p>
-                    <ul class="clean-list">
-                        <li>Entradas e saídas das instalações;</li>
-                        <li>Corredores e áreas comuns de circulação;</li>
-                        <li>Zonas técnicas e de acesso restrito.</li>
-                    </ul>
-                    <p>
-                        <strong>Não são captadas imagens</strong> em áreas privadas ou sensíveis,
-                        designadamente quartos, instalações sanitárias, zonas de descanso ou
-                        quaisquer espaços suscetíveis de afetar a dignidade e reserva da vida
-                        privada dos titulares dos dados.
-                    </p>
-
-                    <p><strong><i>Todos os espaços monitorizados por captação de imagens dispõem de sinalética informativa, garantindo a total transparência e o cumprimento das normas de proteção de dados.</i></strong></p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>5. Conservação das Imagens</h3>
-                    <p>
-                        As imagens recolhidas são conservadas por um período máximo de
-                        <strong>30 dias</strong>, sendo automaticamente eliminadas findo esse prazo,
-                        salvo quando seja necessária à sua conservação por período superior para
-                        efeitos de investigação criminal, exercício de direitos em processo judicial
-                        ou cumprimento de obrigação legal.
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>6. Acesso e Destinatários</h3>
-                    <p>
-                        O acesso às imagens é restrito a pessoas devidamente autorizadas pelo
-                        responsável pelo tratamento, estando sujeito a dever de confidencialidade.
-                        As imagens não são comunicadas a terceiros, exceto quando tal seja exigido
-                        por autoridade judicial ou entidade legalmente competente.
-                    </p>
-                </div>
-            
-                <div class="content-section">
-                    <h3>7. Direitos dos Titulares dos Dados</h3>
-                    <p>
-                        Nos termos do RGPD e da legislação nacional aplicável, os titulares dos dados
-                        podem exercer os seus direitos de acesso, limitação do tratamento e oposição,
-                        dentro dos limites legalmente previstos, através de contacto escrito para:
-                    </p>
-                    <p>
-                        <strong>privacidade@lardesonho.pt</strong>
-                    </p>
-                    <p>
-                        Sem prejuízo de outros meios de recurso administrativo ou judicial,
-                        o titular tem ainda o direito de apresentar reclamação junto da
-                        Comissão Nacional de Proteção de Dados (CNPD).
-                    </p>
-                </div>
-            
+            <div class="content-section">
+                <h3>11. Alterações à política de cookies</h3>
+                <p>O LAR DE SONHO reserva-se o direito de atualizar a presente Política de Cookies sempre que necessário, nomeadamente por alterações legislativas ou técnicas. As alterações serão devidamente publicadas nesta página, com indicação da respetiva data de atualização.</p>
             </div>
 
+            <div style="text-align:center; margin-top: 8px;">
+                <button onclick="showCookieSettings()" class="btn-primary">Gerir as minhas preferências de cookies</button>
+            </div>
+        </div>
 
-        
-            <div id="contactPage" class="page">
-                <h2 class="page-title">Contactos</h2>
-
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>📍 Sede - Portugal</h3>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">📍</div>
-                                <div class="contact-details">
-                                    <strong>Morada</strong>
-                                    <p>Rua Verde, n.º 1<br>4700-001 Braga<br>Portugal</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">📞</div>
-                                <div class="contact-details">
-                                    <strong>Telefone</strong>
-                                    <p>+351 253 000 000</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">📧</div>
-                                <div class="contact-details">
-                                    <strong>Email Geral</strong>
-                                    <p>geral@lardesonho.pt</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">🕐</div>
-                                <div class="contact-details">
-                                    <strong>Horário</strong>
-                                    <p>Seg-Sex: 09:00 - 18:00<br>Sáb: 09:00 - 13:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-card contact-card-green">
-                        <h3>🇮🇹 Itália</h3>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">📍</div>
-                                <div class="contact-details">
-                                    <strong>Morada</strong>
-                                    <p>Via della Stella, 25<br>20121 Milano<br>Italia</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">📞</div>
-                                <div class="contact-details">
-                                    <strong>Telefone</strong>
-                                    <p>+39 02 1234 5678</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">📧</div>
-                                <div class="contact-details">
-                                    <strong>Email</strong>
-                                    <p>italia@lardesonho.pt</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3>📬 Contactos Específicos</h3>
-                    <div class="contact-specific">
-                        <div class="specific-card">
-                            <h4>🔒 Proteção de Dados (DPO)</h4>
-                            <p>dpo@lardesonho.pt</p>
-                            <p class="cookie-detail">Para questões de privacidade e RGPD</p>
-                        </div>
-                        <div class="specific-card">
-                            <h4>📝 Inscrições</h4>
-                            <p>inscricoes@lardesonho.pt</p>
-                            <p class="cookie-detail">Para novos utentes</p>
-                        </div>
-                        <div class="specific-card">
-                            <h4>💼 Recursos Humanos</h4>
-                            <p>rh@lardesonho.pt</p>
-                            <p class="cookie-detail">Para candidaturas</p>
-                        </div>
-                        <div class="specific-card">
-                            <h4>💰 Financeiro</h4>
-                            <p>financeiro@lardesonho.pt</p>
-                            <p class="cookie-detail">Para questões de pagamentos</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <h3>💬 Envie-nos uma Mensagem</h3>
-                    <form onsubmit="submitContactForm(event)">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <input type="text" id="contactName" placeholder="Nome completo *" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="contactEmail" placeholder="Email *" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="contactPhone" placeholder="Telefone">
-                        </div>
-                        <div class="form-group">
-                            <select id="contactSubject" required>
-                                <option>Assunto *</option>
-                                <option>Informações sobre Serviços</option>
-                                <option>Inscrição como Utente</option>
-                                <option>Candidatura a Emprego</option>
-                                <option>Questões de Privacidade</option>
-                                <option>Reclamação</option>
-                                <option>Outro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="contactMessage" rows="5" placeholder="Mensagem *" required></textarea>
-                        </div>
-
-                        <div class="form-checkbox">
-                            <label>
-                                <input type="checkbox" id="contactConsent" required>
-                                <span>Li e aceito a <button type="button" onclick="showPage('privacy')"
-                                        class="btn-link">Política de Privacidade</button> e autorizo o tratamento dos
-                                    meus dados pessoais para efeitos de resposta ao meu contacto. *</span>
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn-primary btn-full">Enviar Mensagem</button>
-                    </form>
-                </div>
-
+        <!-- LEGAL PAGE -->
+        <div id="legalPage" class="page">
+            <h2 class="page-title">Aviso Legal</h2>
+            <div class="content-section">
+                <h3>Identificação da Entidade</h3>
+                <p><strong>Denominação Social:</strong> LAR DE SONHO - Residências e Apoio Domiciliário, Lda.</p>
+                <p><strong>Sede:</strong> Rua Verde, n.º 1, 4700-001 Braga, Portugal</p>
+                <p><strong>NIPC:</strong> 501 000 000</p>
+                <p><strong>Capital Social:</strong> €50.000,00</p>
+                <p><strong>Email:</strong> geral@lardesonho.pt</p>
+                <p><strong>Telefone:</strong> +351 253 000 000</p>
+            </div>
+            <div class="content-section">
+                <h3>Videovigilância</h3>
                 <div class="alert alert-warning">
-                    <div class="alert-icon">🚨</div>
+                    <strong>🎥 Áreas sob Videovigilância</strong>
+                    <p>As nossas instalações dispõem de sistema de videovigilância nas seguintes áreas:</p>
+                    <ul>
+                        <li>• Corredores (segurança de utentes e trabalhadores)</li>
+                        <li>• Entradas e saídas (controlo de acessos)</li>
+                    </ul>
+                    <p><strong>Finalidade:</strong> Segurança de pessoas e bens, conforme Lei n.º 1/2005</p>
+                    <p><strong>Conservação:</strong> Máximo 30 dias</p>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>Legislação Aplicável</h3>
+                <ul>
+                    <li>• Regulamento (UE) 2016/679 (RGPD)</li>
+                    <li>• Lei n.º 58/2019 (Proteção de Dados)</li>
+                    <li>• Lei n.º 1/2005 (Videovigilância)</li>
+                    <li>• Código Civil e Código de Direito de Autor</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RECRUTAMENTO PAGE -->
+        <div id="recrutamentoPage" class="page">
+            <h2 class="page-title">Política de Recrutamento</h2>
+            <div class="alert alert-info">Última atualização: Janeiro 2026</div>
+            <div class="content-section">
+                <h3>1. Enquadramento e Objeto</h3>
+                <p>A presente Política de Recrutamento define os termos em que o <strong>LAR DE SONHO</strong> procede à recolha, utilização e conservação de dados pessoais de candidatos a processos de recrutamento e seleção, em conformidade com o Regulamento (UE) 2016/679 (RGPD), a Lei n.º 58/2019 e o Código do Trabalho.</p>
+                <p>Esta política aplica-se a todas as candidaturas submetidas, quer em resposta a ofertas de emprego, quer através de candidaturas espontâneas.</p>
+            </div>
+            <div class="content-section">
+                <h3>2. Responsável pelo Tratamento</h3>
+                <p><strong>Entidade:</strong> LAR DE SONHO</p>
+                <p><strong>Contacto para proteção de dados:</strong> privacidade@lardesonho.pt</p>
+            </div>
+            <div class="content-section">
+                <h3>3. Categorias de Dados Pessoais Tratados</h3>
+                <ul class="clean-list">
+                    <li>Dados de identificação (nome, idade, nacionalidade)</li>
+                    <li>Dados de contacto (email, telefone, morada)</li>
+                    <li>Dados académicos e profissionais (formação, experiência, qualificações)</li>
+                    <li>Curriculum vitae e carta de motivação</li>
+                    <li>Outras informações fornecidas voluntariamente pelo candidato</li>
+                </ul>
+                <p>Não são solicitados nem tratados dados pessoais sensíveis, salvo quando estritamente necessário para o cumprimento de obrigações legais.</p>
+            </div>
+            <div class="content-section">
+                <h3>4. Finalidades do Tratamento</h3>
+                <ul class="clean-list">
+                    <li>Avaliação da candidatura e adequação ao perfil pretendido</li>
+                    <li>Gestão do processo de recrutamento e seleção</li>
+                    <li>Contacto com o candidato para entrevistas ou esclarecimentos</li>
+                    <li>Constituição de base de dados de candidatos para futuras oportunidades</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>5. Fundamento Jurídico do Tratamento</h3>
+                <div class="legal-bases">
+                    <div class="legal-item"><strong>Diligências pré-contratuais</strong><p>Art. 6.º, n.º 1, al. b) do RGPD</p></div>
+                    <div class="legal-item"><strong>Consentimento do candidato</strong><p>Art. 6.º, n.º 1, al. a) do RGPD</p></div>
+                    <div class="legal-item"><strong>Interesse legítimo</strong><p>Art. 6.º, n.º 1, al. f) do RGPD</p></div>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>6. Princípio da Igualdade e Não Discriminação</h3>
+                <p>O LAR DE SONHO assegura que os processos de recrutamento e seleção respeitam o princípio da igualdade de oportunidades e da não discriminação, não sendo efetuada qualquer distinção com base em sexo, idade, origem étnica, religião, convicções políticas, deficiência, orientação sexual ou qualquer outro fator legalmente protegido.</p>
+            </div>
+            <div class="content-section">
+                <h3>7. Conservação dos Dados</h3>
+                <p>Os dados pessoais dos candidatos serão conservados por um período máximo de <strong>12 meses</strong> após o termo do processo de recrutamento, sendo posteriormente eliminados, salvo consentimento expresso para período superior ou obrigação legal.</p>
+            </div>
+            <div class="content-section">
+                <h3>8. Destinatários e Acesso aos Dados</h3>
+                <p>Os dados são acedidos exclusivamente por colaboradores autorizados envolvidos no processo de recrutamento, sujeitos a dever de confidencialidade. Os dados não são comunicados a terceiros, salvo exigência legal.</p>
+            </div>
+            <div class="content-section">
+                <h3>9. Direitos dos Titulares dos Dados</h3>
+                <p>O candidato pode exercer os seus direitos de acesso, retificação, apagamento, limitação, oposição e retirada do consentimento através de: <strong>privacidade@lardesonho.pt</strong></p>
+                <p>O candidato tem ainda o direito de apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD).</p>
+            </div>
+        </div>
+
+        <!-- RIGHTS PAGE -->
+        <div id="rightsPage" class="page">
+            <h2 class="page-title">Os Seus Direitos (RGPD)</h2>
+            <div class="alert alert-info">Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem os seguintes direitos relativamente aos seus dados pessoais:</div>
+            <div class="rights-grid">
+                <div class="right-card"><div class="right-icon">✅</div><h3>Direito de Acesso</h3><p class="right-article">Art. 15.º RGPD</p><p>Pode solicitar informação sobre que dados pessoais tratamos sobre si e obter uma cópia dos mesmos.</p><p class="right-deadline">Prazo: 1 mês</p></div>
+                <div class="right-card"><div class="right-icon">📝</div><h3>Direito de Retificação</h3><p class="right-article">Art. 16.º RGPD</p><p>Pode solicitar a correção de dados incorretos ou incompletos.</p><p class="right-deadline">Prazo: 1 mês</p></div>
+                <div class="right-card"><div class="right-icon">❌</div><h3>Direito ao Apagamento</h3><p class="right-article">Art. 17.º RGPD</p><p>Pode solicitar o apagamento dos seus dados quando não sejam mais necessários.</p></div>
+                <div class="right-card"><div class="right-icon">⚠️</div><h3>Direito de Limitação</h3><p class="right-article">Art. 18.º RGPD</p><p>Pode solicitar a limitação do tratamento em determinadas circunstâncias.</p></div>
+                <div class="right-card"><div class="right-icon">🛑</div><h3>Direito de Oposição</h3><p class="right-article">Art. 21.º RGPD</p><p>Pode opor-se ao tratamento dos seus dados para fins de marketing direto.</p></div>
+                <div class="right-card"><div class="right-icon">📦</div><h3>Direito à Portabilidade</h3><p class="right-article">Art. 20.º RGPD</p><p>Pode receber os seus dados num formato estruturado.</p></div>
+            </div>
+            <div class="content-section">
+                <h3>Como Exercer os Seus Direitos?</h3>
+                <div class="contact-methods">
+                    <div class="contact-method"><strong>📧 Por Email:</strong> dpo@lardesonho.pt</div>
+                    <div class="contact-method"><strong>📞 Por Telefone:</strong> +351 253 000 000</div>
+                    <div class="contact-method"><strong>✉️ Por Correio:</strong> LAR DE SONHO - Encarregado de Proteção de Dados, Rua Verde, n.º 1, 4700-001 Braga</div>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>Direito de Reclamação</h3>
+                <div class="alert alert-info">
                     <div>
-                        <h4>Em caso de Emergência</h4>
-                        <p>Para situações urgentes fora do horário de atendimento:</p>
-                        <p style="font-size: 18px; font-weight: 700; margin-top: 8px;">📞 +351 912 345 678 (24h)</p>
+                        <strong>🇵🇹 CNPD - Comissão Nacional de Proteção de Dados</strong>
+                        <p>Av. D. Carlos I, 134, 1.º, 1200-651 Lisboa</p>
+                        <p>Tel: +351 213 928 400 | Email: geral@cnpd.pt</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>❤️ LAR DE SONHO</h3>
-                    <p>Dedicados aos cuidados de excelência para a terceira idade desde 2010.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Serviços</h3>
-                    <ul>
-                        <li><button onclick="showPage('services')">Residência</button></li>
-                        <li><button onclick="showPage('services')">Apoio Domiciliário</button></li>
-                        <li><button onclick="showPage('services')">Fisioterapia</button></li>
-                        <li><button onclick="showPage('pricing')">Preçário</button></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Legal & Privacidade</h3>
-                    <ul>
-                        <li><button onclick="showPage('privacy')">Política de Privacidade</button></li>
-                        <li><button onclick="showPage('cookies')">Política de Cookies</button></li>
-                        <li><button onclick="showPage('recrutamento')">Politica de Recrutamento</button></li>
-                        <li><button onclick="showPage('cctv')">Politica de Videovigilância</button></li>
-                        <li><button onclick="window.location.href='visualizador.html'">Visualizador de Cookies</button>
-                        <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
-                        <li><button onclick="showPage('legal')">Aviso Legal</button></li>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contactos</h3>
-                    <ul>
-                        <li>📍 Rua Verde, nº 1, 4700-001 Braga</li>
-                        <li>📞 +351 253 000 000</li>
-                        <li>📧 geral@lardesonho.pt</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2026 LAR DE SONHO. Todos os direitos reservados. | NIPC: 501 000 000</p>
-            </div>
-
-            <div class="footer-compliance">
-                <div class="compliance-badge">
-                    <span>🔒</span>
-                    <span>100% Conforme com RGPD</span>
-                </div>
+            <div class="content-section">
+                <h3>💡 Formulário Rápido</h3>
+                <p>Preencha o formulário abaixo para exercer os seus direitos:</p>
+                <form onsubmit="submitRightsRequest(event)">
+                    <div class="form-group">
+                        <select id="rightsSelect" required>
+                            <option>Selecione o direito que pretende exercer</option>
+                            <option>Acesso aos meus dados</option>
+                            <option>Retificação de dados</option>
+                            <option>Apagamento de dados</option>
+                            <option>Oposição ao tratamento</option>
+                            <option>Portabilidade de dados</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="rightsDescription" rows="4" placeholder="Descreva o seu pedido..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Enviar Pedido</button>
+                </form>
             </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- CCTV PAGE -->
+        <div id="cctvPage" class="page">
+            <h2 class="page-title">Política de Videovigilância</h2>
+            <div class="alert alert-info">Última atualização: Janeiro 2026</div>
+            <div class="content-section">
+                <h3>1. Enquadramento e Objeto</h3>
+                <p>A presente Política de Videovigilância estabelece os princípios aplicáveis ao tratamento de dados pessoais através de sistemas de captação de imagem utilizados pelo <strong>LAR DE SONHO</strong>, nos termos do RGPD, da Lei n.º 58/2019 e da legislação nacional aplicável.</p>
+                <p>O sistema de videovigilância destina-se exclusivamente à proteção de pessoas e bens, não sendo utilizado para controlo de desempenho profissional, vigilância permanente de trabalhadores ou quaisquer finalidades incompatíveis.</p>
+            </div>
+            <div class="content-section">
+                <h3>2. Responsável pelo Tratamento</h3>
+                <p><strong>Entidade:</strong> LAR DE SONHO</p>
+                <p><strong>Contacto para proteção de dados:</strong> privacidade@lardesonho.pt</p>
+            </div>
+            <div class="content-section">
+                <h3>3. Fundamento Jurídico do Tratamento</h3>
+                <p>O tratamento baseia-se no interesse legítimo do responsável pelo tratamento, nos termos do artigo 6.º, n.º 1, alínea f) do RGPD, observando ainda as disposições da Lei n.º 1/2005 e as orientações da CNPD.</p>
+            </div>
+            <div class="content-section">
+                <h3>4. Âmbito da Captação de Imagens</h3>
+                <p>As câmaras encontram-se instaladas exclusivamente em:</p>
+                <ul class="clean-list">
+                    <li>Entradas e saídas das instalações</li>
+                    <li>Corredores e áreas comuns de circulação</li>
+                    <li>Zonas técnicas e de acesso restrito</li>
+                </ul>
+                <p><strong>Não são captadas imagens</strong> em quartos, instalações sanitárias, zonas de descanso ou espaços suscetíveis de afetar a dignidade e reserva da vida privada.</p>
+                <p><em>Todos os espaços monitorizados dispõem de sinalética informativa, garantindo total transparência.</em></p>
+            </div>
+            <div class="content-section">
+                <h3>5. Conservação das Imagens</h3>
+                <p>As imagens são conservadas por um período máximo de <strong>30 dias</strong>, sendo automaticamente eliminadas findo esse prazo, salvo necessidade de conservação por obrigação legal ou processo judicial.</p>
+            </div>
+            <div class="content-section">
+                <h3>6. Acesso e Destinatários</h3>
+                <p>O acesso às imagens é restrito a pessoas devidamente autorizadas, sujeitas a dever de confidencialidade. As imagens não são comunicadas a terceiros, exceto quando exigido por autoridade judicial ou entidade legalmente competente.</p>
+            </div>
+            <div class="content-section">
+                <h3>7. Direitos dos Titulares dos Dados</h3>
+                <p>Os titulares dos dados podem exercer os seus direitos de acesso, limitação e oposição através de: <strong>privacidade@lardesonho.pt</strong></p>
+                <p>O titular tem ainda o direito de apresentar reclamação junto da CNPD.</p>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- TERMS PAGE — NOVO — BULLETPROOF (qualidade DPO)              -->
+        <!-- ============================================================ -->
+        <div id="termsPage" class="page">
+            <h2 class="page-title">Termos e Condições de Utilização</h2>
+
+            <div class="alert alert-info">
+                <strong>Última atualização:</strong> Janeiro de 2026 &nbsp;|&nbsp; <strong>Versão:</strong> 1.0
+            </div>
+
+            <!-- DESTAQUE ACADÉMICO -->
+            <div class="alert alert-warning" style="margin-bottom:28px;">
+                <div class="alert-icon">🎓</div>
+                <div>
+                    <h4>Aviso — Natureza Académica e Dados Fictícios</h4>
+                    <p>Este website foi desenvolvido exclusivamente no âmbito da unidade curricular de <strong>Segurança e Proteção de Dados para Sistemas de Informação</strong>. O seu propósito é demonstrar a implementação prática de compliance RGPD, boas práticas de consentimento e estrutura documental de proteção de dados.</p>
+                    <p style="margin-top:8px;"><strong>Todos os dados apresentados — nomes, moradas, contactos, preços, estatísticas e identidades — são inteiramente fictícios.</strong> Qualquer semelhança com entidades, pessoas ou situações reais é meramente coincidencial e não intencional.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3>1. Identificação da Entidade</h3>
+                <p><strong>Denominação Social:</strong> LAR DE SONHO — Residências e Apoio Domiciliário, Lda.</p>
+                <p><strong>Sede Social:</strong> Rua Verde, n.º 1, 4700-001 Braga, Portugal</p>
+                <p><strong>NIPC:</strong> 501 000 000</p>
+                <p><strong>Capital Social:</strong> €50.000,00</p>
+                <p><strong>Email:</strong> geral@lardesonho.pt</p>
+                <p><strong>Telefone:</strong> +351 253 000 000</p>
+                <p><strong>Encarregado de Proteção de Dados (DPO):</strong> dpo@lardesonho.pt</p>
+            </div>
+
+            <div class="content-section">
+                <h3>2. Objeto e Âmbito de Aplicação</h3>
+                <p>Os presentes Termos e Condições de Utilização (doravante "Termos") regulam o acesso, navegação e utilização do website do <strong>LAR DE SONHO</strong>, disponível em <em>lardesonho.pt</em>, bem como todos os conteúdos, funcionalidades, formulários e documentos informativos nele disponibilizados.</p>
+                <p>Este website tem natureza institucional, informativa e académica, destinando-se a:</p>
+                <ul class="clean-list">
+                    <li>Apresentar os serviços e atividade do LAR DE SONHO (dados fictícios)</li>
+                    <li>Demonstrar implementação de compliance RGPD em contexto prático</li>
+                    <li>Disponibilizar documentação de proteção de dados (Política de Privacidade, Política de Cookies, Política de Recrutamento, Política de Videovigilância)</li>
+                    <li>Proporcionar mecanismos de exercício de direitos pelos titulares dos dados</li>
+                </ul>
+                <p>Os presentes Termos aplicam-se a todos os utilizadores que acedam ao website, independentemente do dispositivo, localização geográfica ou finalidade da visita.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>3. Aceitação dos Termos</h3>
+                <p>Ao aceder e utilizar o website, o utilizador declara expressamente que:</p>
+                <ul class="clean-list">
+                    <li>Leu, compreendeu e aceita na íntegra os presentes Termos e Condições</li>
+                    <li>Tem capacidade legal para assumir os compromissos aqui previstos</li>
+                    <li>Tomou conhecimento da Política de Privacidade e da Política de Cookies, aceites separadamente através do mecanismo de consentimento disponibilizado</li>
+                </ul>
+                <p>Caso o utilizador não concorde com qualquer disposição dos presentes Termos, deverá abster-se de utilizar o website. A mera navegação no website constitui aceitação tácita destes Termos.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>4. Condições de Acesso e Utilização</h3>
+                <p>O acesso ao website é disponibilizado a título gratuito, sem prejuízo dos custos de ligação à Internet suportados pelo utilizador. O LAR DE SONHO não garante a disponibilidade contínua, ininterrupta ou isenta de erros do website, reservando-se o direito de suspender, alterar ou encerrar o acesso ao website, ou a partes do mesmo, a qualquer momento e sem aviso prévio, nomeadamente para efeitos de manutenção, atualização ou por razões de segurança.</p>
+                <p>O utilizador compromete-se a utilizar o website de forma responsável, lícita e conforme os princípios da boa-fé, não interferindo com os direitos de terceiros nem com o normal funcionamento da plataforma.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>5. Proibições Específicas</h3>
+                <p>É expressamente proibido ao utilizador, a título exemplificativo:</p>
+                <div class="legal-bases">
+                    <div class="legal-item">
+                        <strong>🚫 Acesso não autorizado</strong>
+                        <p>Tentar aceder a áreas reservadas, sistemas internos, dados de terceiros ou funcionalidades não autorizadas, incluindo através de técnicas de enumeração, fuzzing, injeção de código ou qualquer método de ataque.</p>
+                    </div>
+                    <div class="legal-item">
+                        <strong>🚫 Dados falsos ou ofensivos</strong>
+                        <p>Introduzir informação falsa, ofensiva, ilícita, difamatória, discriminatória ou que viole direitos de terceiros através dos formulários ou outros meios de contacto disponibilizados.</p>
+                    </div>
+                    <div class="legal-item">
+                        <strong>🚫 Perturbação técnica</strong>
+                        <p>Interferir com a segurança, estabilidade, integridade ou desempenho técnico do website, incluindo através de ataques de negação de serviço (DoS/DDoS), injeção de scripts maliciosos ou exploração de vulnerabilidades.</p>
+                    </div>
+                    <div class="legal-item">
+                        <strong>🚫 Utilização ilícita</strong>
+                        <p>Utilizar o website para fins fraudulentos, de engenharia social, phishing, disseminação de malware, ou qualquer outra finalidade contrária à lei ou aos presentes Termos.</p>
+                    </div>
+                    <div class="legal-item">
+                        <strong>🚫 Reprodução não autorizada</strong>
+                        <p>Reproduzir, copiar, distribuir, comunicar publicamente, modificar ou explorar comercialmente conteúdos do website sem autorização expressa do titular dos respetivos direitos.</p>
+                    </div>
+                    <div class="legal-item">
+                        <strong>🚫 Recolha massiva de dados</strong>
+                        <p>Utilizar sistemas automatizados, bots, scrapers ou técnicas de web crawling para recolha massiva de dados, conteúdos ou informação pessoal disponibilizada no website.</p>
+                    </div>
+                </div>
+                <p style="margin-top:16px;">O incumprimento das proibições previstas pode determinar a responsabilidade civil e/ou criminal do utilizador, nos termos da legislação aplicável, incluindo o Regulamento (UE) 2022/2555 (Diretiva NIS2) e a Lei do Cibercrime.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>6. Propriedade Intelectual e Direitos de Autor</h3>
+                <p>Todos os conteúdos disponibilizados no website — incluindo textos, imagens, logótipos, elementos gráficos, estrutura, organização, design, código-fonte, documentação jurídica e demais materiais — são da titularidade do LAR DE SONHO ou de terceiros devidamente autorizados, encontrando-se protegidos ao abrigo do Código do Direito de Autor e Direitos Conexos (CDADC) e da legislação comunitária aplicável.</p>
+                <p>É autorizada a visualização, impressão e reprodução temporária dos conteúdos para uso pessoal e não comercial, desde que mantidos todos os avisos de direitos de autor e propriedade intelectual. Qualquer outro uso — nomeadamente reprodução, modificação, distribuição, disponibilização pública, reutilização ou exploração comercial — carece de autorização prévia e escrita do LAR DE SONHO.</p>
+                <p>A violação dos direitos de propriedade intelectual pode determinar responsabilidade civil e criminal nos termos do CDADC e demais legislação aplicável.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>7. Dados Pessoais e Privacidade</h3>
+                <p>O LAR DE SONHO trata os dados pessoais dos utilizadores em estrito cumprimento do Regulamento (UE) 2016/679 (RGPD), da Lei n.º 58/2019 e demais legislação aplicável. O tratamento de dados pessoais rege-se pelos princípios da licitude, lealdade e transparência, limitação das finalidades, minimização dos dados, exatidão, limitação da conservação, integridade e confidencialidade, e responsabilidade (accountability).</p>
+                <p>Para informação detalhada sobre as categorias de dados tratados, finalidades, fundamentos legais, destinatários, prazos de conservação e exercício de direitos, o utilizador deverá consultar a <button type="button" class="btn-link" onclick="showPage('privacy')">Política de Privacidade</button>.</p>
+                <p>O Encarregado de Proteção de Dados (DPO) pode ser contactado através de: <strong>dpo@lardesonho.pt</strong></p>
+            </div>
+
+            <div class="content-section">
+                <h3>8. Cookies e Tecnologias Similares</h3>
+                <p>O website recorre a cookies e tecnologias similares para garantir o seu funcionamento, melhorar a experiência do utilizador e, mediante consentimento, para fins analíticos e de marketing. O utilizador tem o direito de gerir as suas preferências de cookies a qualquer momento através do mecanismo de gestão disponibilizado no website.</p>
+                <p>A informação detalhada sobre as categorias de cookies utilizados, finalidades, prazos de conservação e mecanismos de gestão de preferências encontra-se disponível na <button type="button" class="btn-link" onclick="showPage('cookies')">Política de Cookies</button>.</p>
+                <p>O consentimento para cookies não estritamente necessários pode ser retirado a qualquer momento, sem prejuízo da licitude do tratamento efetuado com base no consentimento previamente prestado (artigo 7.º, n.º 3 do RGPD).</p>
+            </div>
+
+            <div class="content-section">
+                <h3>9. Formulários e Comunicações Eletrónicas</h3>
+                <p>O website disponibiliza formulários de contacto, pedidos de informação e exercício de direitos. Ao submeter informação através destes formulários, o utilizador declara que:</p>
+                <ul class="clean-list">
+                    <li>Os dados fornecidos são verdadeiros, exatos, atuais e do próprio, ou que possui legitimidade para os comunicar</li>
+                    <li>Tomou conhecimento da informação sobre proteção de dados associada ao respetivo formulário</li>
+                    <li>Presta o seu consentimento livre, específico, informado e inequívoco para o tratamento dos dados, quando aplicável</li>
+                </ul>
+                <p>O LAR DE SONHO reserva-se o direito de não responder a pedidos incompletos, inválidos, abusivos ou que contenham linguagem ofensiva, sem prejuízo do cumprimento das obrigações legais aplicáveis, nomeadamente os prazos de resposta ao exercício de direitos previstos no RGPD (regra geral, 1 mês).</p>
+                <p>As comunicações eletrónicas consideram-se válidas para efeitos de contacto institucional. O utilizador reconhece os riscos inerentes à Internet — atrasos, falhas técnicas, acessos não autorizados — que a entidade mitiga através de medidas técnicas e organizativas adequadas.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>10. Ligações para Websites de Terceiros</h3>
+                <p>O website pode conter hiperligações para páginas externas, sites de parceiros, entidades reguladoras ou plataformas de terceiros. Estas ligações são disponibilizadas exclusivamente para comodidade do utilizador e não implicam qualquer aprovação, controlo ou responsabilidade por parte do LAR DE SONHO relativamente aos respetivos conteúdos, políticas de privacidade, práticas de tratamento de dados, segurança ou disponibilidade.</p>
+                <p>A navegação para páginas externas é da exclusiva responsabilidade do utilizador, devendo este consultar os respetivos termos e políticas de privacidade antes de disponibilizar qualquer informação pessoal.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>11. Segurança da Informação</h3>
+                <p>O LAR DE SONHO adota medidas técnicas e organizativas adequadas para proteger o website e a informação transmitida através do mesmo, em conformidade com o estado da técnica, os custos de implementação e a natureza, âmbito, contexto e finalidades do tratamento, incluindo:</p>
+                <div class="legal-bases">
+                    <div class="legal-item"><strong>🔒 Controlos de acesso</strong><p>Autenticação e autorização baseadas em perfis de utilizador, com princípio do menor privilégio.</p></div>
+                    <div class="legal-item"><strong>🛡️ Transmissão segura</strong><p>Utilização de protocolos seguros de transmissão de dados (HTTPS/TLS).</p></div>
+                    <div class="legal-item"><strong>📋 Registo e monitorização</strong><p>Logging de acessos e eventos relevantes para deteção de incidentes de segurança.</p></div>
+                    <div class="legal-item"><strong>🔄 Revisão periódica</strong><p>Avaliação regular das medidas de segurança implementadas, com atualização em função de novos riscos identificados.</p></div>
+                </div>
+                <p style="margin-top:16px;">Sem prejuízo destes esforços, o utilizador reconhece que nenhum sistema ligado à Internet é totalmente isento de risco, não podendo ser garantida segurança absoluta. Em caso de identificação de vulnerabilidade de segurança no website, o utilizador é encorajado a reportá-la responsavelmente para <strong>geral@lardesonho.pt</strong>, abstendo-se de explorar ou divulgar publicamente qualquer falha antes de resolução.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>12. Videovigilância nas Instalações</h3>
+                <p>As instalações físicas do LAR DE SONHO podem dispor de sistema de videovigilância em zonas devidamente sinalizadas, nos termos da Lei n.º 1/2005 e do RGPD, para salvaguarda da segurança de pessoas e bens.</p>
+                <p>As condições de captação, acesso, conservação e exercício de direitos relativamente a este tratamento encontram-se definidas na <button type="button" class="btn-link" onclick="showPage('cctv')">Política de Videovigilância</button> e no aviso informativo afixado nas instalações.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>13. Recrutamento e Candidaturas</h3>
+                <p>Sempre que o website disponibilize funcionalidades de recrutamento, os dados pessoais submetidos por candidatos serão tratados exclusivamente para efeitos de análise de candidatura, contacto e gestão do processo de seleção, nos termos da <button type="button" class="btn-link" onclick="showPage('recrutamento')">Política de Recrutamento</button>.</p>
+                <p>A submissão de candidatura não garante a celebração de qualquer contrato de trabalho nem a existência de vaga disponível. Os dados dos candidatos não selecionados serão conservados por um máximo de 12 meses, salvo consentimento expresso para período superior.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>14. Limitação de Responsabilidade</h3>
+                <p>Sem prejuízo das obrigações legais imperativas e das normas de defesa do consumidor aplicáveis, o LAR DE SONHO não será responsável por danos diretos, indiretos, incidentais ou consequenciais resultantes de:</p>
+                <ul class="clean-list">
+                    <li>Utilização indevida ou não autorizada do website pelo utilizador ou por terceiros</li>
+                    <li>Interrupções, falhas técnicas, indisponibilidade temporária ou erros de funcionamento do website</li>
+                    <li>Perda, corrupção ou acesso não autorizado a dados do utilizador, salvo quando imputável a negligência grave ou dolo da entidade</li>
+                    <li>Conteúdos introduzidos por terceiros ou disponibilizados em websites externos</li>
+                    <li>Utilização de informação do website fora do respetivo contexto informativo ou em contradição com as advertências expressamente formuladas</li>
+                    <li>Decisões tomadas pelo utilizador com base na informação disponibilizada no website, nomeadamente de natureza médica, jurídica ou financeira</li>
+                </ul>
+                <p>A informação disponível no website tem carácter geral e não substitui aconselhamento profissional especializado.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>15. Alterações aos Termos e Condições</h3>
+                <p>O LAR DE SONHO reserva-se o direito de alterar os presentes Termos a qualquer momento, nomeadamente por razões legais, técnicas, operacionais ou de atualização do website. As alterações produzirão efeitos a partir da sua publicação no website, com indicação da respetiva data de atualização.</p>
+                <p>O utilizador é responsável pela consulta periódica dos presentes Termos. A continuação da utilização do website após a publicação de alterações constitui aceitação das mesmas. Caso não concorde com as alterações introduzidas, o utilizador deverá cessar a utilização do website.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>16. Legislação Aplicável e Resolução de Litígios</h3>
+                <p>Os presentes Termos regem-se pela lei portuguesa. Em caso de litígio emergente da interpretação, validade ou execução destes Termos, e na medida em que tal seja legalmente admissível, as partes elegem o foro da comarca de Braga como competente para dirimir quaisquer conflitos, com expressa renúncia a qualquer outro.</p>
+                <p>Sem prejuízo do recurso aos tribunais competentes, o utilizador pode recorrer às seguintes entidades de resolução alternativa de litígios (RAL):</p>
+                <div class="legal-bases">
+                    <div class="legal-item">
+                        <strong>🇵🇹 CNIACC — Centro Nacional de Informação e Arbitragem de Conflitos de Consumo</strong>
+                        <p>www.arbitragemdeconsumo.org</p>
+                    </div>
+                    <div class="legal-item">
+                        <strong>🇪🇺 Plataforma ODR da Comissão Europeia</strong>
+                        <p>ec.europa.eu/consumers/odr</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section highlight">
+                <h3>17. Contacto e Reclamações</h3>
+                <p>Para esclarecimentos, reclamações ou questões relacionadas com os presentes Termos:</p>
+                <ul class="clean-list">
+                    <li>📧 Email geral: geral@lardesonho.pt</li>
+                    <li>🔒 Proteção de dados / DPO: dpo@lardesonho.pt</li>
+                    <li>📞 Telefone: +351 253 000 000</li>
+                    <li>✉️ Correio: LAR DE SONHO, Rua Verde, n.º 1, 4700-001 Braga, Portugal</li>
+                </ul>
+                <p>Questões relacionadas com proteção de dados e privacidade devem ser dirigidas ao DPO. O titular dos dados tem ainda o direito de apresentar reclamação junto da <strong>CNPD — Comissão Nacional de Proteção de Dados</strong> (www.cnpd.pt).</p>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contactPage" class="page">
+            <h2 class="page-title">Contactos</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📍 Sede - Portugal</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details"><strong>Morada</strong><p>Rua Verde, n.º 1<br>4700-001 Braga<br>Portugal</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details"><strong>Telefone</strong><p>+351 253 000 000</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details"><strong>Email Geral</strong><p>geral@lardesonho.pt</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div class="contact-details"><strong>Horário</strong><p>Seg-Sex: 09:00 - 18:00<br>Sáb: 09:00 - 13:00</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card contact-card-green">
+                    <h3>🇮🇹 Itália</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details"><strong>Morada</strong><p>Via della Stella, 25<br>20121 Milano<br>Italia</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details"><strong>Telefone</strong><p>+39 02 1234 5678</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details"><strong>Email</strong><p>italia@lardesonho.pt</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>📬 Contactos Específicos</h3>
+                <div class="contact-specific">
+                    <div class="specific-card"><h4>🔒 Proteção de Dados (DPO)</h4><p>dpo@lardesonho.pt</p><p class="cookie-detail">Para questões de privacidade e RGPD</p></div>
+                    <div class="specific-card"><h4>📝 Inscrições</h4><p>inscricoes@lardesonho.pt</p><p class="cookie-detail">Para novos utentes</p></div>
+                    <div class="specific-card"><h4>💼 Recursos Humanos</h4><p>rh@lardesonho.pt</p><p class="cookie-detail">Para candidaturas</p></div>
+                    <div class="specific-card"><h4>💰 Financeiro</h4><p>financeiro@lardesonho.pt</p><p class="cookie-detail">Para questões de pagamentos</p></div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>💬 Envie-nos uma Mensagem</h3>
+                <form onsubmit="submitContactForm(event)">
+                    <div class="form-grid">
+                        <div class="form-group"><input type="text" id="contactName" placeholder="Nome completo *" required></div>
+                        <div class="form-group"><input type="email" id="contactEmail" placeholder="Email *" required></div>
+                    </div>
+                    <div class="form-group"><input type="tel" id="contactPhone" placeholder="Telefone"></div>
+                    <div class="form-group">
+                        <select id="contactSubject" required>
+                            <option>Assunto *</option>
+                            <option>Informações sobre Serviços</option>
+                            <option>Inscrição como Utente</option>
+                            <option>Candidatura a Emprego</option>
+                            <option>Questões de Privacidade</option>
+                            <option>Reclamação</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><textarea id="contactMessage" rows="5" placeholder="Mensagem *" required></textarea></div>
+                    <div class="form-checkbox">
+                        <label>
+                            <input type="checkbox" id="contactConsent" required>
+                            <span>Li e aceito a <button type="button" onclick="showPage('privacy')" class="btn-link">Política de Privacidade</button> e autorizo o tratamento dos meus dados pessoais para efeitos de resposta ao meu contacto. *</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Enviar Mensagem</button>
+                </form>
+            </div>
+            <div class="alert alert-warning">
+                <div class="alert-icon">🚨</div>
+                <div>
+                    <h4>Em caso de Emergência</h4>
+                    <p>Para situações urgentes fora do horário de atendimento:</p>
+                    <p style="font-size: 18px; font-weight: 700; margin-top: 8px;">📞 +351 912 345 678 (24h)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>❤️ LAR DE SONHO</h3>
+                <p>Dedicados aos cuidados de excelência para a terceira idade desde 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><button onclick="showPage('services')">Residência</button></li>
+                    <li><button onclick="showPage('services')">Apoio Domiciliário</button></li>
+                    <li><button onclick="showPage('services')">Fisioterapia</button></li>
+                    <li><button onclick="showPage('pricing')">Preçário</button></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal & Privacidade</h3>
+                <ul>
+                    <li><button onclick="showPage('privacy')">Política de Privacidade</button></li>
+                    <li><button onclick="showPage('cookies')">Política de Cookies</button></li>
+                    <li><button onclick="showPage('terms')">📄 Termos e Condições</button></li>
+                    <li><button onclick="showPage('recrutamento')">Política de Recrutamento</button></li>
+                    <li><button onclick="showPage('cctv')">Política de Videovigilância</button></li>
+                    <li><button onclick="window.location.href='visualizador.html'">Visualizador de Cookies</button></li>
+                    <li><button onclick="showPage('rights')">Os Seus Direitos</button></li>
+                    <li><button onclick="showPage('legal')">Aviso Legal</button></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contactos</h3>
+                <ul>
+                    <li>📍 Rua Verde, nº 1, 4700-001 Braga</li>
+                    <li>📞 +351 253 000 000</li>
+                    <li>📧 geral@lardesonho.pt</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 LAR DE SONHO. Todos os direitos reservados. | NIPC: 501 000 000</p>
+        </div>
+        <div class="footer-compliance">
+            <div class="compliance-badge">
+                <span>🔒</span>
+                <span>100% Conforme com RGPD</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
