@@ -1332,6 +1332,30 @@ input:disabled + .slider {
     margin-bottom: 24px;
 }
 
+.content-section ul {
+    margin: 12px 0 18px 0;
+    padding-left: 22px;
+}
+
+.content-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.content-section p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.content-section h3 {
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.content-section strong {
+    font-weight: 700;
+}
+
 .cookie-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
